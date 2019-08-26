@@ -1,0 +1,116 @@
+.background{
+    background-color: pink;
+    background-size: cover;
+}
+
+.toprighti{
+    position: absolute;
+    top: 30%;
+    right: 14%;
+    width: 33%;
+}
+
+.topcenteri{
+    position: absolute;
+    top: 42%;
+    right: 49%;
+    width: 8%;
+}
+
+.hairbi{
+    position: absolute;
+    top: 46%;
+    right: 20%;
+    width: 10%;
+}
+
+.bottomi1{
+    width: 100%;
+    position: absolute;
+    top: 55%;
+}
+
+.bottomi2{
+    width: 100%;
+    position: absolute;
+    top: 75%;
+}
+
+.topleft{
+    position: absolute;
+    margin-left: 100px;
+    font-size: 150px;
+}
+
+.aboutus{
+    background-color: pink;
+    background-size: cover;
+    margin-top: 250px;
+    margin-left: 100px;
+}
+
+.aboutusp{
+    width: 40%;
+    display: inline-block;
+    position: relative;
+    margin-top: 0;
+    margin-left: 100px;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.aboutusi{
+    width: 45%;
+    position: relative;
+    float: right;
+}
+
+.statsbegin{
+    width: 100%;
+    position: relative;
+}
+
+.statsleft{
+    width: 100%;
+    position: absolute;
+    top: 854px;
+    left: 0;
+}
+
+.statsbus{
+    width: 50%;
+    position: absolute;
+    top: 1200px;
+    left: 300px;
+}
+
+.theme{
+    width: 100%;
+}
+
+.themehead{
+    position: absolute;
+    margin-left: 500px;
+    top: 1650px;
+    font-size: 150px;
+    color: black;
+}
+
+.themei{
+    position: absolute;
+    top: 1900px;
+    left: 0;
+    width: 90%;
+}
+
+.themep{
+    position: absolute;
+    top: 2500px;
+    font-size: 25px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#btm1{
+    overflow: hidden;
+}
