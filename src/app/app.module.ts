@@ -15,6 +15,9 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { CompetitionHomeComponent } from './competition/competition-home/competition-home.component';
+import { CompetitionListComponent } from './competition/competition-list/competition-list.component';
+import { CompetitionDetailComponent } from './competition/competition-detail/competition-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { RouterModule, Routes } from '@angular/router';
     EventsComponent,
     FaqsComponent,
     RegistrationComponent,
-    SponsorsComponent
+    SponsorsComponent,
+    CompetitionHomeComponent,
+    CompetitionListComponent,
+    CompetitionDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -53,9 +59,24 @@ import { RouterModule, Routes } from '@angular/router';
       {
         path:'competition',
         component:CompetitionComponent,
-        
-      },
-    ]),
+        children: [
+          {path: '', component: CompetitionHomeComponent },
+          {path: ':compiName', component: CompetitionListComponent},
+          {
+            path: ':compiName/:eventName',
+            component: CompetitionDetailComponent,
+            children: [
+              {path: '', redirectTo: 'comp-desc', pathMatch:'full'},
+              // {path: 'comp-desc', component:CompDescRulesComponent},
+              // {path: 'comp-prizes', component:CompPrizesComponent},
+              // {path: 'comp-faq', component:CompFaqComponent},
+              // {path: 'comp-reg', component:CompRegComponent},
+              // {path: 'comp-prev-winner', component:CompPrevWinnerComponent},
+            ]
+          },
+      ],
+    },
+  ]),
     HttpClientModule,
     ReactiveFormsModule
   ],
