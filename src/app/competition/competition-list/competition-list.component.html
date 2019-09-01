@@ -1,0 +1,130 @@
+<div class="back">
+
+  <br><br><br><br><br>
+
+  <h1 class="headr"><b>{{current_competition_category}}</b></h1>
+
+  <br><br><br><br><br>
+
+<div *ngFor="let category of competitions_categories">
+  <div *ngIf="category.name == current_competition_category">
+      <div class="container">
+          <a *ngFor="let event of category.events, let i=index" class="button" routerLink="{{event.name}}">
+              <!-- <b> {{event.name}} </b> <br>
+              {{event.subtitle}} -->
+            <div class="responsive">
+              <div class="gallery">
+                <a target="_blank" href="#">
+                  <img *ngIf="i%3==0" src='../../../assets/compi/Asset 18.png'  width="600" height="400">
+                  <img *ngIf="i%3==1" src='../../../assets/compi/Asset 19.png'  width="600" height="400">
+                  <img *ngIf="i%3==2" src='../../../assets/compi/Asset 20.png'  width="600" height="400">
+              </a>  
+                <div class="desc"><b>{{event.name}}</b></div>
+                <div class="subdesc">{{event.subtitle}}</div>
+              </div>  
+            </div>  
+   
+      
+      </a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<img src="../../../assets/compi/compi2.png" class="bg1">
+<!-- <img src="../../assets/compi/Asset 13Selected.png" class="bg2"> -->
+
+
+
+<!-- <div class="container">
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="#">
+        <img src="../../assets/compi/genre/dance.png" width="600" height="400">
+      </a>
+      <div class="desc"><b>DANCE</b></div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="#">
+        <img src="../../assets/compi/genre/music.png" width="600" height="400">
+      </a>
+      <div class="desc"><b>MUSIC</b></div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="#">
+        <img src="../../assets/compi/genre/dram.png" width="600" height="400">
+      </a>
+      <div class="desc"><b>DRAMATICS</b></div>
+    </div>
+  </div>
+
+
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="#">
+        <img src="../../assets/compi/genre/speaku.png" width="600" height="400">
+      </a>
+      <div class="desc"><b>SPEAKING ARTS</b></div>
+    </div>
+
+</div>
+</div>
+<div class="container">
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="#">
+        <img src="../../assets/compi/genre/literary.png" width="600" height="400">
+      </a>
+      <div class="desc"><b>LITERARY ARTS</b></div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="#">
+        <img src="../../assets/compi/genre/lifestyle.png" width="600" height="400">
+      </a>
+      <div class="desc"><b>LIFESTYLE</b></div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="#">
+        <img src="../../assets/compi/genre/fa.png" width="600" height="400">
+      </a>
+      <div class="desc"><b>FINE ARTS</b></div>
+    </div>
+  </div>
+
+
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="#">
+        <img src="../../assets/compi/genre/dada.png" width="600" height="400">
+      </a>
+      <div class="desc"><b>DESIGN & DIGITAL ARTS</b></div>
+    </div>
+
+</div>
+
+  </div>
+ -->
