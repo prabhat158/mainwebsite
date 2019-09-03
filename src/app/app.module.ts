@@ -26,6 +26,7 @@ import { FifthComponent } from './accommodation/fifth/fifth.component';
 import { ReghomeComponent } from './registration/reghome/reghome.component';
 import { RegformComponent } from './registration/regform/regform.component';
 import { RegprofileComponent } from './registration/regprofile/regprofile.component';
+import { EventsHomeComponent } from './events/events-home/events-home.component';
 
 @NgModule({
   declarations: [
@@ -48,12 +49,13 @@ import { RegprofileComponent } from './registration/regprofile/regprofile.compon
     FifthComponent,
     ReghomeComponent,
     RegformComponent,
-    RegprofileComponent
+    RegprofileComponent,
+    EventsHomeComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      
+
 
 
       {path:'',component:HomeComponent},
@@ -66,7 +68,7 @@ import { RegprofileComponent } from './registration/regprofile/regprofile.compon
         {path: 'previous winners', component: FifthComponent},
       ]
     },
-      
+
       {
         path:'registration',
         component:RegistrationComponent,
@@ -75,10 +77,14 @@ import { RegprofileComponent } from './registration/regprofile/regprofile.compon
           {path: 'form', component: RegformComponent},
           {path: 'profile', component: RegprofileComponent},
         ]
-       
+
       },
-      {path:'events',component:EventsComponent,
-     
+      {path: 'events',
+        component: EventsComponent,
+        children: [
+          {path: '', component: EventsHomeComponent},
+        ]
+
     },
       {path:'faqs',component:FaqsComponent},
       {path:'sponsors',component:SponsorsComponent},
