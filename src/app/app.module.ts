@@ -15,6 +15,17 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { CompetitionHomeComponent } from './competition/competition-home/competition-home.component';
+import { CompetitionListComponent } from './competition/competition-list/competition-list.component';
+import { CompetitionDetailComponent } from './competition/competition-detail/competition-detail.component';
+import { FirstComponent } from './accommodation/first/first.component';
+import { SecondComponent } from './accommodation/second/second.component';
+import { ThirdComponent } from './accommodation/third/third.component';
+import { FourthComponent } from './accommodation/fourth/fourth.component';
+import { FifthComponent } from './accommodation/fifth/fifth.component';
+import { ReghomeComponent } from './registration/reghome/reghome.component';
+import { RegformComponent } from './registration/regform/regform.component';
+import { RegprofileComponent } from './registration/regprofile/regprofile.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +37,18 @@ import { RouterModule, Routes } from '@angular/router';
     EventsComponent,
     FaqsComponent,
     RegistrationComponent,
-    SponsorsComponent
+    SponsorsComponent,
+    CompetitionHomeComponent,
+    CompetitionListComponent,
+    CompetitionDetailComponent,
+    FirstComponent,
+    SecondComponent,
+    ThirdComponent,
+    FourthComponent,
+    FifthComponent,
+    ReghomeComponent,
+    RegformComponent,
+    RegprofileComponent
   ],
   imports: [
     BrowserModule,
@@ -36,12 +58,23 @@ import { RouterModule, Routes } from '@angular/router';
 
       {path:'',component:HomeComponent},
       {path:'accommodation',component:AccommodationComponent,
-
+      children: [
+        {path: 'reach us', component: FirstComponent},
+        {path: 'prizes & lyps', component: SecondComponent},
+        {path: 'faq', component: ThirdComponent},
+        {path: 'register', component: FourthComponent},
+        {path: 'previous winners', component: FifthComponent},
+      ]
     },
       
       {
         path:'registration',
         component:RegistrationComponent,
+        children: [
+          {path: '', component: ReghomeComponent},
+          {path: 'form', component: RegformComponent},
+          {path: 'profile', component: RegprofileComponent},
+        ]
        
       },
       {path:'events',component:EventsComponent,
@@ -53,9 +86,24 @@ import { RouterModule, Routes } from '@angular/router';
       {
         path:'competition',
         component:CompetitionComponent,
-        
-      },
-    ]),
+        children: [
+          {path: '', component: CompetitionHomeComponent },
+          {path: ':compiName', component: CompetitionListComponent},
+          {
+            path: ':compiName/:eventName',
+            component: CompetitionDetailComponent,
+            children: [
+              {path: '', redirectTo: 'comp-desc', pathMatch:'full'},
+              // {path: 'comp-desc', component:CompDescRulesComponent},
+              // {path: 'comp-prizes', component:CompPrizesComponent},
+              // {path: 'comp-faq', component:CompFaqComponent},
+              // {path: 'comp-reg', component:CompRegComponent},
+              // {path: 'comp-prev-winner', component:CompPrevWinnerComponent},
+            ]
+          },
+      ],
+    },
+  ]),
     HttpClientModule,
     ReactiveFormsModule
   ],
