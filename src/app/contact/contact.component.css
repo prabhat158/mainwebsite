@@ -1,0 +1,62 @@
+.background {
+    width:100%;
+    height:100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: -4;
+    background-color: #FFE88B;
+}
+
+.bg2 {
+    width:100%;
+    height:20%;
+    position: absolute;
+    top: 70%;
+    left: 0%;
+    z-index: -3;
+}
+
+.bg3 {
+    width:100%;
+    height:80%;
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    z-index: -2;
+}
+
+.bg4 {
+    width:100%;
+    height:20%;
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    z-index: -1;
+}
+competition
+.heading{
+    text-align:center;
+    position:absolute;
+    top:15%;
+    width:100%;
+}
+.heading h1{
+    font-size:170px;
+}
+
+.deps{
+    text-align:left;
+    top:35%;
+    left:12%;
+    position:absolute;
+}
+
+.deps a{
+    text-decoration: none;
+    color:black;
+    padding:20px;
+    font-size:15px;
+    font-family:lato;
+
+}
