@@ -18,6 +18,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { CompetitionHomeComponent } from './competition/competition-home/competition-home.component';
 import { CompetitionListComponent } from './competition/competition-list/competition-list.component';
 import { CompetitionDetailComponent } from './competition/competition-detail/competition-detail.component';
+import { FirstComponent } from './accommodation/first/first.component';
+import { SecondComponent } from './accommodation/second/second.component';
+import { ThirdComponent } from './accommodation/third/third.component';
+import { FourthComponent } from './accommodation/fourth/fourth.component';
+import { FifthComponent } from './accommodation/fifth/fifth.component';
+import { ReghomeComponent } from './registration/reghome/reghome.component';
+import { RegformComponent } from './registration/regform/regform.component';
+import { RegprofileComponent } from './registration/regprofile/regprofile.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +40,15 @@ import { CompetitionDetailComponent } from './competition/competition-detail/com
     SponsorsComponent,
     CompetitionHomeComponent,
     CompetitionListComponent,
-    CompetitionDetailComponent
+    CompetitionDetailComponent,
+    FirstComponent,
+    SecondComponent,
+    ThirdComponent,
+    FourthComponent,
+    FifthComponent,
+    ReghomeComponent,
+    RegformComponent,
+    RegprofileComponent
   ],
   imports: [
     BrowserModule,
@@ -42,12 +58,23 @@ import { CompetitionDetailComponent } from './competition/competition-detail/com
 
       {path:'',component:HomeComponent},
       {path:'accommodation',component:AccommodationComponent,
-
+      children: [
+        {path: 'reach us', component: FirstComponent},
+        {path: 'prizes & lyps', component: SecondComponent},
+        {path: 'faq', component: ThirdComponent},
+        {path: 'register', component: FourthComponent},
+        {path: 'previous winners', component: FifthComponent},
+      ]
     },
       
       {
         path:'registration',
         component:RegistrationComponent,
+        children: [
+          {path: '', component: ReghomeComponent},
+          {path: 'form', component: RegformComponent},
+          {path: 'profile', component: RegprofileComponent},
+        ]
        
       },
       {path:'events',component:EventsComponent,
