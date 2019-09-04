@@ -62,10 +62,14 @@
 }
 
 .btn_group{
-    /* width: 100%; */
+    /* width: 50%; */
     position: relative;
     margin-left: 10%;
+    margin-right: 59%;
     padding: 1%;
+    /* background-color: azure; */
+    /* display: inline-block; */
+    /* float: left; */
     /* top: 50%; */
     /* margin-left:13%; */
     /* top: 35%; */
