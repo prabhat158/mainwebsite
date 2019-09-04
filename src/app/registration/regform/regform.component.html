@@ -1,31 +1,34 @@
-
-
-
-<div style="overflow: hidden"  class="full-color">
+<div style="overflow: hidden" class="full-color" xmlns:searchFilter="http://www.w3.org/1999/xhtml">
   <img src="../../../assets/reg/Asset%2031withbg.png" class="bg1">
-  
+
   <div>
-  
+
     <br><br><br><br><br>
-  
+
     <h1 class="headr"><b>Reg Form</b></h1>
-  
+
     <br><br><br><br><br>
   <div class="container">
     <div class="regform">
       <form [formGroup]="form">
         <table>
           <tr>
-            <td><label for="name">NAME:</label></td>
-            <td><input id="name" placeholder="Your Name"></td>
+            <td class="text"><label for="name">NAME:</label></td>
+            <td class="input"><input id="name" placeholder="Your Name"></td>
           </tr>
           <tr>
             <td><label for="mobile">MOBILE:</label></td>
             <td><input id="mobile" placeholder="Your Mobile No."></td>
           </tr>
           <tr>
-            <td><label for="currentclg">CURRENT COLLEGE:</label></td>
-            <td><input id="currentclg" placeholder="Select Your College"></td>
+            <td><label for="currentclg">CURRENT COLLEGE: {{college}}</label></td>
+            <td (blur)="showDropDown = false"><input [value] = '' id="currentclg" (click)="toggleDropDown()" placeholder="{{college}}" (blur)="selectValue($event.target.value, $event.relatedTarget.)">
+              <div class="dropdown" *ngIf="showDropDown">
+                <div (click)="selectValue(s)" class="dropdown-option" *ngFor="let s of list" (blur)="showDropDown = false">
+                  {{s}}
+                </div>
+              </div>
+            </td>
           </tr>
           <tr>
             <td><label for="currentcity">CURRENT CITY OF STAY:</label></td>
@@ -43,13 +46,18 @@
             <td><label for="gender">GENDER:</label></td>
             <td><input id="gender" placeholder="Select Your Gender"></td>
           </tr>
+          <tr>
+            <td>
+            <button (click)="printAll()">Submit</button>
+            </td>
+          </tr>
         </table>
       </form>
     </div>
   </div>
-    
+
   </div>
 
   <img src="../../assets/reg/Asset 28.png" class="bg2">
-  
+
   </div>
