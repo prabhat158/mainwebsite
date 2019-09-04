@@ -69,9 +69,3 @@ div.desc {
   width: 25%;
   /* margin-left: 40px; */
 }
-
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
-}
