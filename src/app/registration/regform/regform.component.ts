@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {FormGroup} from '@angular/forms';
 
 @Component({
@@ -8,10 +8,12 @@ import {FormGroup} from '@angular/forms';
 })
 export class RegformComponent implements OnInit {
 
-  list = ['option 1', 'option 2', 'option 3', 'option 4', 'option 5', 'option 6', 'option 7', 'option 8', 'option 9'];
-  showDropDown = false;
-  college = 'Select Your College ';
-  inputOff = true;
+  list = ['option 1', 'option 2', 'option 3'];
+  genders = ['Male', 'Female', 'Other'];
+  showDropDownClg = false;
+  showDropDownGen = false;
+  chosen = '';
+  chosengender = '';
 
   constructor() {
   }
@@ -20,17 +22,31 @@ export class RegformComponent implements OnInit {
 
   ngOnInit() {
   }
-  toggleDropDown() {
-    this.showDropDown = !this.showDropDown;
-
+  toggleDropDownClg() {
+    this.showDropDownClg = !this.showDropDownClg;
+  }
+  closeDropDownClg() {
+    this.showDropDownClg = false;
   }
   printAll() {
 
   }
-  selectValue(value) {
-    this.college = value;
-    console.log(this.college);
-    this.showDropDown = false;
-    // this.stateForm.patchValue({search: value});
+  selectValueClg(value) {
+    this.chosen = value;
+    this.showDropDownGen = false;
+  }
+
+  toggleDropDownGen() {
+    this.showDropDownGen = !this.showDropDownGen;
+  }
+  closeDropDownGen() {
+    this.showDropDownGen = false;
+  }
+  printAll() {
+
+  }
+  selectValueGen(value) {
+    this.chosengender = value;
+    this.showDropDownGen = false;
   }
 }

@@ -28,7 +28,7 @@ import { RegformComponent } from './registration/regform/regform.component';
 import { RegprofileComponent } from './registration/regprofile/regprofile.component';
 import { EventsHomeComponent } from './events/events-home/events-home.component';
 import { LottieAnimationViewModule } from 'ng-lottie';
-
+import { ClickOutsideModule } from 'ng-click-outside';
 
 
 @NgModule({
@@ -59,6 +59,7 @@ import { LottieAnimationViewModule } from 'ng-lottie';
     
     LottieAnimationViewModule.forRoot(),
     BrowserModule,
+    ClickOutsideModule,
     RouterModule.forRoot([
 
 

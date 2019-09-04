@@ -21,10 +21,10 @@
             <td><input id="mobile" placeholder="Your Mobile No."></td>
           </tr>
           <tr>
-            <td><label for="currentclg">CURRENT COLLEGE: {{college}}</label></td>
-            <td (blur)="showDropDown = false"><input [value] = '' id="currentclg" (click)="toggleDropDown()" placeholder="{{college}}">
-              <div class="dropdown" *ngIf="showDropDown">
-                <div (click)="selectValue(s)" class="dropdown-option" *ngFor="let s of list" (blur)="showDropDown = false">
+            <td><label for="currentclg">CURRENT COLLEGE:</label></td>
+            <td (blur)="showDropDownClg = false"><input value={{chosen}} id="currentclg" (click)="toggleDropDownClg()" (clickOutside)="closeDropDownClg()" placeholder="Select Your College" autocomplete="none">
+              <div class="dropdown" *ngIf="showDropDownClg">
+                <div (click)="selectValueClg(s)" class="dropdown-option" *ngFor="let s of list" (blur)="showDropDownClg = false">
                   {{s}}
                 </div>
               </div>
@@ -44,7 +44,13 @@
           </tr>
           <tr>
             <td><label for="gender">GENDER:</label></td>
-            <td><input id="gender" placeholder="Select Your Gender"></td>
+            <td (blur)="showDropDownGen = false"><input value={{chosengender}} id="gender" placeholder="Select Your Gender" (click)="toggleDropDownGen()" (clickOutside)="closeDropDownGen()" autocomplete="none">
+              <div class="dropdown" *ngIf="showDropDownGen">
+                <div (click)="selectValueGen(g)" class="dropdown-option" *ngFor="let g of genders" (blur)="showDropDownGen = false">
+                  {{g}}
+                </div>
+              </div>
+            </td>
           </tr>
           <tr>
             <td>

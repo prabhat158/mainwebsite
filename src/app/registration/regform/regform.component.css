@@ -70,22 +70,16 @@ div.desc {
   /* margin-left: 40px; */
 }
 
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
-}
-
-
 .regform{
   width: 100%;
   align-self: center;
   top: 0;
+  color: white;
 }
 
 label {
   margin-left: 0px;
-  font-size: 20px;
+  font-size: 18px;
   font-family: Verdana, cursive;
   margin-top: 0px;
   color: white;
@@ -119,21 +113,60 @@ td.input {
 }
 .dropdown{
   position: absolute;
-  width: 70%;
+  width: 75%;
   padding-left: 10%;
+  padding-right: 5%;
   align-content: center;
   child-align: middle;
-  max-height: 100px;
+  max-height: 217px;
   z-index: 1;
   overflow-y: auto;
+  border-radius: 2em;
+  color: black;
 }
+
+.dropdown::-webkit-scrollbar { width: 0 !important }
+
 .dropdown-option{
   font-size: large;
-  background-color: #32B4FF80;
+  background-color: white;
+  border-radius: 2em;
+  height: 10%;
+  padding: 1.5%;
 }
 .dropdown-option:hover{
-  background-color: #32B4FFA0;
+  background-color: cadetblue;
 }
 .dropdown div{
   width: 80%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .responsive {
+    width: 100%;
+  }
+  label {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .responsive {
+    width: 100%;
+  }
+  label {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+  label {
+    font-size: 10px;
+  }
+  .dropdown {
+    padding-right: 8%;
+  }
 }
