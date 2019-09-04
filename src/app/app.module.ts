@@ -28,6 +28,7 @@ import { RegformComponent } from './registration/regform/regform.component';
 import { RegprofileComponent } from './registration/regprofile/regprofile.component';
 import { EventsHomeComponent } from './events/events-home/events-home.component';
 import { LottieAnimationViewModule } from 'ng-lottie';
+import { CollegelistPipe } from './registration/regform/collegelist.pipe';
 
 
 
@@ -53,7 +54,8 @@ import { LottieAnimationViewModule } from 'ng-lottie';
     ReghomeComponent,
     RegformComponent,
     RegprofileComponent,
-    EventsHomeComponent
+    EventsHomeComponent,
+    CollegelistPipe
   ],
   imports: [
     
