@@ -12,83 +12,75 @@
 .bg1 {
     z-index: -3;
     width:100%;
+    /* height:100%; */
     position: absolute;
     top: 0px;
-    left: 0px;
-}   
+    left: 0;
+    right: 0;
+    bottom: -500px;
+    z-index: -4;
+    background-color: #2CE201;
+    /* overflow-y: hidden; */
 
-.bg2 {
-    
-    z-index: -1;
+    background-repeat: repeat-y;
+    /* overflow-y: scroll; */
+}
+
+
+/* .bg2 {
     width:100%;
+    height:50%;
     position: absolute;
-    /* bottom: 0px; */
-    left: 0px;
-    /* clip: rect(0,0, 100,0); */
-    /* overflow: hidden;    */
-    /* max-height: 120px; */
+    top: 70%;
+    left: 0%;
+    z-index: -4;
+} */
 
+.bg3 {
+    width:100%;
+    /* height:auto; */
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    /* top: 5%; */
+    /* margin-top: 20px; */
+    /* left: 0%; */
+    z-index: -2;
 }
 
-.full-color{
-  background-color:  	#32B4FF;
-  position: absolute;
-  /* height:100vh; */
-  top:0; 
-   bottom:-400px; 
-   right:0; 
-   left:0; 
-   background-repeat: repeat-y;
-   overflow-y: scroll;
-   z-index: -150; 
+.bg4 {
+    width:100%;
+    /* height:auto; */
+    position: absolute;
+    left: 0%;
+    /* margin-top: -20%; */
+    /* position: -webkit-sticky; */
+    /* position: sticky; */
+    /* margin-bottom:80%; *50%/
+    /* left: 0%; */
+    /* top: 0%; */
+    bottom: -500px;
+    z-index: -1;
 }
 
-
-.container{
-    /* margin-left: 180px; */
+.main_heading{
     position: relative;
+    font-size: 190px;
+    font-family: Welcome;
+    width:100%;
     text-align: center;
-}
-
-.headr{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 70px;
-    top: 90px;
+    /* top: 20%;  */
     color: white;
-    position: relative;
-    text-align: center;
 }
 
-  div.gallery img {
-    width: 80%;
-    height: auto;
-  }
-  
-  div.desc {
-    text-align: center;
-    font-size: 25px;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  .responsive {
-    padding: 30px 30px;
-    float: left;
-    width: 25%;
-    /* margin-left: 40px; */
-  }
-  
-  @media only screen and (max-width: 500px) {
-    .responsive {
-      width: 100%;
-    }
-  }
-
-  .btn_group{
-    width: 100%;
-    
+.btn_group{
+    /* width: 100%; */
+    position: relative;
+    margin-left: 10%;
+    padding: 1%;
+    /* top: 50%; */
+    /* margin-left:13%; */
+    /* top: 35%; */
 }
 
 .btn_group a{
