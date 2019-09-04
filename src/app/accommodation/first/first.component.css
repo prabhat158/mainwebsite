@@ -1,9 +1,9 @@
 .main_content {
     width: 50%;
     position: absolute;
-    left: 40%;
-    top: 35%;
-    bottom: 30%;
+    margin-left: 40%;
+    top: 42%;
+    bottom: 20%;
     color: white;
     font-size: 15px;
 
