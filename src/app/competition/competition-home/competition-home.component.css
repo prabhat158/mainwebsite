@@ -1,14 +1,4 @@
 
-
-.background {
-    height: 50%;
-    width: 50%;
-    /* width: 100%;  */
-    top: 0; left: 0; 
-    background-size: cover;
-    position: fixed;
-}
-
 .bg1 {
     z-index: -3;
     width:100%;
@@ -21,7 +11,7 @@
     
     z-index: -1;
     width:100%;
-    position: absolute;
+    /* position: absolute; */
     /* bottom: 0px; */
     left: 0px;
     /* clip: rect(0,0, 100,0); */
@@ -35,11 +25,11 @@
   position: absolute;
   /* height:100vh; */
   top:0; 
-   bottom:-400px; 
+  
    right:0; 
    left:0; 
-   background-repeat: repeat-y;
-   overflow-y: scroll;
+   
+   
    z-index: -150; 
 }
 
