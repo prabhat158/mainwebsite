@@ -27,6 +27,9 @@ import { ReghomeComponent } from './registration/reghome/reghome.component';
 import { RegformComponent } from './registration/regform/regform.component';
 import { RegprofileComponent } from './registration/regprofile/regprofile.component';
 import { EventsHomeComponent } from './events/events-home/events-home.component';
+import { LottieAnimationViewModule } from 'ng-lottie';
+
+
 
 @NgModule({
   declarations: [
@@ -53,6 +56,8 @@ import { EventsHomeComponent } from './events/events-home/events-home.component'
     EventsHomeComponent
   ],
   imports: [
+    
+    LottieAnimationViewModule.forRoot(),
     BrowserModule,
     RouterModule.forRoot([
 

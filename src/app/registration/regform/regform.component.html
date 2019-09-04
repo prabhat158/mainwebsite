@@ -22,7 +22,7 @@
           </tr>
           <tr>
             <td><label for="currentclg">CURRENT COLLEGE: {{college}}</label></td>
-            <td (blur)="showDropDown = false"><input [value] = '' id="currentclg" (click)="toggleDropDown()" placeholder="{{college}}" (blur)="selectValue($event.target.value, $event.relatedTarget.)">
+            <td (blur)="showDropDown = false"><input [value] = '' id="currentclg" (click)="toggleDropDown()" placeholder="{{college}}">
               <div class="dropdown" *ngIf="showDropDown">
                 <div (click)="selectValue(s)" class="dropdown-option" *ngFor="let s of list" (blur)="showDropDown = false">
                   {{s}}
