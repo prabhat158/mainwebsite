@@ -10,7 +10,7 @@
 .regform{
   width: 100%;
   align-self: center;
-  position: relative;
+  position: absolute;
   top: 0;
 }
 
@@ -20,19 +20,22 @@ label {
   font-family: Verdana, cursive;
   margin-top: 0px;
   color: white;
+  width: 50%;
+  margin-left: 20%;
+  text-align: right;
 }
 
 input {
   display: table-cell;
   position: relative;
-  left: 40px !important;
+  /*left: 40px !important;*/
   border: groove white!important;
   border-width: 15px;
   border-radius: 2em;
   padding: 0.6em 1.4em;
   font-size: 15px;
   background-color: transparent;
-  margin: 10px 30px;
-  width: 170%;
+  margin: 10px 0;
+  width: 100%;
   outline: none;
 }
