@@ -1,0 +1,9 @@
+.reg_background{
+  width:100%;
+  min-height:50vh;
+  /*height: 100%;*/
+  top: 0px;
+  left: 0px;
+  z-index: -4;
+  background-color: #CC8BFF;
+}
