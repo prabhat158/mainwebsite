@@ -1,3 +1,48 @@
-<p>
-  competition-detail works!
-</p>
+
+<div style="overflow: hidden" class="full-color">
+  <img src="../../../assets/compi/compi3.png" class="bg1">
+
+<div *ngFor="let category of competitions_categories">
+  <div *ngIf="category.name == current_competition_category">
+    <div *ngFor="let event of category.events">
+      <div *ngIf="event.name == current_event">
+
+        <p class="headr">{{event.name}}</p>
+
+    
+        <div class="btn-group" style="top:295px">
+          
+            <a routerLink="comp-desc">
+              <button (click)="onClick('desc')" [ngClass]="{'clicked': clickedButton=='desc'}">Description & Rules</button>
+            </a>
+            <a routerLink="comp-prizes">
+              <button (click)="onClick('prizes')" [ngClass]="{'clicked': clickedButton=='prizes'}">Prizes & LYPs</button>
+            </a>
+            <a routerLink="comp-faq">
+              <button (click)="onClick('faq')" [ngClass]="{'clicked': clickedButton=='faq'}">FAQs</button>
+            </a>
+            <a routerLink="comp-reg">
+              <button (click)="onClick('reg')" [ngClass]="{'clicked': clickedButton=='reg'}">Register</button>
+            </a>
+            <a routerLink="comp-prev-winner">
+              <button (click)="onClick('winner')" [ngClass]="{'clicked': clickedButton=='winner'}">Previous Winners</button>
+            </a>
+        </div>
+
+        <div class="description">
+          <router-outlet></router-outlet>
+        </div>
+
+       
+
+        
+
+
+      </div>
+    </div>
+  </div>
+  
+
+</div>
+<img src="../../assets/compi/Asset 13Selected.png" class="bg2">
+</div>
