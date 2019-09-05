@@ -8,28 +8,28 @@
 }
 
 .bg1 {
+  background-color: #ADE2FF;
     z-index: -3;
     width:100%;
-    /* height:100%; */
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0px;
-    overflow-y: hidden;
 }   
+ 
 
 .bg2 {
-    z-index: -1;
-    width:100%;
-    height:23%;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    /* overflow: hidden;    */
-    /* max-height: 120px; */
+  z-index: -1;
+  width:100%;
+  /* position: absolute; */
+  /* bottom: 0px; */
+  left: 0px;
+  /* clip: rect(0,0, 100,0); */
+  /* overflow: hidden;    */
+  /* max-height: 120px; */
 
 }
 
-.btn-group{
+/* .btn-group{
     
     width: 100%;
     position: absolute;
@@ -62,7 +62,7 @@
     color: rgba(0, 0, 0, 0.5) !important;
     background-color: white !important; 
     outline: none !important;
-}
+} */
 
 /* 
 .back{
@@ -78,28 +78,34 @@
     overflow: hidden;
 } */
 
+
+.full-color{
+  background-color:  	#32B4FF !important;
+  position: absolute;
+  /* height:100vh; */
+  top:0; 
+  
+   right:0; 
+   left:0; 
+   
+   
+   z-index: -150; 
+}
+
+
 .container{
-    /* margin-left: 180px; */
-    /* position: relative;
-    text-align: center; */
-    width: 75%;
-position: fixed;
-left: 50%;
-margin-left: -37.5%;
-overflow-y: auto;
-top: 310px;
-bottom: 0px;
+  /* margin-left: 180px; */
+  position: relative;
+  text-align: center;
 }
-
 .headr{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 70px;
-    top: 90px;
-    color: white;
-    position: relative;
-    text-align: center;
+  font-family: Welcome;
+  font-size: 200px;
+  top: 90px;
+  color: white;
+  position: relative;
+  text-align: center;
 }
-
   div.gallery img {
     width: 80%;
     height: auto;
@@ -107,21 +113,18 @@ bottom: 0px;
   
   div.desc {
     text-align: center;
-    font-size: 340%;
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
-    position: relative;
-    top: -170px;
+    font-size: 25px;
   }
+  
 
-  div.subdesc {
-    text-align: center;
-    font-size: 140%;
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
-    position: relative;
-    top: -170px;
-  }
+    /* div.subdesc {
+      text-align: center;
+      font-size: 140%;
+      font-family: Arial, Helvetica, sans-serif;
+      color: black;
+      position: relative;
+      top: -170px;
+    } */
   
   * {
     box-sizing: border-box;

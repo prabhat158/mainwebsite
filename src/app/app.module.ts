@@ -31,6 +31,11 @@ import { LottieAnimationViewModule } from 'ng-lottie';
 
 import { CollegelistPipe } from './registration/regform/collegelist.pipe';
 import { ClickOutsideModule } from 'ng-click-outside';
+import { CompDescRulesComponent } from './competition/competition-detail/comp-desc-rules/comp-desc-rules.component';
+import { CompFaqComponent } from './competition/competition-detail/comp-faq/comp-faq.component';
+import { CompPrevWinnerComponent } from './competition/competition-detail/comp-prev-winner/comp-prev-winner.component';
+import { CompPrizesComponent } from './competition/competition-detail/comp-prizes/comp-prizes.component';
+import { CompRegComponent } from './competition/competition-detail/comp-reg/comp-reg.component';
 
 
 
@@ -57,7 +62,12 @@ import { ClickOutsideModule } from 'ng-click-outside';
     RegformComponent,
     RegprofileComponent,
     EventsHomeComponent,
-    CollegelistPipe
+    CollegelistPipe,
+    CompDescRulesComponent,
+    CompFaqComponent,
+    CompPrevWinnerComponent,
+    CompPrizesComponent,
+    CompRegComponent
   ],
   imports: [
 
@@ -111,11 +121,11 @@ import { ClickOutsideModule } from 'ng-click-outside';
             component: CompetitionDetailComponent,
             children: [
               {path: '', redirectTo: 'comp-desc', pathMatch:'full'},
-              // {path: 'comp-desc', component:CompDescRulesComponent},
-              // {path: 'comp-prizes', component:CompPrizesComponent},
-              // {path: 'comp-faq', component:CompFaqComponent},
-              // {path: 'comp-reg', component:CompRegComponent},
-              // {path: 'comp-prev-winner', component:CompPrevWinnerComponent},
+              {path: 'comp-desc', component:CompDescRulesComponent},
+              {path: 'comp-prizes', component:CompPrizesComponent},
+              {path: 'comp-faq', component:CompFaqComponent},
+              {path: 'comp-reg', component:CompRegComponent},
+              {path: 'comp-prev-winner', component:CompPrevWinnerComponent},
             ]
           },
       ],
