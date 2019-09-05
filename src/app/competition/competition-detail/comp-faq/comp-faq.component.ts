@@ -1,16 +1,14 @@
 
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CompetitionDataService } from '../competition-data.service';
+import { CompetitionDataService } from '../../competition-data.service';
 
 @Component({
-  selector: 'app-competition-detail',
-  templateUrl: './competition-detail.component.html',
-  styleUrls: ['./competition-detail.component.css']
+  selector: 'app-comp-faq',
+  templateUrl: './comp-faq.component.html',
+  styleUrls: ['./comp-faq.component.css']
 })
-export class CompetitionDetailComponent implements OnInit {
-
-  clickedButton:string;
+export class CompFaqComponent implements OnInit {
 
   competitions_categories: any[];
   current_competition_category: string;
@@ -24,24 +22,18 @@ export class CompetitionDetailComponent implements OnInit {
   getCategories(){
     this.dataService.getCategories()
       .subscribe(
-        data=> {
+        data=> {  
           this.competitions_categories = data['Competitions'];
         }
     );
   }  
 
-  onClick(button){
-    this.clickedButton = button;
-  }
-
   ngOnInit() {
-    
-    this.clickedButton='desc';
     this.getCategories();
-    this.route.params.subscribe(
+    this.route.parent.params.subscribe(
       params => {
         this.current_competition_category = params.compiName,
-        this.current_event = params.eventName
+        this.current_event = params.eventName 
       }
     );
   }
