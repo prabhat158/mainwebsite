@@ -25,13 +25,21 @@ export class CollegelistPipe implements PipeTransform {
     if(term === undefined) return people;
     //return updates people array
 
-    var objs: any[] = [];
+    // var objs: any[] = [];
+    // for (let i of people){
+    //   if (i.includes(term))
+    //     objs.push(i);
+    // }
+    // console.log(objs);
+    // return objs;
+
+    var result:any[]=[];
     for (let i of people){
-      if (i.includes(term))
-        objs.push(i);
+      if(this.is_substring(String(term),i)){
+      result.push(i);}
+
     }
-    console.log(objs);
-    return objs;
+    return result;
 
   }
 

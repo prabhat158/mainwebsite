@@ -20,7 +20,7 @@ const httpOptions={
 })
 export class RegformComponent implements OnInit {
 
-  people = ['option 1', 'option 2', 'option 3','ok'];
+  people = ['Indian Institute of Tech Bombay', 'Indian Institute of Tech Delhi', 'Indian Institute of Tech Kanpur','IIIT Pune','Bits Pilani'];
   genders = ['Male', 'Female', 'Other'];
   showDropDownClg = false;
   showDropDownGen = false;
