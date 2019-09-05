@@ -1,10 +1,15 @@
-<div class="back">
+<div style="overflow: hidden" class="full-color">
+<img src="../../../assets/compi/compi2.png" class="bg1">
 
-  <br><br><br><br><br>
 
-  <h1 class="headr"><b>{{current_competition_category}}</b></h1>
+<div>
 
-  <br><br><br><br><br>
+  
+  <br><br>
+
+  <p class="headr">{{current_competition_category}}</p>
+
+  <br><br>
 
 <div *ngFor="let category of competitions_categories">
   <div *ngIf="category.name == current_competition_category">
@@ -31,16 +36,16 @@
 </div>
 
 </div>
+<img src="../../assets/compi/Asset 13Selected.png" class="bg2">
 
 
 
 
 
+</div>  
 
 
 
-
-<img src="../../../assets/compi/compi2.png" class="bg1">
 <!-- <img src="../../assets/compi/Asset 13Selected.png" class="bg2"> -->
 
 
