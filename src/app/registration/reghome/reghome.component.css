@@ -5,10 +5,10 @@
   position: absolute;
   top: 0px;
   left: 0px;
-}   
+}
 
 .bg2 {
-  
+
   z-index: -1;
   width:100%;
   /* position: absolute; */
@@ -24,13 +24,13 @@
 background-color:  	#AF32FF;
 position: absolute;
 /* height:100vh; */
-top:0; 
+top:0;
 
- right:0; 
- left:0; 
- 
- 
- z-index: -150; 
+ right:0;
+ left:0;
+
+
+ z-index: -150;
 }
 
 
@@ -68,4 +68,21 @@ div.desc {
   float: left;
   width: 25%;
   /* margin-left: 40px; */
+}
+.btn{
+
+  text-align: center;
+  font-size: 15px;
+  font-family: Verdana;
+
+
+  border: groove black!important;
+  border-width: 0 1px;
+
+  background-color: transparent;
+  cursor: pointer;
+  width:auto;
+  padding: 0.3em 1.9em;
+  border-radius: 2em;
+  outline: none !important;
 }

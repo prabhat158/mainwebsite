@@ -1,6 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import {FormGroup} from '@angular/forms';
+import { Component,NgZone, OnInit} from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
+import { DataService } from '../data.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+
+
+const httpOptions={
+  headers: new HttpHeaders({
+    'Content-Type':'application/json',
+    'Authorization':'my-auth-token',
+
+  })
+}
 @Component({
   selector: 'app-regform',
   templateUrl: './regform.component.html',
@@ -8,29 +20,94 @@ import {FormGroup} from '@angular/forms';
 })
 export class RegformComponent implements OnInit {
 
-  list = ['option 1', 'option 2', 'option 3', 'option 4', 'option 5', 'option 6', 'option 7', 'option 8', 'option 9'];
-  showDropDown = false;
-  college = 'Select Your College ';
-  inputOff = true;
+  people = ['option 1', 'option 2', 'option 3','ok'];
+  genders = ['Male', 'Female', 'Other'];
+  showDropDownClg = false;
+  showDropDownGen = false;
 
-  constructor() {
-  }
+  chosengender
+  college
+  name = this.transfereService.getName();   
+  email= this.transfereService.getEmail();
+  uid=this.transfereService.getUid();
+  mobile
+  city
+  pin
+  year
+
+  constructor(
+
+    private _ngZone: NgZone,
+    private activatedRoute: ActivatedRoute,
+    private http: HttpClient,
+    private transfereService:DataService,
+    private router:Router) {
+    }
 
   form = new FormGroup({});
 
   ngOnInit() {
+    if(this.uid==undefined){
+      this._ngZone.run(() => this.router.navigate(['/'],{relativeTo: this.activatedRoute.parent}));
+    }else{
+      // console.log(this.uid)
+    }
   }
-  toggleDropDown() {
-    this.showDropDown = !this.showDropDown;
+  toggleDropDownClg() {
+    this.showDropDownClg = !this.showDropDownClg;
+  }
+  closeDropDownClg() {
+    this.showDropDownClg = false;
+  }
+  selectValueClg(value) {
 
+    console.log("value")
+    console.log(value)
+    this.college = value;
+    this.showDropDownGen = false;
+  }
+
+  toggleDropDownGen() {
+    this.showDropDownGen = !this.showDropDownGen;
+  }
+  closeDropDownGen() {
+    this.showDropDownGen = false;
   }
   printAll() {
 
   }
-  selectValue(value) {
-    this.college = value;
-    console.log(this.college);
-    this.showDropDown = false;
-    // this.stateForm.patchValue({search: value});
+  selectValueGen(value) {
+    this.chosengender = value;
+    this.showDropDownGen = false;
   }
+
+  createuser(){
+    // console.log(this.chosengender + this.city +this.college+this.mobile)
+    this.http.post("https://api2.moodi.org/user/create",
+    {
+      name: this.name,
+      mobile_number: this.mobile,
+      year_of_study:"First",
+      gender:this.chosengender,
+      zip_code:this.pin,
+      google_id:this.uid,
+      email:this.email,
+      present_city:this.city,
+      present_college:this.college,
+      postal_address:'NotMulticity',
+      dob:"111",
+      cr_referral_code:'',
+      status:"reg"
+    },httpOptions)
+    .subscribe(result =>
+      {
+        this._ngZone.run(() => this.router.navigate(['profile'],{relativeTo: this.activatedRoute.parent}));
+        // console.log(result)
+      },
+      data => {
+        console.log(data)
+      alert(JSON.stringify(data["error"]))
+      },
+      () => {
+      })}
 }
