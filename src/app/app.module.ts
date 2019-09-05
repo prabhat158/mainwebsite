@@ -13,7 +13,7 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
 
 
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { CompetitionHomeComponent } from './competition/competition-home/competition-home.component';
 import { CompetitionListComponent } from './competition/competition-list/competition-list.component';
@@ -28,7 +28,9 @@ import { RegformComponent } from './registration/regform/regform.component';
 import { RegprofileComponent } from './registration/regprofile/regprofile.component';
 import { EventsHomeComponent } from './events/events-home/events-home.component';
 import { LottieAnimationViewModule } from 'ng-lottie';
+
 import { CollegelistPipe } from './registration/regform/collegelist.pipe';
+import { ClickOutsideModule } from 'ng-click-outside';
 
 
 
@@ -58,9 +60,11 @@ import { CollegelistPipe } from './registration/regform/collegelist.pipe';
     CollegelistPipe
   ],
   imports: [
-    
+
+    FormsModule,
     LottieAnimationViewModule.forRoot(),
     BrowserModule,
+    ClickOutsideModule,
     RouterModule.forRoot([
 
 
@@ -117,6 +121,7 @@ import { CollegelistPipe } from './registration/regform/collegelist.pipe';
       ],
     },
   ]),
+
     HttpClientModule,
     ReactiveFormsModule
   ],

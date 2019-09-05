@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { DataService } from '../data.service';
+
 @Component({
   selector: 'app-regprofile',
   templateUrl: './regprofile.component.html',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegprofileComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private profile:DataService,
+    ) { }
+
+    name=this.profile.getName()
+    email=this.profile.getEmail()
+    uid=this.profile.getUid()
 
   ngOnInit() {
   }
