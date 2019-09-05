@@ -13,7 +13,7 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
 
 
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { CompetitionHomeComponent } from './competition/competition-home/competition-home.component';
 import { CompetitionListComponent } from './competition/competition-list/competition-list.component';
@@ -26,6 +26,13 @@ import { FifthComponent } from './accommodation/fifth/fifth.component';
 import { ReghomeComponent } from './registration/reghome/reghome.component';
 import { RegformComponent } from './registration/regform/regform.component';
 import { RegprofileComponent } from './registration/regprofile/regprofile.component';
+import { EventsHomeComponent } from './events/events-home/events-home.component';
+import { LottieAnimationViewModule } from 'ng-lottie';
+
+import { CollegelistPipe } from './registration/regform/collegelist.pipe';
+import { ClickOutsideModule } from 'ng-click-outside';
+
+
 
 @NgModule({
   declarations: [
@@ -48,12 +55,18 @@ import { RegprofileComponent } from './registration/regprofile/regprofile.compon
     FifthComponent,
     ReghomeComponent,
     RegformComponent,
-    RegprofileComponent
+    RegprofileComponent,
+    EventsHomeComponent,
+    CollegelistPipe
   ],
   imports: [
+
+    FormsModule,
+    LottieAnimationViewModule.forRoot(),
     BrowserModule,
+    ClickOutsideModule,
     RouterModule.forRoot([
-      
+
 
 
       {path:'',component:HomeComponent},
@@ -66,7 +79,7 @@ import { RegprofileComponent } from './registration/regprofile/regprofile.compon
         {path: 'previous winners', component: FifthComponent},
       ]
     },
-      
+
       {
         path:'registration',
         component:RegistrationComponent,
@@ -75,10 +88,14 @@ import { RegprofileComponent } from './registration/regprofile/regprofile.compon
           {path: 'form', component: RegformComponent},
           {path: 'profile', component: RegprofileComponent},
         ]
-       
+
       },
-      {path:'events',component:EventsComponent,
-     
+      {path: 'events',
+        component: EventsComponent,
+        children: [
+          {path: '', component: EventsHomeComponent},
+        ]
+
     },
       {path:'faqs',component:FaqsComponent},
       {path:'sponsors',component:SponsorsComponent},
@@ -104,6 +121,7 @@ import { RegprofileComponent } from './registration/regprofile/regprofile.compon
       ],
     },
   ]),
+
     HttpClientModule,
     ReactiveFormsModule
   ],

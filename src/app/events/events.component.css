@@ -1,0 +1,7 @@
+.event_background{
+  background-color: #fed18e;
+  /*background-color: #32B4FF;*/
+}
+body{
+  min-height: 100vh;
+}
