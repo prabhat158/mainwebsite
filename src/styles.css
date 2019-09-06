@@ -3,7 +3,3 @@
   font-family: Welcome;
   src: url("assets/Welcome.ttf");
 }
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
