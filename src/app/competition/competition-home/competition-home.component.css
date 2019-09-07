@@ -44,20 +44,19 @@
 .headr{
     font-family: Welcome;
     font-size: 200px;
-    top: 90px;
     color: white;
     position: relative;
     text-align: center;
 }
 
   div.gallery img {
-    width: 80%;
+    width: 64%;
     height: auto;
   }
   
   div.desc {
     text-align: center;
-    font-size: 25px;
+    font-size: 122%;
   }
   
   * {
