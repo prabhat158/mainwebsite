@@ -1,21 +1,31 @@
 .main_content {
-    width: 50%;
-    position: absolute;
-    left: 40%;
-    top: 35%;
-    bottom: 30%;
-    color: white;
-    font-size: 15px;
+  /* display:inline-block; */
+  width: 50%;
+  position: relative;
+  float: right;
+  /* margin-left: 40%; */
+  /* margin-top: 0%; */
+  margin-right: 10%;
 
-    overflow-y: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;  
+  /* top: 95%; */
+  /* margin-top: -10%; */
+  max-height: 40%;
+  /* height: 40%; */
+  color: white;
+  font-size: 15px;
+  display: block;
 
-    z-index: 1;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  /* z-index: 1; */
+  /* float: right; */
+  /* background-color: azure;     */
 
 }
 
 .main_content::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+  width: 0;
+  height: 0;
 }
