@@ -8,7 +8,7 @@
 }
 
 .bg1 {
-  background-color: #ADE2FF;
+  background-color: #ADE2FF ;
     z-index: -3;
     width:100%;
     position: absolute;
@@ -28,59 +28,8 @@
   /* max-height: 120px; */
 
 }
-
-/* .btn-group{
-    
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    left:0px;
-
-}
-
-.btn-group button {
-    background-color: transparent;
-    border: 0px;
-    color: white;
-    cursor: pointer;
-    width:auto;
-    font-size: 140%;
-    padding: 0.2em 0.5em;
-    border-radius: 1em;
-    margin-left: 3%;
-    font-weight: 500;
-    outline: none !important;
-}
-
-.btn-group button:hover {
-    color: rgba(0, 0, 0, 0.5);
-    background-color: white;
-    outline: none !important;
-}
-
-.clicked {
-    color: rgba(0, 0, 0, 0.5) !important;
-    background-color: white !important; 
-    outline: none !important;
-} */
-
-/* 
-.back{
-    height:100%;
-	width:100%;
-	z-index:-3;
-	position:fixed;
-    background: #ffcdd2;
-    background-repeat: no-repeat;
-    background-position: right;
-	left:0;
-    top:0;
-    overflow: hidden;
-} */
-
-
 .full-color{
-  background-color:  	#32B4FF !important;
+  background-color:  	#32B4FF ;
   position: absolute;
   /* height:100vh; */
   top:0; 
