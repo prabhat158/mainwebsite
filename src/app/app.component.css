@@ -202,3 +202,13 @@ body {
     display: none;
   }
 }
+
+.button1:focus {
+  background-color: black;
+}
+.button1:hover {
+  background-color: black;
+}
+.button1:active {
+  background-color: black;
+}

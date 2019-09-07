@@ -280,7 +280,7 @@ SETTINGS
     position: relative;
     margin-left: 10%;
     margin-right: 59%;
-    padding: 1%;
+    /*padding: 1%;*/
     /* background-color: azure; */
     /* display: inline-block; */
     /* float: left; */
@@ -293,4 +293,57 @@ SETTINGS
     font-size: 35px;
     color: white;
     cursor: pointer;
+}
+
+
+
+p {
+  font-size: 30px;
+}
+
+.mobileoptions {
+  display: none;
+  width: 100%;
+  text-align: center;
+  left:0px;
+}
+
+.mobileoptions button {
+  background-color: transparent;
+  border: 0px;
+  color: black;
+  cursor: pointer;
+  width:auto;
+  font-size: 200%;
+  padding: 0.3em 01em;
+  border-radius: 1em;
+  margin-left: 0.5%;
+  margin-right:0.5%;
+  font-weight: 500;
+  outline: none !important;
+}
+
+@media screen and (max-width: 800px){
+  p {
+    font-size: 20px;
+  }
+
+  .options {
+    top: 28%;
+    display: none;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 0px;
+    vertical-align: middle;
+  }
+
+  .mobileoptions {
+    display: block;
+  }
+}
+
+.options {
+  margin-left: 4%;
+  width: 100%;
 }

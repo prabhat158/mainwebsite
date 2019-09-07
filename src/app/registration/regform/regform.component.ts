@@ -22,8 +22,10 @@ export class RegformComponent implements OnInit {
 
   people = ['Indian Institute of Tech Bombay', 'Indian Institute of Tech Delhi', 'Indian Institute of Tech Kanpur','IIIT Pune','Bits Pilani'];
   genders = ['Male', 'Female', 'Other'];
+  years = ['First', 'Second', 'Third', 'Fourth', 'Fifth'];
   showDropDownClg = false;
   showDropDownGen = false;
+  showDropDownCys = false;
 
   chosengender
   college
@@ -64,7 +66,7 @@ export class RegformComponent implements OnInit {
     console.log("value")
     console.log(value)
     this.college = value;
-    this.showDropDownGen = false;
+    this.showDropDownClg = false;
   }
 
   toggleDropDownGen() {
@@ -73,6 +75,21 @@ export class RegformComponent implements OnInit {
   closeDropDownGen() {
     this.showDropDownGen = false;
   }
+
+  toggleDropDownCys() {
+    this.showDropDownCys = !this.showDropDownCys;
+  }
+  closeDropDownCys() {
+    this.showDropDownCys = false;
+  }
+  selectValueCys(value) {
+
+    console.log("value")
+    console.log(value)
+    this.year = value;
+    this.showDropDownCys = false;
+  }
+
   printAll() {
 
   }
@@ -87,7 +104,7 @@ export class RegformComponent implements OnInit {
     {
       name: this.name,
       mobile_number: this.mobile,
-      year_of_study:"First",
+      year_of_study: this.year,
       gender:this.chosengender,
       zip_code:this.pin,
       google_id:this.uid,
