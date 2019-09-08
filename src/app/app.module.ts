@@ -36,6 +36,17 @@ import { CompFaqComponent } from './competition/competition-detail/comp-faq/comp
 import { CompPrevWinnerComponent } from './competition/competition-detail/comp-prev-winner/comp-prev-winner.component';
 import { CompPrizesComponent } from './competition/competition-detail/comp-prizes/comp-prizes.component';
 import { CompRegComponent } from './competition/competition-detail/comp-reg/comp-reg.component';
+import { CompetitionsandlypComponent } from './contact/competitionsandlyp/competitionsandlyp.component';
+import { CreativesComponent } from './contact/creatives/creatives.component';
+import { FoodandbeveragesComponent } from './contact/foodandbeverages/foodandbeverages.component';
+import { HorizonsComponent } from './contact/horizons/horizons.component';
+import { InformalsandworkshopsComponent } from './contact/informalsandworkshops/informalsandworkshops.component';
+import { MarketingComponent } from './contact/marketing/marketing.component';
+import { MediaandpublicityComponent } from './contact/mediaandpublicity/mediaandpublicity.component';
+import { PronitesComponent } from './contact/pronites/pronites.component';
+import { LogisticsandoperationsComponent } from './contact/logisticsandoperations/logisticsandoperations.component';
+import { HospitalityComponent } from './contact/hospitality/hospitality.component';
+import { OcComponent } from './contact/oc/oc.component';
 
 
 
@@ -67,7 +78,18 @@ import { CompRegComponent } from './competition/competition-detail/comp-reg/comp
     CompFaqComponent,
     CompPrevWinnerComponent,
     CompPrizesComponent,
-    CompRegComponent
+    CompRegComponent,
+    CompetitionsandlypComponent,
+    CreativesComponent,
+    FoodandbeveragesComponent,
+    HorizonsComponent,
+    InformalsandworkshopsComponent,
+    MarketingComponent,
+    MediaandpublicityComponent,
+    PronitesComponent,
+    LogisticsandoperationsComponent,
+    HospitalityComponent,
+    OcComponent
   ],
   imports: [
 
@@ -109,7 +131,21 @@ import { CompRegComponent } from './competition/competition-detail/comp-reg/comp
     },
       {path:'faqs',component:FaqsComponent},
       {path:'sponsors',component:SponsorsComponent},
-      {path:'contact',component:ContactComponent},
+      {path:'contact',component:ContactComponent,
+        children: [
+          {path: 'competitions & lyp', component: CompetitionsandlypComponent},
+          {path: 'creatives', component: CreativesComponent},
+          {path: 'food & beverages', component: FoodandbeveragesComponent},
+          {path: 'horizons', component: HorizonsComponent},
+          {path: 'informals & workshops', component: InformalsandworkshopsComponent},
+          {path: 'marketing', component: MarketingComponent},
+          {path: 'media & publicity', component: MediaandpublicityComponent},
+          {path: 'pronites', component: PronitesComponent},
+          {path: 'logistics & operations', component: LogisticsandoperationsComponent},
+          {path: 'hospitality', component: HospitalityComponent},
+          {path: 'oc', component: OcComponent},
+        ]
+      },
       {
         path:'competition',
         component:CompetitionComponent,
