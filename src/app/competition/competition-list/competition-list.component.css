@@ -8,7 +8,7 @@
 }
 
 .bg1 {
-  background-color: #ADE2FF ;
+  /* background-color: #32B4FF ; */
     z-index: -3;
     width:100%;
     position: absolute;
@@ -48,9 +48,9 @@
   text-align: center;
 }
 .headr{
+  margin-top: 5%;
   font-family: Welcome;
   font-size: 200px;
-  top: 90px;
   color: white;
   position: relative;
   text-align: center;
@@ -60,7 +60,8 @@
     height: auto;
   }
   
-  div.desc {
+  .desc {
+    padding: 25px;
     text-align: center;
     font-size: 25px;
   }
