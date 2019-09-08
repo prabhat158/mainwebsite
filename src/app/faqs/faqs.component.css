@@ -1,0 +1,51 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,500italic);
+
+@keyframes cloud {
+  0% {
+    left: -10%
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.globe .cloud {
+  position: absolute;
+  width: 70px;
+  height: 24px;
+  background: linear-gradient(to bottom, #f2f9fe 5%, #d6f0fd 100%);
+  border-radius: 20px;
+  top: -20px;
+  z-index: -1;
+  -webkit-animation: cloud 9s linear infinite;
+          animation: cloud 9s linear infinite;
+}
+.globe .cloud.small {
+  top: -50px;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+  -webkit-animation-delay: -1.5s;
+          animation-delay: -1.5s;
+  -webkit-animation-duration: 13.5s;
+          animation-duration: 13.5s;
+}
+.globe .cloud:before, .globe .cloud:after {
+  position: absolute;
+  content: "";
+  background: inherit;
+  z-index: -1;
+}
+.globe .cloud:before {
+  width: 36px;
+  height: 36px;
+  top: -18px;
+  right: 10px;
+  border-radius: 40px;
+}
+
+.globe .bird {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    }
