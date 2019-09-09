@@ -45,7 +45,10 @@
         <button>OVERALL COORDINATORS</button>
       </a>
     </div>
-    <router-outlet></router-outlet>
+
+    <div [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+    </div>
 
     <div class="options">
       <div class="btn_group">
@@ -168,6 +171,11 @@
     <!-- </div> -->
 
   </div>
-
+  <div class="bot1">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
+  <div class="bot2">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
   <img src="../../assets/contact/Asset 32formbox.png" class="bg4">
 </div>
