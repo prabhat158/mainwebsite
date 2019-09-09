@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Router} from '@angular/router';
-
+import {Gmaild} from './gmaild'
 @Injectable({
   providedIn: 'root'
 })
@@ -8,7 +8,6 @@ export class DataService {
 
   constructor(
     private router:Router,
-    // private companyServiceService:CompanyServiceService,
   ) { }
 
   private name;
@@ -41,6 +40,10 @@ export class DataService {
 
   clearName(){
     this.name = undefined;
+  }
+
+  private setLocalStorageGmaild(gamil: Gmaild[]): void {
+    localStorage.setItem('todos', JSON.stringify({ gamil: gamil }));
   }
 
 }
