@@ -295,10 +295,16 @@ SETTINGS
   cursor: pointer;
 }
 
+.bot1 {
+  display: block;
+}
 
+.bot2 {
+  display: none;
+}
 
 p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .mobileoptions {
@@ -339,6 +345,14 @@ p {
   }
 
   .mobileoptions {
+    display: block;
+  }
+
+  .bot1 {
+    display: none;
+  }
+
+  .bot2 {
     display: block;
   }
 }
