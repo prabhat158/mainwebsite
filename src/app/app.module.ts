@@ -15,6 +15,7 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CompetitionHomeComponent } from './competition/competition-home/competition-home.component';
 import { CompetitionListComponent } from './competition/competition-list/competition-list.component';
 import { CompetitionDetailComponent } from './competition/competition-detail/competition-detail.component';
@@ -97,6 +98,7 @@ import { OcComponent } from './contact/oc/oc.component';
     LottieAnimationViewModule.forRoot(),
     BrowserModule,
     ClickOutsideModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([
 
 
@@ -133,17 +135,17 @@ import { OcComponent } from './contact/oc/oc.component';
       {path:'sponsors',component:SponsorsComponent},
       {path:'contact',component:ContactComponent,
         children: [
-          {path: 'competitions & lyp', component: CompetitionsandlypComponent},
-          {path: 'creatives', component: CreativesComponent},
-          {path: 'food & beverages', component: FoodandbeveragesComponent},
-          {path: 'horizons', component: HorizonsComponent},
-          {path: 'informals & workshops', component: InformalsandworkshopsComponent},
-          {path: 'marketing', component: MarketingComponent},
-          {path: 'media & publicity', component: MediaandpublicityComponent},
-          {path: 'pronites', component: PronitesComponent},
-          {path: 'logistics & operations', component: LogisticsandoperationsComponent},
-          {path: 'hospitality', component: HospitalityComponent},
-          {path: 'oc', component: OcComponent},
+          {path: 'competitions & lyp', component: CompetitionsandlypComponent, data: {animation: 'Competitions'} },
+          {path: 'creatives', component: CreativesComponent, data: {animation: 'Creatives'} },
+          {path: 'food & beverages', component: FoodandbeveragesComponent, data: {animation: 'Food'} },
+          {path: 'horizons', component: HorizonsComponent, data: {animation: 'Horizons'} },
+          {path: 'informals & workshops', component: InformalsandworkshopsComponent, data: {animation: 'Informals'} },
+          {path: 'marketing', component: MarketingComponent, data: {animation: 'Marketing'} },
+          {path: 'media & publicity', component: MediaandpublicityComponent, data: {animation: 'Media'} },
+          {path: 'pronites', component: PronitesComponent, data: {animation: 'Pronites'} },
+          {path: 'logistics & operations', component: LogisticsandoperationsComponent, data: {animation: 'Logistics'} },
+          {path: 'hospitality', component: HospitalityComponent, data: {animation: 'Hospitality'} },
+          {path: 'oc', component: OcComponent, data: {animation: 'Oc'} },
         ]
       },
       {
