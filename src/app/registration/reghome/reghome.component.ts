@@ -54,12 +54,15 @@ export class ReghomeComponent implements OnInit {
       (googleUser)=> {
         let profile=googleUser.getBasicProfile();
         this.gID=profile.getId();
-        this.transfereService.setUid(profile.getId());
+
+        this.transfereService.setJdata(JSON.stringify({
+          'name':profile.getName(),
+          'email':profile.getEmail(),
+          'uid':profile.getId()
+        }) );
         this.name= profile.getName();
-        this.transfereService.setName(profile.getName())
         this.imageURL=profile.getImageUrl();
         this.email=profile.getEmail();
-        this.transfereService.setEmail(profile.getEmail())
         this.onClick();
       });
   }

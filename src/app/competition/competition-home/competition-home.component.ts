@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CompetitionDataService } from '../competition-data.service';
+
 @Component({
   selector: 'app-competition-home',
   templateUrl: './competition-home.component.html',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompetitionHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private dataService: CompetitionDataService) { }
 
   ngOnInit() {
+
+    this.dataService.getCategories();
   }
 
 }
