@@ -13,9 +13,9 @@ export class RegprofileComponent implements OnInit {
     private profile:DataService,
     ) { }
 
-    name=this.profile.getName()
-    email=this.profile.getEmail()
-    uid=this.profile.getUid()
+    name=JSON.parse(this.profile.getJdata()).name;
+    email=JSON.parse(this.profile.getJdata()).email
+    uid=JSON.parse(this.profile.getJdata()).uid
 
   ngOnInit() {
   }

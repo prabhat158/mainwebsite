@@ -29,9 +29,9 @@ export class RegformComponent implements OnInit {
 
   chosengender
   college
-  name = this.transfereService.getName();   
-  email= this.transfereService.getEmail();
-  uid=this.transfereService.getUid();
+  name = JSON.parse(this.transfereService.getJdata()).name
+  email= JSON.parse(this.transfereService.getJdata()).email
+  uid=JSON.parse(this.transfereService.getJdata()).uid
   mobile
   city
   pin

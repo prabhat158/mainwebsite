@@ -21,12 +21,8 @@ export class CompDescRulesComponent implements OnInit {
   ) { }
 
   getCategories(){
-    this.dataService.getCategories()
-      .subscribe(
-        data=> {  
-          this.competitions_categories = data['Competitions'];
-        }
-    );
+   
+    this.competitions_categories =this.dataService.getCompidetail();
   }  
 
   ngOnInit() {
