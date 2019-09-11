@@ -3,13 +3,87 @@
       <div *ngFor="let event of category.events">
           <div *ngIf="event.name == current_event">
     
-              The Registration for Competitions will begin soon.<b> Stay tuned!</b>
+            <div *ngIf="status ==true && is_leader_names == undefined && my_team_names ==undefined">
+                <button (click)="create_team(eventid)">create team</button><br>
+                Only Team Leader should create the team<br>
+                Team Leader can then add the Team Members<br>
+              
+          </div>
+          <div style="align-content: flex-end">
+              <div *ngIf="leader_names">
+                  Leader: {{leader_names.name}}
+                  </div>
+        <div *ngIf="is_leader_names">
+          <table  class="table">
+              <thead>
+                <tr>
+                  <td>Name</td>
+                  <td>Phone No.</td>
+                  <td></td>
+                </tr>
+              </thead>
+              <tbody>
+                  <td>{{leader_names.name}}</td>
+                  <td>{{leader_names.mobile_number}}</td>
+                  <td>Team Leader</td>
+              </tbody>
+              <tbody *ngFor="let user of is_leader_names">
+                <tr>
+                  <td>{{user.name}}</td>
+                  <td>{{user.mobile_number}}</td>
+                  <td>
+                    <button (click)="exit_team(user.mobile_number,eventid)" type="button">Remove</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        <div *ngIf="my_team_names">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <td>Name</td>
+                    <td>Phone No.</td>
+                    <td>Status</td>
+                  </tr>
+                </thead>
+                <tbody>
+                    <td>{{leader_names.name}}</td>
+                    <td>{{leader_names.mobile_number}}</td>
+                    <td>Team Leader</td>
+                </tbody>
+                <tbody *ngFor="let user of my_team_names">
+                    <tr>
+                      <td>{{user.name}}</td>
+                      <td>{{user.mobile_number}}</td>
+                      <td>Member</td>
+                    </tr>
+                  </tbody>
+
+              </table>
+              You are registered!<br>
+              Team Limit: 15<br>
+              Contact Kanav(7700903058) or Atharva(7021760392) in case you are not the Team Member<br>
+            </div>
+          </div>
+          <div *ngIf="is_leader_names">
+              <div *ngIf="is_leader_names?.length < 14 && my_team_names?.length < 14" class="input-group">
+                  <input #myInput  placeholder="Registered Mobile No."  type="text" class="form-control">
+                  <span class="input-group-btn">
+                      <button (click)="add_member(myInput.value,eventid)" class="btn btn-default" style="background: brown; margin-left: 10px" type="button">Add member</button>
+                  </span>
+              </div>
+              You are registered!<br>
+              Team Limit: 15<br>
+              Contact Kanav(7700903058) or Atharva(7021760392) in case you are not the Team Leader<br>
+          </div>
+         <br>
+        </div>
             
     
             
     
     
           </div>
-      </div>
   </div>
 </div>
