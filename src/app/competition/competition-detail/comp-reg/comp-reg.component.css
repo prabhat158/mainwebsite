@@ -1,0 +1,19 @@
+.team_button{
+        left:0px;
+        position:absolute;
+        text-align: center;
+        font-size: 15px;
+        font-family: Verdana;
+        margin-top: 225px;
+        margin-left: 250px;
+    
+        border: groove black!important;
+        border-width: 0 1px;
+    
+        background-color: transparent;
+        cursor: pointer;
+        width:auto;
+        padding: 0.3em 1.9em;
+        border-radius: 2em;
+        outline: none !important;
+}

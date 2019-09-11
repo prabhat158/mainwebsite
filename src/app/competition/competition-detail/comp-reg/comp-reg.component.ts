@@ -80,7 +80,7 @@ export class CompRegComponent implements OnInit {
     
       console.log("ok")
       this.http.post('https://api2.moodi.org/team/create_team/'+this.UID, {
-        mobile_number :43343443,
+        mobile_number :JSON.parse(this.profile.getJdata()).mobile_number,
         multicity:"NO",
         eventMI_id: eventid,
        })
