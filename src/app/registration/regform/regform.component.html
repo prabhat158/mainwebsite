@@ -2,12 +2,7 @@
   <img src="../../../assets/reg/Asset%2031withbg.png" class="bg1">
 
   <div>
-
-    <br><br><br><br><br>
-
-    <h1 class="headr"><b>Reg Form</b></h1>
-
-    <br><br><br><br><br>
+    <h1 class="headr">Reg Form</h1>
   <div class="container">
     <div class="regform">
 
@@ -46,7 +41,13 @@
           </tr>
           <tr>
             <td><label for="yearofstudy">CURRENT YEAR OF STUDY:</label></td>
-            <td><input name="year" [(ngModel)]="year" id="yearofstudy" placeholder="Select Your of Study"></td>
+            <td (blur)="showDropDownCys = false"><input style="margin-bottom: 0;" name="year" [(ngModel)]="year" id="yearofstudy" placeholder="Select Year of Study" (click)="toggleDropDownCys()" (clickOutside)="closeDropDownCys()" autocomplete="none">
+              <div class="dropdown" *ngIf="showDropDownCys">
+                <div (click)="selectValueCys(y)" class="dropdown-option" *ngFor="let y of years" (blur)="showDropDownCys = false">
+                  {{y}}
+                </div>
+              </div>
+            </td>
           </tr>
           <tr>
             <td><label for="gender">GENDER:</label></td>
@@ -70,6 +71,6 @@
 
   </div>
 
-  <img src="../../assets/reg/Asset 28.png" class="bg2">
+  <img src="../../../assets/reg/Asset 28lap.png" class="bg2">
 
   </div>

@@ -10,22 +10,22 @@
         <p class="headr">{{event.name}}</p>
 
     
-        <div class="btn-group" style="top:295px">
+        <div class="btn-group" >
           
-            <a routerLink="comp-desc">
-              <button (click)="onClick('desc')" [ngClass]="{'clicked': clickedButton=='desc'}">Description & Rules</button>
+            <a >
+              <button routerLink="comp-desc" class="raise" routerLinkActive="active" (click)="onClick('desc')" [ngClass]="{'clicked': clickedButton=='desc'}">Description & Rules</button>
             </a>
-            <a routerLink="comp-prizes">
-              <button (click)="onClick('prizes')" [ngClass]="{'clicked': clickedButton=='prizes'}">Prizes & LYPs</button>
+            <a >
+              <button routerLink="comp-prizes" class="raise" (click)="onClick('prizes')" routerLinkActive="active" [ngClass]="{'clicked': clickedButton=='prizes'}">Prizes & LYPs</button>
             </a>
-            <a routerLink="comp-faq">
-              <button (click)="onClick('faq')" [ngClass]="{'clicked': clickedButton=='faq'}">FAQs</button>
+            <a >
+              <button routerLink="comp-faq" routerLinkActive="active" class="raise" (click)="onClick('faq')" [ngClass]="{'clicked': clickedButton=='faq'}">FAQs</button>
             </a>
-            <a routerLink="comp-reg">
-              <button (click)="onClick('reg')" [ngClass]="{'clicked': clickedButton=='reg'}">Register</button>
+            <a >
+              <button routerLink="comp-reg" routerLinkActive="active" class="raise" (click)="onClick('reg')" [ngClass]="{'clicked': clickedButton=='reg'}">Register</button>
             </a>
-            <a routerLink="comp-prev-winner">
-              <button (click)="onClick('winner')" [ngClass]="{'clicked': clickedButton=='winner'}">Previous Winners</button>
+            <a >
+              <button routerLink="comp-prev-winner" routerLinkActive="active" class="raise" (click)="onClick('winner')" [ngClass]="{'clicked': clickedButton=='winner'}">Previous Winners</button>
             </a>
         </div>
 
@@ -44,5 +44,5 @@
   
 
 </div>
-<img src="../../assets/compi/Asset 13Selected.png" class="bg2">
+<img src="../../../assets/compi/Asset 13Selectedlap.png" class="bg2">
 </div>

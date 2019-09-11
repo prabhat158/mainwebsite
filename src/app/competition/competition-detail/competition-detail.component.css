@@ -38,16 +38,16 @@
 .headr{
     font-family: Welcome;
     font-size: 200px;
-    top: 90px;
+    margin-top: 5%;
     color: white;
     position: relative;
     text-align: center;
 }
 
 .btn-group{
-    
+    margin-top: -100px;
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
     text-align: center;
     left:0px;
 
@@ -55,6 +55,7 @@
 
 
 .btn-group button {
+    margin-top: -100px;
     background-color: transparent;
     border: 0px;
     color: black;
@@ -63,8 +64,7 @@
     font-size: 200%;
     padding: 0.3em 01em;
     border-radius: 1em;
-    margin-left: 0.5%;
-    margin-right:0.5%;
+    
     font-weight: 500;
     outline: none !important;
 }
@@ -91,7 +91,9 @@
 }
 */
 .description{
-    position: absolute;
+    /* position: absolute; */
+    padding-left: 100px;
+    padding-right: 100px;
     top: 390px;
     text-align:left;
     left: 310px;
@@ -119,3 +121,44 @@
     right: 40px;
     overflow: hidden!important ;
 } */
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+
+.raise {
+  --color: #fff;
+  --hover: #fff;
+}
+
+button {
+  color: var(--color);
+  transition: 0.25s;
+}
+button:hover, button:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+
+
+h1 {
+  font-weight: 400;
+}
+
+code {
+  /* color: #e4cb58; */
+  font: inherit;
+}
+
+.active{
+    /* display: none */
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    -webkit-transform: translateY(-0.25em);
+            transform: translateY(-0.25em);
+  /* --color: #ffa260; */
+  /* --hover: #e5ff60; */
+            
+  }
