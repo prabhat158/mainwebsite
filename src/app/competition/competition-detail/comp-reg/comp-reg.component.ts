@@ -5,7 +5,6 @@ import { CompetitionDataService } from '../../competition-data.service';
 import { HttpClient } from '@angular/common/http';
 // import {RouteConfig, Router, ROUTER_DIRECTIVES} from 'angular2/router';
 import { DataService } from '../../../registration/data.service';
-
 @Component({
   selector: 'app-comp-reg',
   templateUrl: './comp-reg.component.html',
@@ -28,16 +27,27 @@ export class CompRegComponent implements OnInit {
   
   constructor(
     private route: ActivatedRoute,
-    private dataService: CompetitionDataService,
+    private http:HttpClient,
+    private dataService: CompetitionDataService,    
     private profile:DataService,
-    private http: HttpClient,
     private router: Router
   ) { }
 
   getCategories(){
-   
-    this.competitions_categories =this.dataService.getCompidetail();
-    }  
+
+    if(this.dataService.getCompidetail()==undefined){
+      this.http.get('https://api2.moodi.org/events').subscribe(
+        data=> {
+        
+        this.competitions_categories =data['Competitions'];
+        this.dataService.setCompidetail(data['Competitions']);
+  
+        },
+    );}else{
+      
+      this.competitions_categories =this.dataService.getCompidetail();
+    }
+   }  
 
     public my_team(eventid){
       console.log('43534534534')
@@ -80,7 +90,7 @@ export class CompRegComponent implements OnInit {
     
       console.log("ok")
       this.http.post('https://api2.moodi.org/team/create_team/'+this.UID, {
-        mobile_number :JSON.parse(this.profile.getJdata()).mobile_number,
+        mobile_number :1222222233,
         multicity:"NO",
         eventMI_id: eventid,
        })

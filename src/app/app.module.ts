@@ -48,6 +48,11 @@ import { PronitesComponent } from './contact/pronites/pronites.component';
 import { LogisticsandoperationsComponent } from './contact/logisticsandoperations/logisticsandoperations.component';
 import { HospitalityComponent } from './contact/hospitality/hospitality.component';
 import { OcComponent } from './contact/oc/oc.component';
+import { FirstFaqComponent } from './faqs/first-faq/first-faq.component';
+import { SecondFaqComponent } from './faqs/second-faq/second-faq.component';
+import { ThirdFaqComponent } from './faqs/third-faq/third-faq.component';
+import { FourthFaqComponent } from './faqs/fourth-faq/fourth-faq.component';
+import { FifthFaqComponent } from './faqs/fifth-faq/fifth-faq.component';
 
 
 
@@ -90,7 +95,12 @@ import { OcComponent } from './contact/oc/oc.component';
     PronitesComponent,
     LogisticsandoperationsComponent,
     HospitalityComponent,
-    OcComponent
+    OcComponent,
+    FirstFaqComponent,
+    SecondFaqComponent,
+    ThirdFaqComponent,
+    FourthFaqComponent,
+    FifthFaqComponent
   ],
   imports: [
 
@@ -106,6 +116,8 @@ import { OcComponent } from './contact/oc/oc.component';
       {path:'',component:HomeComponent},
       {path:'accommodation',component:AccommodationComponent,
       children: [
+
+        {path: '', redirectTo: 'reach us', pathMatch:'full'},
         {path: 'reach us', component: FirstComponent},
         {path: 'prizes & lyps', component: SecondComponent},
         {path: 'faq', component: ThirdComponent},
@@ -131,7 +143,16 @@ import { OcComponent } from './contact/oc/oc.component';
         ]
 
     },
-      {path:'faqs',component:FaqsComponent},
+      {path:'faqs',component:FaqsComponent,
+      children: [
+        {path: '', redirectTo: 'reach us', pathMatch:'full'},
+        {path: 'reach us', component: FirstFaqComponent},
+        {path: 'prizes & lyps', component: SecondFaqComponent},
+        {path: 'faq', component: ThirdFaqComponent},
+        {path: 'register', component: FourthFaqComponent},
+        {path: 'previous winners', component: FifthFaqComponent},
+      ]
+    },
       {path:'sponsors',component:SponsorsComponent},
       {path:'contact',component:ContactComponent,
         children: [
