@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { DataService } from '../data.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-regprofile',
@@ -11,6 +12,7 @@ export class RegprofileComponent implements OnInit {
 
   constructor(
     private profile:DataService,
+    private router: Router
     ) { }
 
     name=JSON.parse(this.profile.getJdata()).name;
@@ -19,6 +21,7 @@ export class RegprofileComponent implements OnInit {
 
     logout(){
     localStorage.clear();
+    this.router.navigateByUrl('/registration');
     }
   ngOnInit() {
   }

@@ -73,6 +73,14 @@ export class ReghomeComponent implements OnInit {
         // data => this.router.navigate(['profile'],{relativeTo: this.activatedRoute.parent}),
         data => {
           // console.log(data),
+          this.transfereService.setJdata(
+            JSON.stringify({
+            'name':data['name'],
+            'email':data['email'],
+            'uid':data['google_id'],
+            'mobile':data['mobile_number']
+  
+          }))
           this._ngZone.run(() => this.router.navigate(['profile'],{relativeTo: this.activatedRoute.parent}));
         },
         error => {
@@ -85,7 +93,17 @@ export class ReghomeComponent implements OnInit {
     this.googleInit();
   }
 
+  status=true;
+
+  profile(){
+
+    this.router.navigateByUrl('/registration/profile');
+  }
+
   ngOnInit() {
+    if(localStorage.getItem("jdata")===null){
+      this.status=false;
+    }
   }
 
 }
