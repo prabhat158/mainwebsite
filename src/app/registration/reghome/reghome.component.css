@@ -8,13 +8,11 @@
 }
 
 .bg2 {
-
-  z-index: -1;
   width:100%;
-  /* position: absolute; */
-  /* bottom: 0px; */
+  /*position: absolute;*/
+  /*top: 90%;*/
   left: 0px;
-  /* clip: rect(0,0, 100,0); */
+  /*clip: rect(0px,1290px,200px,0px);*/
   /* overflow: hidden;    */
   /* max-height: 120px; */
 
@@ -41,12 +39,12 @@ top:0;
 }
 
 .headr{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 70px;
-  top: 90px;
+  font-family: Welcome;
+  font-size: 180px;
+  width: 100%;
   color: white;
-  position: relative;
-  text-align: center;
+  margin-top: 14%;
+  margin-bottom: 0;
 }
 
 div.gallery img {
@@ -85,4 +83,11 @@ div.desc {
   padding: 0.3em 1.9em;
   border-radius: 2em;
   outline: none !important;
+}
+
+@media screen and (max-width: 600px){
+  .headr {
+    margin-top: 14%;
+    font-size: 75px;
+  }
 }

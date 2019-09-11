@@ -5,23 +5,22 @@
 
 .toprighti{
     position: relative;
-    width: 33%;
+    width: 350%;
     margin-top: -83%;
     right: -53%;
 }
 
 .topcenteri{
     position: relative;
-    width: 8%;
-    margin-top: -73%;
+    width: 250%;
+    margin-top: -25%;
     right: -10%;
 }
-
 .hairbi{
     position: relative;
-    width: 10%;
-    margin-top: -64%;
-    right: -32%;
+    width: 250%;
+    margin-top: -25%;
+    right: -10%;
 }
 
 .bottomi1{
@@ -111,3 +110,60 @@
     margin-left: 100px;
     margin-right: 100px;
 }
+
+@keyframes cloud {
+  0% {
+    left: 100%
+  }
+  100% {
+    left: -20%;
+  }
+}
+
+@keyframes balloon {
+    0% {
+      top: 300px
+    }
+    100% {
+      top: -100px;
+      opacity: 0
+    }
+  }
+
+  .globe .balloon {
+      z-index: 0;
+    position: absolute;
+    right: 350px;
+    width: 40px;
+    /* height: 24px; */
+   
+    z-index: -1;
+    -webkit-animation: balloon 6s linear infinite;
+            animation: balloon 6s linear infinite;
+  }
+
+.globe .cloud {
+  position: absolute;
+  width: 70px;
+  height: 24px;
+ 
+  z-index: -1;
+  -webkit-animation: cloud 9s linear infinite;
+          animation: cloud 9s linear infinite;
+}
+.globe .cloud.small {
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+  -webkit-animation-delay: -1.5s;
+          animation-delay: -1.5s;
+  -webkit-animation-duration: 13.5s;
+          animation-duration: 13.5s;
+}
+
+.globe .bird {
+    
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 300px;
+    }

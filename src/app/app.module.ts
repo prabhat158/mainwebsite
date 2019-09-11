@@ -15,6 +15,7 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CompetitionHomeComponent } from './competition/competition-home/competition-home.component';
 import { CompetitionListComponent } from './competition/competition-list/competition-list.component';
 import { CompetitionDetailComponent } from './competition/competition-detail/competition-detail.component';
@@ -36,6 +37,17 @@ import { CompFaqComponent } from './competition/competition-detail/comp-faq/comp
 import { CompPrevWinnerComponent } from './competition/competition-detail/comp-prev-winner/comp-prev-winner.component';
 import { CompPrizesComponent } from './competition/competition-detail/comp-prizes/comp-prizes.component';
 import { CompRegComponent } from './competition/competition-detail/comp-reg/comp-reg.component';
+import { CompetitionsandlypComponent } from './contact/competitionsandlyp/competitionsandlyp.component';
+import { CreativesComponent } from './contact/creatives/creatives.component';
+import { FoodandbeveragesComponent } from './contact/foodandbeverages/foodandbeverages.component';
+import { HorizonsComponent } from './contact/horizons/horizons.component';
+import { InformalsandworkshopsComponent } from './contact/informalsandworkshops/informalsandworkshops.component';
+import { MarketingComponent } from './contact/marketing/marketing.component';
+import { MediaandpublicityComponent } from './contact/mediaandpublicity/mediaandpublicity.component';
+import { PronitesComponent } from './contact/pronites/pronites.component';
+import { LogisticsandoperationsComponent } from './contact/logisticsandoperations/logisticsandoperations.component';
+import { HospitalityComponent } from './contact/hospitality/hospitality.component';
+import { OcComponent } from './contact/oc/oc.component';
 
 
 
@@ -67,7 +79,18 @@ import { CompRegComponent } from './competition/competition-detail/comp-reg/comp
     CompFaqComponent,
     CompPrevWinnerComponent,
     CompPrizesComponent,
-    CompRegComponent
+    CompRegComponent,
+    CompetitionsandlypComponent,
+    CreativesComponent,
+    FoodandbeveragesComponent,
+    HorizonsComponent,
+    InformalsandworkshopsComponent,
+    MarketingComponent,
+    MediaandpublicityComponent,
+    PronitesComponent,
+    LogisticsandoperationsComponent,
+    HospitalityComponent,
+    OcComponent
   ],
   imports: [
 
@@ -75,6 +98,7 @@ import { CompRegComponent } from './competition/competition-detail/comp-reg/comp
     LottieAnimationViewModule.forRoot(),
     BrowserModule,
     ClickOutsideModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([
 
 
@@ -109,7 +133,21 @@ import { CompRegComponent } from './competition/competition-detail/comp-reg/comp
     },
       {path:'faqs',component:FaqsComponent},
       {path:'sponsors',component:SponsorsComponent},
-      {path:'contact',component:ContactComponent},
+      {path:'contact',component:ContactComponent,
+        children: [
+          {path: 'competitions & lyp', component: CompetitionsandlypComponent, data: {animation: 'Competitions'} },
+          {path: 'creatives', component: CreativesComponent, data: {animation: 'Creatives'} },
+          {path: 'food & beverages', component: FoodandbeveragesComponent, data: {animation: 'Food'} },
+          {path: 'horizons', component: HorizonsComponent, data: {animation: 'Horizons'} },
+          {path: 'informals & workshops', component: InformalsandworkshopsComponent, data: {animation: 'Informals'} },
+          {path: 'marketing', component: MarketingComponent, data: {animation: 'Marketing'} },
+          {path: 'media & publicity', component: MediaandpublicityComponent, data: {animation: 'Media'} },
+          {path: 'pronites', component: PronitesComponent, data: {animation: 'Pronites'} },
+          {path: 'logistics & operations', component: LogisticsandoperationsComponent, data: {animation: 'Logistics'} },
+          {path: 'hospitality', component: HospitalityComponent, data: {animation: 'Hospitality'} },
+          {path: 'oc', component: OcComponent, data: {animation: 'Oc'} },
+        ]
+      },
       {
         path:'competition',
         component:CompetitionComponent,

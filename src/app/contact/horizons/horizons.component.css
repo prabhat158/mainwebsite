@@ -1,0 +1,48 @@
+.main_content {
+  /* display:inline-block; */
+  width: 50%;
+  position: relative;
+  float: right;
+  /* margin-left: 40%; */
+  /* margin-top: 0%; */
+  margin-right: 10%;
+
+  /* top: 95%; */
+  /* margin-top: -10%; */
+  max-height: 40%;
+  /* height: 40%; */
+  color: white;
+  font-size: 15px;
+  display: block;
+  justify-content: center;
+  text-align: center;
+
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  /* z-index: 1; */
+  /* float: right; */
+  /* background-color: azure;     */
+
+}
+
+.main_content::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.contactimg {
+  width: 50%;
+}
+
+@media screen and (max-width: 800px) {
+  .main_content {
+    width: 100%;
+    float: none;
+    text-align: center;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}

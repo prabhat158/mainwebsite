@@ -10,7 +10,7 @@ import { CompetitionDataService } from '../competition-data.service';
 })
 export class CompetitionListComponent implements OnInit {
 
-  competitions_categories: any[];
+  competitions_categories: any;
   current_competition_category: string;
 
   constructor(
@@ -19,12 +19,8 @@ export class CompetitionListComponent implements OnInit {
   ) { }
 
   getCategories(){
-    this.dataService.getCategories()
-      .subscribe(
-        data=> {
-          this.competitions_categories = data['Competitions'];
-        }
-    );
+          this.competitions_categories =this.dataService.getCompidetail();
+          // console.log(this.competitions_categories)
   }  
   
   ngOnInit(){
