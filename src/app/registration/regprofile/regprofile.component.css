@@ -219,3 +219,8 @@
   outline: none !important;
   margin-bottom: 1.8em;     
 }
+
+.qr{
+  background-color: blue;
+  margin-top: 2500px;
+}
