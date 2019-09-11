@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CompetitionDataService } from '../../competition-data.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-comp-desc-rules',
@@ -17,12 +18,24 @@ export class CompDescRulesComponent implements OnInit {
   
   constructor(
     private route: ActivatedRoute,
+    private http:HttpClient,
     private dataService: CompetitionDataService
   ) { }
 
   getCategories(){
-   
-    this.competitions_categories =this.dataService.getCompidetail();
+  
+    if(this.dataService.getCompidetail()==undefined){
+      this.http.get('https://api2.moodi.org/events').subscribe(
+        data=> {
+        
+        this.competitions_categories =data['Competitions'];
+        this.dataService.setCompidetail(data['Competitions']);
+  
+        },
+    );}else{
+      
+      this.competitions_categories =this.dataService.getCompidetail();
+    } 
   }  
 
   ngOnInit() {
