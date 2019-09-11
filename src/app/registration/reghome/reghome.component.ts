@@ -55,7 +55,7 @@ export class ReghomeComponent implements OnInit {
         let profile=googleUser.getBasicProfile();
         this.gID=profile.getId();
 
-        this.transfereService.setJdata(JSON.stringify({
+        this.transfereService.setJdataTemp(JSON.stringify({
           'name':profile.getName(),
           'email':profile.getEmail(),
           'uid':profile.getId()

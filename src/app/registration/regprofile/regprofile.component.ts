@@ -17,6 +17,9 @@ export class RegprofileComponent implements OnInit {
     email=JSON.parse(this.profile.getJdata()).email
     uid=JSON.parse(this.profile.getJdata()).uid
 
+    logout(){
+    localStorage.clear();
+    }
   ngOnInit() {
   }
 
