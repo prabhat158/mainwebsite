@@ -69,7 +69,7 @@ export class CompRegComponent implements OnInit {
       )
         
   
-      this.http.get('https://api2.moodi.org/team/my_team/'+JSON.parse(this.profile.getJdata()).uid+"?event="+eventid+"&multicity=NO")
+      this.http.get('https://api2.moodi.org/team/my_team/'+JSON.parse(this.profile.getJdata()).uid+"?event="+eventid+"&multicity=no")
       .subscribe(
         data1 => {
           this.my_team_names=data1['members']

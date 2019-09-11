@@ -29,9 +29,9 @@ export class RegformComponent implements OnInit {
 
   chosengender
   college
-  name = JSON.parse(this.transfereService.getJdata()).name
-  email= JSON.parse(this.transfereService.getJdata()).email
-  uid=JSON.parse(this.transfereService.getJdata()).uid
+  name = JSON.parse(this.transfereService.getJdataTemp()).name
+  email= JSON.parse(this.transfereService.getJdataTemp()).email
+  uid=JSON.parse(this.transfereService.getJdataTemp()).uid
   mobile
   city
   pin
@@ -118,6 +118,14 @@ export class RegformComponent implements OnInit {
     },httpOptions)
     .subscribe(result =>
       {
+        this.transfereService.setJdata(
+          JSON.stringify({
+          'name':this.name,
+          'email':this.email,
+          'uid':this.uid,
+          'mobile':this.mobile
+
+        }))
         this._ngZone.run(() => this.router.navigate(['profile'],{relativeTo: this.activatedRoute.parent}));
         // console.log(result)
       },
