@@ -20,4 +20,13 @@ export class DataService {
     return localStorage.getItem('jdata')
   }
 
+  setJdataTemp(data){
+    localStorage.setItem('jdatatemp',data);
+  }
+
+  getJdataTemp(){
+    // let temp = this.uid;
+    return localStorage.getItem('jdatatemp')
+  }
+
 }
