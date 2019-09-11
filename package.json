@@ -28,6 +28,7 @@
     "jquery": "^3.4.1",
     "ng-click-outside": "^5.1.1",
     "ng-lottie": "^0.3.2",
+    "ngx-qrcode2": "0.0.9",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
