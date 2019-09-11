@@ -2,6 +2,7 @@
   <div class="btn-group" *ngIf="category.name == current_competition_category">
       <div *ngFor="let event of category.events">
           <div *ngIf="event.name == current_event">
+              {{event.maxparticipants}}
     
               The Registration for Competitions will begin soon.<b> Stay tuned!</b>
             
