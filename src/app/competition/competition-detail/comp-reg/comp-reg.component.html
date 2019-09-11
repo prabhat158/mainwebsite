@@ -4,7 +4,7 @@
           <div *ngIf="event.name == current_event">
     
             <div *ngIf="status ==true && is_leader_names == undefined && my_team_names ==undefined">
-                <button (click)="create_team(eventid)">create team</button><br>
+                <button (click)="create_team(eventid)" class="team_button">Create Team</button><br>
                 Only Team Leader should create the team<br>
                 Team Leader can then add the Team Members<br>
               
