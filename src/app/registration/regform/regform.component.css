@@ -102,6 +102,11 @@ input {
   background-color: transparent;
   margin: 10px 10%;
   outline: none;
+  color:white;
+}
+::placeholder
+{
+  color:white;
 }
 table {
   width: 100%;
