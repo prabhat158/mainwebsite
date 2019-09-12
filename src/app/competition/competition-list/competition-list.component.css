@@ -62,6 +62,9 @@
     width: 80%;
     height: auto;
   }
+  .gallery {
+    cursor: pointer;
+  }
   
   .desc {
     padding: 25px;

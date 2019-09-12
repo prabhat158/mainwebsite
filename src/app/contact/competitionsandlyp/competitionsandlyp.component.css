@@ -13,7 +13,7 @@
   /* height: 40%; */
   color: white;
   font-size: 15px;
-  display: block;
+  /*display: block;*/
   justify-content: center;
   text-align: center;
 
@@ -34,6 +34,16 @@
 
 .contactimg {
   width: 50%;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.overlays {
+  display: none;
+}
+
+.contactimg:hover .overlays {
+  display: block;
 }
 
 @media screen and (max-width: 800px) {
