@@ -48,7 +48,7 @@
 }
 
 .headr{
-  margin-top: 5%;
+  margin-top: 6%;
   font-family: Welcome;
   font-size: 200px;
   color: white;
@@ -72,7 +72,7 @@ div.desc {
 }
 
 .responsive {
-  padding: 30px 30px;
+  padding: 5px 5px;
   float: left;
   width: 33%;
   /* margin-left: 40px; */
