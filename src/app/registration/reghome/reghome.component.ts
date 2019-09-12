@@ -78,7 +78,8 @@ export class ReghomeComponent implements OnInit {
             'name':data['name'],
             'email':data['email'],
             'uid':data['google_id'],
-            'mobile':data['mobile_number']
+            'mobile':data['mobile_number'],
+            'mi_no':data['mi_number']
   
           }))
           this._ngZone.run(() => this.router.navigate(['profile'],{relativeTo: this.activatedRoute.parent}));
