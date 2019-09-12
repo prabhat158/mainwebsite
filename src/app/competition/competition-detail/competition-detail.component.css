@@ -63,7 +63,7 @@
     font-size: 200%;
     padding: 0.3em 01em;
     border-radius: 1em;
-    
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     outline: none !important;
 }
@@ -96,7 +96,7 @@
     text-align:left;
     left: 310px;
     right: 310px;
-    font-family: Verdana;
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
     z-index: 100;
     /* overflow-y: auto; */
@@ -173,4 +173,3 @@ code {
     }
 
   }
-  

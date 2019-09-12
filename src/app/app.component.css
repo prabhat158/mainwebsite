@@ -14,5 +14,6 @@
 ul li a{
   color: black;
   font-family: 'Staatliches', cursive;
-  font-size: 20px
+  font-size: 28px;
+  margin-top: 50px;
 }
