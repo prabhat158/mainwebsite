@@ -35,7 +35,7 @@ export class ReghomeComponent implements OnInit {
   public name: string;
   public imageURL: string;
   public email: string;
-  private url: string = "http://api2.moodi.org/user";
+  private url: string = "https://api2.moodi.org/user";
 
 
   public auth2:any;
