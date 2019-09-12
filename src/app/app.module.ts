@@ -158,6 +158,8 @@ import { FifthFaqComponent } from './faqs/fifth-faq/fifth-faq.component';
       {path:'sponsors',component:SponsorsComponent},
       {path:'contact',component:ContactComponent,
         children: [
+
+           {path: '', redirectTo: 'competitions & lyp', pathMatch:'full'},
           {path: 'competitions & lyp', component: CompetitionsandlypComponent, data: {animation: 'Competitions'} },
           {path: 'creatives', component: CreativesComponent, data: {animation: 'Creatives'} },
           {path: 'food & beverages', component: FoodandbeveragesComponent, data: {animation: 'Food'} },
