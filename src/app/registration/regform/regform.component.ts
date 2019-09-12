@@ -123,7 +123,8 @@ export class RegformComponent implements OnInit {
           'name':this.name,
           'email':this.email,
           'uid':this.uid,
-          'mobile':this.mobile
+          'mobile':this.mobile,
+          'mi_no':result['mi_number']
 
         }))
         this._ngZone.run(() => this.router.navigate(['profile'],{relativeTo: this.activatedRoute.parent}));

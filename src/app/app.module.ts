@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {NgxQRCodeModule } from 'ngx-qrcode2';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -109,6 +110,7 @@ import { FifthFaqComponent } from './faqs/fifth-faq/fifth-faq.component';
     BrowserModule,
     ClickOutsideModule,
     BrowserAnimationsModule,
+    NgxQRCodeModule,
     RouterModule.forRoot([
 
 
