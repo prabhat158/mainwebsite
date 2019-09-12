@@ -224,3 +224,10 @@
   background-color: blue;
   margin-top: 2500px;
 }
+
+@media only screen and (max-width: 500px) {
+
+  .headr {
+    font-size: 80px;
+  }
+}
