@@ -23,7 +23,7 @@
 
           <tr>
             <td><label for="currentclg">CURRENT COLLEGE:</label></td>
-            <td (blur)="showDropDownClg = false"><input style="margin-bottom: 0px" name="people" [(ngModel)]="college" id="currentclg" (click)="toggleDropDownClg()" (clickOutside)="closeDropDownClg()" (focus)="toggleDropDownClg()" (focusout)="closeDropDownClg()" placeholder="Select Your College" autocomplete="none">
+            <td (blur)="showDropDownClg = false"><input style="margin-bottom: 0px" name="people" [(ngModel)]="college" id="currentclg" (click)="toggleDropDownClg()" (clickOutside)="closeDropDownClg()" (focus)="toggleDropDownClg()" placeholder="Select Your College" autocomplete="none">
               <div class="dropdown" *ngIf="showDropDownClg">
                 <div (click)="selectValueClg(person)" class="dropdown-option" *ngFor="let person of people | filter:college" (blur)="showDropDownClg = false">
                   {{person}}
@@ -41,7 +41,7 @@
           </tr>
           <tr>
             <td><label for="yearofstudy">CURRENT YEAR OF STUDY:</label></td>
-            <td (blur)="showDropDownCys = false"><input onkeypress="return false;" style="margin-bottom: 0;" name="year" [(ngModel)]="year" id="yearofstudy" placeholder="Select Year of Study" (click)="toggleDropDownCys()" (clickOutside)="closeDropDownCys()" (focus)="toggleDropDownCys()" (focusout)="closeDropDownCys()" autocomplete="none">
+            <td (blur)="showDropDownCys = false"><input onkeypress="return false;" style="margin-bottom: 0;" name="year" [(ngModel)]="year" id="yearofstudy" placeholder="Select Year of Study" (click)="toggleDropDownCys()" (clickOutside)="closeDropDownCys()" (focus)="toggleDropDownCys()" autocomplete="none">
               <div class="dropdown" *ngIf="showDropDownCys">
                 <div (click)="selectValueCys(y)" class="dropdown-option" *ngFor="let y of years" (blur)="showDropDownCys = false">
                   {{y}}
@@ -51,7 +51,7 @@
           </tr>
           <tr>
             <td><label for="gender">GENDER:</label></td>
-            <td (blur)="showDropDownGen = false"><input onkeypress="return false;" style="margin-bottom: 0px" value={{chosengender}} id="gender" placeholder="Select Your Gender" (click)="toggleDropDownGen()" (clickOutside)="closeDropDownGen()" (focus)="toggleDropDownGen()" (focusout)="closeDropDownGen()" autocomplete="none">
+            <td (blur)="showDropDownGen = false"><input onkeypress="return false;" style="margin-bottom: 0px" value={{chosengender}} id="gender" placeholder="Select Your Gender" (click)="toggleDropDownGen()" (clickOutside)="closeDropDownGen()" (focus)="toggleDropDownGen()"  autocomplete="none">
               <div class="dropdown" *ngIf="showDropDownGen">
                 <div (click)="selectValueGen(g)" class="dropdown-option" *ngFor="let g of genders" (blur)="showDropDownGen = false">
                   {{g}}
