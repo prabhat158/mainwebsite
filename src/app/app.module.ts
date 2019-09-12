@@ -55,6 +55,7 @@ import { ThirdFaqComponent } from './faqs/third-faq/third-faq.component';
 import { FourthFaqComponent } from './faqs/fourth-faq/fourth-faq.component';
 import { FifthFaqComponent } from './faqs/fifth-faq/fifth-faq.component';
 import { SixthComponent } from './accommodation/sixth/sixth.component';
+import { SixthfaqComponent } from './faqs/sixthfaq/sixthfaq.component';
 
 
 
@@ -103,7 +104,8 @@ import { SixthComponent } from './accommodation/sixth/sixth.component';
     ThirdFaqComponent,
     FourthFaqComponent,
     FifthFaqComponent,
-    SixthComponent
+    SixthComponent,
+    SixthfaqComponent
   ],
   imports: [
 
@@ -156,6 +158,7 @@ import { SixthComponent } from './accommodation/sixth/sixth.component';
         {path: 'faq', component: ThirdFaqComponent},
         {path: 'register', component: FourthFaqComponent},
         {path: 'previous winners', component: FifthFaqComponent},
+        {path: 'sixth', component: SixthfaqComponent},
       ]
     },
       {path:'sponsors',component:SponsorsComponent},
