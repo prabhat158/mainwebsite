@@ -18,7 +18,7 @@
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
-
+  font-weight:bold;
   font-family: 'Poppins', sans-serif;
 
   /* z-index: 1; */
