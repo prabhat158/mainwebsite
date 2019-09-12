@@ -5,7 +5,7 @@
     float: right;
     /* margin-left: 40%; */
     /* margin-top: 0%; */
-    margin-right: 10%;
+    margin-right: 20%;
 
     /* top: 95%; */
     /* margin-top: -10%; */
@@ -18,8 +18,8 @@
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;  
-
-  font-family: 'Staatliches', cursive;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
 
     /* z-index: 1; */
     /* float: right; */
