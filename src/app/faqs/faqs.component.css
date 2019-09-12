@@ -333,11 +333,13 @@ p {
   }
 
   .mobileoptions {
+    font-family: 'Staatliches', cursive;
     display: block;
   }
 }
 
 .options {
+  font-family: 'Staatliches', cursive;
   margin-left: 4%;
   width: 100%;
 }
