@@ -56,7 +56,10 @@ export class RegformComponent implements OnInit {
     }
   }
   toggleDropDownClg() {
-    this.showDropDownClg = !this.showDropDownClg;
+    if (this.showDropDownClg) {
+    } else {
+      this.showDropDownClg = !this.showDropDownClg;
+    }
   }
   closeDropDownClg() {
     this.showDropDownClg = false;
@@ -70,14 +73,20 @@ export class RegformComponent implements OnInit {
   }
 
   toggleDropDownGen() {
-    this.showDropDownGen = !this.showDropDownGen;
+    if (this.showDropDownGen) {
+    } else {
+      this.showDropDownGen = !this.showDropDownGen;
+    }
   }
   closeDropDownGen() {
     this.showDropDownGen = false;
   }
 
   toggleDropDownCys() {
-    this.showDropDownCys = !this.showDropDownCys;
+    if (this.showDropDownCys) {
+    } else {
+      this.showDropDownCys = !this.showDropDownCys;
+    }
   }
   closeDropDownCys() {
     this.showDropDownCys = false;
