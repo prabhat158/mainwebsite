@@ -20,7 +20,8 @@ const httpOptions={
 })
 export class RegformComponent implements OnInit {
 
-  people = ['Indian Institute of Tech Bombay', 'Indian Institute of Tech Delhi', 'Indian Institute of Tech Kanpur','IIIT Pune','Bits Pilani'];
+  people1 = ['Indian Institute of Tech Bombay', 'Indian Institute of Tech Delhi', 'Indian Institute of Tech Kanpur','IIIT Pune','Bits Pilani'];
+  people=[];
   genders = ['Male', 'Female', 'Other'];
   years = ['First', 'Second', 'Third', 'Fourth', 'Fifth'];
   showDropDownClg = false;
@@ -52,8 +53,19 @@ export class RegformComponent implements OnInit {
     if(this.uid==undefined){
       this._ngZone.run(() => this.router.navigate(['/'],{relativeTo: this.activatedRoute.parent}));
     }else{
-      // console.log(this.uid)
-    }
+
+      this.http.get('https://api2.moodi.org/collegeslist')
+      .subscribe((data: any[]) => 
+      this.people = data.map(function(item){
+        return item.college_name;
+      },
+
+      console.log(this.people)
+      ))
+      
+      
+  }
+
   }
   toggleDropDownClg() {
     if (this.showDropDownClg) {
