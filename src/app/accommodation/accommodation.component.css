@@ -324,11 +324,13 @@ p {
 
   .main_heading {
     position: absolute;
-    top: 0;
-    font-size: 100px;
+    top:3%;
+    font-size: 70px;
   }
 
   .mobileoptions {
+
+  font-family: 'Staatliches', cursive;
     margin-top: -50px;
   }
 
@@ -348,6 +350,8 @@ p {
 }
 
 .options {
+
+  font-family: 'Staatliches', cursive;
   margin-left: 4%;
   width: 100%;
 }
