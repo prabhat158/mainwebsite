@@ -41,21 +41,6 @@ export class CollegelistPipe implements PipeTransform {
     // if(String(term).length<3){this.tempres=[];}
     for (let i of people){
       do_not_push=false;
-        for(let k of String(term).split(" ")){
-          // console.log("m for loop me aa gya")
-          if(k.length>=3){
-            if(i.toLowerCase().search(k.toLowerCase())!=-1){
-            }else{
-              do_not_push=true;
-              break;
-            }
-          }else{}
-          // console.log(k)
-        }
-        if(do_not_push){}else{result.push(i);}
-    }
-    for (let i of people){
-      do_not_push=false;
       var capitals='';
       for(let k of i.split(" ")){
         var ch=k.charAt(0);
