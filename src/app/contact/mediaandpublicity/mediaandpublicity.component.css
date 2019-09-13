@@ -38,11 +38,30 @@
   display: inline-block;
 }
 
+.contsocial {
+  display: inline-block;
+  opacity: 0;
+  padding: 1%;
+  position: relative;
+  top: -230px;
+}
+.contsocial img {
+  width: 20%;
+  padding: 2%;
+}
+.contaditya:hover {
+  background-color: white;
+  border-radius: 50%;
+}
+
 .contdet {
   opacity: 0;
-  width: 50%;
-  padding: 0;
-  margin: 0 0;
+  position: relative;
+  top: -240px;
+  color: black;
+}
+.contdet:hover {
+  color: white;
 }
 
 .contactimg {
@@ -50,10 +69,21 @@
   transition: 0.5s ease;
   cursor: pointer;
 }
+.contactimg1 {
+  width: 90%;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
 .contactcont:hover .contactimg{
   opacity: 0.2;
 }
+.contactcont:hover .contactimg1{
+  opacity: 0.2;
+}
 .contactcont:hover .contdet{
+  opacity: 1;
+}
+.contactcont:hover .contsocial{
   opacity: 1;
 }
 
