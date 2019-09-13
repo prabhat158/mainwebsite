@@ -89,7 +89,7 @@
     width: 92%;
     height: auto;
     position: relative;
-    margin-top: -297px;
+    top:411px;
     right: -105%;
 }
 
@@ -117,7 +117,7 @@
     width: 46%;
     display: inline-block;
     position: relative;
-    margin-top: 20px;
+    margin-top: -24%;
     margin-left: 100px;
     font-size: 22px;
     font-weight: lighter;
@@ -304,6 +304,7 @@
         display: none
     }
     .about{
+        z-index: 1;
         background-color: #f5a1af; 
         position: relative; 
         margin-top: 0; 
@@ -352,4 +353,30 @@
             margin-top: -80%;
             margin-left: -1%;
         }
+        .aboutusp{
+            width: 100%;
+            padding: 0 87px;
+            margin-left: 0;
+            margin-top: 0;
+            font-size: 13px
+        }
+        .topleft{
+            font-size: 66px
+        }
+        .anim2m{
+            width: 76%;
+            margin-top: -10%;
+            margin-left: 11%
+        }
+        .aboutushead{
+            margin-top: 13%
+        }
+        /* .anim2{
+            width: 133%;
+            height: auto;
+            position: unset;
+            margin-top: 32%;
+            margin-left: 14%
+
+        } */
     }
