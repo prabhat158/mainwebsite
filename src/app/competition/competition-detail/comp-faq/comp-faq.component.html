@@ -1,5 +1,5 @@
 <div *ngFor="let category of competitions_categories">
-  <div class="btn-group" *ngIf="category.name == current_competition_category">
+  <div style="padding: 3%;" class="btn-group" *ngIf="category.name == current_competition_category">
       <div *ngFor="let event of category.events">
           <div *ngIf="event.name == current_event">
     

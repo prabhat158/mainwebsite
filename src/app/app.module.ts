@@ -54,6 +54,8 @@ import { SecondFaqComponent } from './faqs/second-faq/second-faq.component';
 import { ThirdFaqComponent } from './faqs/third-faq/third-faq.component';
 import { FourthFaqComponent } from './faqs/fourth-faq/fourth-faq.component';
 import { FifthFaqComponent } from './faqs/fifth-faq/fifth-faq.component';
+import { SixthComponent } from './accommodation/sixth/sixth.component';
+import { SixthfaqComponent } from './faqs/sixthfaq/sixthfaq.component';
 
 
 
@@ -101,7 +103,9 @@ import { FifthFaqComponent } from './faqs/fifth-faq/fifth-faq.component';
     SecondFaqComponent,
     ThirdFaqComponent,
     FourthFaqComponent,
-    FifthFaqComponent
+    FifthFaqComponent,
+    SixthComponent,
+    SixthfaqComponent
   ],
   imports: [
 
@@ -125,6 +129,7 @@ import { FifthFaqComponent } from './faqs/fifth-faq/fifth-faq.component';
         {path: 'faq', component: ThirdComponent},
         {path: 'register', component: FourthComponent},
         {path: 'previous winners', component: FifthComponent},
+        {path: 'sixth', component: SixthComponent},
       ]
     },
 
@@ -153,11 +158,14 @@ import { FifthFaqComponent } from './faqs/fifth-faq/fifth-faq.component';
         {path: 'faq', component: ThirdFaqComponent},
         {path: 'register', component: FourthFaqComponent},
         {path: 'previous winners', component: FifthFaqComponent},
+        {path: 'sixth', component: SixthfaqComponent},
       ]
     },
       {path:'sponsors',component:SponsorsComponent},
       {path:'contact',component:ContactComponent,
         children: [
+
+           {path: '', redirectTo: 'competitions & lyp', pathMatch:'full'},
           {path: 'competitions & lyp', component: CompetitionsandlypComponent, data: {animation: 'Competitions'} },
           {path: 'creatives', component: CreativesComponent, data: {animation: 'Creatives'} },
           {path: 'food & beverages', component: FoodandbeveragesComponent, data: {animation: 'Food'} },
