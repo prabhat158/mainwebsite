@@ -5,17 +5,18 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CollegelistPipe implements PipeTransform {
 
-  is_substring(x, y){
+
+  is_subsequence(x, y){
     if(x.length==0){
       return true;
-    }else if(y.length==0){
+    }else if(y.length<x.length){
       return false;
     }
     else if(y.charAt(0)==x.charAt(0)){
-      return this.is_substring(x.slice(1),y.slice(1));
+      return this.is_subsequence(x.slice(1),y.slice(1));
     }
     else{
-      return this.is_substring(x,y.slice(1));
+      return this.is_subsequence(x,y.slice(1));
     }
   }
 
@@ -36,11 +37,50 @@ export class CollegelistPipe implements PipeTransform {
     // return objs;
 
     var result:any[]=[];
+    var do_not_push=true;
+    // if(String(term).length<3){this.tempres=[];}
     for (let i of people){
-      if(this.is_substring(String(term),i)){
-      result.push(i);}
-
+      do_not_push=false;
+        for(let k of String(term).split(" ")){
+          // console.log("m for loop me aa gya")
+          if(k.length>=3){
+            if(i.toLowerCase().search(k.toLowerCase())!=-1){
+            }else{
+              do_not_push=true;
+              break;
+            }
+          }else{}
+          // console.log(k)
+        }
+        if(do_not_push){}else{result.push(i);}
     }
+    for (let i of people){
+      do_not_push=false;
+      var capitals='';
+      for(let k of i.split(" ")){
+        var ch=k.charAt(0);
+        if(ch >= "a" && ch <= "z" || ch >= "A" && ch <= "Z"){
+        capitals=capitals+ch;
+      }
+    }
+      // console.log(capitals);
+        for(let k of String(term).split(" ")){
+          // console.log("m for loop me aa gya")
+          if(k.length>=3){
+            if(i.toLowerCase().search(k.toLowerCase())!=-1){
+            }else if(this.is_subsequence(k.toLowerCase(),capitals.toLowerCase())){
+            }else{
+              do_not_push=true;
+              break;
+            }
+          }else{}
+          // console.log(k)
+        }
+        if(do_not_push){
+          
+        }else{result.push(i);}
+    }
+    // console.log(result);
     return result;
 
   }
