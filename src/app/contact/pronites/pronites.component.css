@@ -89,4 +89,17 @@
     padding-right: 5%;
     top: 0;
   }
+  .contactcont .contsocial {
+    opacity: 1;
+    position: relative;
+    top: -130px;
+  }
+  .contactcont .contdet {
+    opacity: 1;
+    position: relative;
+    top: -140px;
+  }
+  .contactcont .contactimg {
+    opacity: 0.3;
+  }
 }
