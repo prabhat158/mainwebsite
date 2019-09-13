@@ -355,13 +355,14 @@
         }
         .aboutusp{
             width: 100%;
-            padding: 0 87px;
+            padding: 0 63px;
             margin-left: 0;
             margin-top: 0;
             font-size: 13px
         }
         .topleft{
-            font-size: 66px
+            margin-left: 63px;
+            font-size: 46px
         }
         .anim2m{
             width: 76%;
@@ -369,7 +370,7 @@
             margin-left: 11%
         }
         .aboutushead{
-            margin-top: 13%
+            margin-top: 23%
         }
         /* .anim2{
             width: 133%;
