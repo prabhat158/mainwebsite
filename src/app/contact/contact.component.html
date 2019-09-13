@@ -7,46 +7,134 @@
 
   <div class="bg1"></div>
   <!-- <img src="../../assets/acco/Asset 26.png" class="bg2"> -->
-  <div>
-    <br><br><br><br><br><br><br><br>
+  <div style="position: relative; top: -50px;">
 
 
     <h1 class="main_heading">Contact Us</h1>
     <div class="mobileoptions">
-      <a routerLink="competitions & lyp">
-        <button>COMPETITIONS & LYP</button>
-      </a>
-      <a routerLink="creatives">
-        <button>CREATIVES</button>
-      </a>
-      <a routerLink="food & beverages">
-        <button>FOOD & BEVERAGES</button>
-      </a>
-      <a routerLink="horizons">
-        <button>HORIZONS</button>
-      </a>
-      <a routerLink="informals & workshops">
-        <button>INFORMALS & WORKSHOPS</button>
-      </a>
-      <a routerLink="marketing">
-        <button>MARKETING</button>
-      </a>
-      <a routerLink="media & publicity">
-        <button>MEDIA & PUBLICITY</button>
-      </a>
-      <a routerLink="pronites">
-        <button>PRONITES</button>
-      </a>
-      <a routerLink="logistics & operations">
-        <button>LOGISTICS & OPERATIONS</button>
-      </a>
-      <a routerLink="hospitality">
-        <button>HOSPITALITY, ASSISTANCE & PR</button>
-      </a>
-      <a routerLink="oc">
-        <button>OVERALL COORDINATORS</button>
-      </a>
+      <div style="display: inline-block;">
+      <div class="section">
+        <div class="section__item">
+          <a class="sm-link sm-link_padding-bottom sm-link3">
+            <a routerLinkActive="active_button" routerLink="competitions & lyp">
+              <button>COMPETITIONS & LYP</button>
+            </a>
+          </a>
+        </div>
+      </div>
+      </div>
+        <div style="display: inline-block;">
+      <div class="section">
+        <div class="section__item">
+          <a class="sm-link sm-link_padding-bottom sm-link3">
+            <a routerLinkActive="active_button" routerLink="creatives">
+              <button>CREATIVES</button>
+            </a>
+          </a>
+        </div>
+      </div>
+        </div>
+        <div style="display: inline-block;">
+      <div class="section">
+        <div class="section__item">
+          <a class="sm-link sm-link_padding-bottom sm-link3">
+            <a routerLinkActive="active_button" routerLink="food & beverages">
+              <button>FOOD & BEVERAGES</button>
+            </a>
+          </a>
+        </div>
+      </div>
+        </div>
+        <div style="display: inline-block;">
+      <div class="section">
+        <div class="section__item">
+          <a class="sm-link sm-link_padding-bottom sm-link3">
+            <a routerLinkActive="active_button" routerLink="horizons">
+              <button>HORIZONS</button>
+            </a>
+          </a>
+        </div>
+      </div>
+        </div>
+      <div style="display: inline-block;">
+      <div class="section">
+        <div class="section__item">
+          <a class="sm-link sm-link_padding-bottom sm-link3">
+            <a routerLinkActive="active_button" routerLink="informals & workshops">
+              <button>INFORMALS & WORKSHOPS</button>
+            </a>
+          </a>
+        </div>
+      </div>
+      </div>
+      <div style="display: inline-block;">
+      <div class="section">
+        <div class="section__item">
+          <a class="sm-link sm-link_padding-bottom sm-link3">
+            <a routerLinkActive="active_button" routerLink="marketing">
+              <button>MARKETING</button>
+            </a>
+          </a>
+        </div>
+      </div>
+      </div>
+      <div style="display: inline-block;">
+      <div class="section">
+        <div class="section__item">
+          <a class="sm-link sm-link_padding-bottom sm-link3">
+            <a routerLinkActive="active_button" routerLink="media & publicity">
+              <button>MEDIA & PUBLICITY</button>
+            </a>
+          </a>
+        </div>
+      </div>
+      </div>
+      <div style="display: inline-block;">
+      <div class="section">
+        <div class="section__item">
+          <a class="sm-link sm-link_padding-bottom sm-link3">
+            <a routerLinkActive="active_button" routerLink="pronites">
+              <button>PRONITES</button>
+            </a>
+          </a>
+        </div>
+      </div>
+      </div>
+      <div style="display: inline-block;">
+      <div class="section">
+        <div class="section__item">
+          <a class="sm-link sm-link_padding-bottom sm-link3">
+            <a routerLinkActive="active_button" routerLink="logistics & operations">
+              <button>LOGISTICS & OPERATIONS</button>
+            </a>
+          </a>
+        </div>
+      </div>
+      </div>
+      <div style="display: inline-block;">
+      <div class="section">
+        <div class="section__item">
+          <a class="sm-link sm-link_padding-bottom sm-link3">
+            <a routerLinkActive="active_button" routerLink="hospitality">
+              <button>HOSPITALITY, ASSISTANCE & PR</button>
+            </a>
+          </a>
+        </div>
+      </div>
+      </div>
+      <div style="display: inline-block;">
+      <div class="section">
+        <div class="section__item">
+          <a class="sm-link sm-link_padding-bottom sm-link3">
+            <a routerLinkActive="active_button" routerLink="oc">
+              <button>OVERALL COORDINATORS</button>
+            </a>
+          </a>
+        </div>
+      </div>
+      </div>
     </div>
+
 
     <div [@routeAnimations]="prepareRoute(outlet)">
     <router-outlet #outlet="outlet"></router-outlet>
