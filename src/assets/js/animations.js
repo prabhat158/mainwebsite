@@ -29,4 +29,18 @@ var animation = bodymovin.loadAnimation({
     autoplay: true,
     path:'assets/home/animationcl/data.json'
   });
+  var animation6 = bodymovin.loadAnimation({
+    container: document.getElementById('bmsc'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path:'assets/home/animationbc/data.json'
+  });
+  var animation7 = bodymovin.loadAnimation({
+    container: document.getElementById('bmbc'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path:'assets/home/animationsc/data.json'
+  });
 
