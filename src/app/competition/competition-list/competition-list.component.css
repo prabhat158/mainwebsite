@@ -49,7 +49,7 @@
 }
 
 .headr{
-  margin-top: 5%;
+  margin-top: -10%;
   font-family: Welcome;
   font-size: 200px;
   color: white;
@@ -64,6 +64,13 @@
   }
   .gallery {
     cursor: pointer;
+  }
+  .logo{
+    width: 13%;
+    height: auto;
+    position: relative;
+    margin-top: 3%;
+    margin-left: 4%;
   }
   
   .desc {

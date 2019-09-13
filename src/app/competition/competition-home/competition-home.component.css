@@ -7,6 +7,13 @@
     left: 0px;
     /* background-color: #B2E1FF;  */
 }   
+.logo{
+  width: 13%;
+  height: auto;
+  position: relative;
+  margin-top: 3%;
+  margin-left: 4%;
+}
 
 .bg2 {
     
@@ -42,7 +49,7 @@
 }
 
 .headr{
-    margin-top: 6%;
+    margin-top: -10%;
     font-family: Welcome;
     font-size: 175px;
     color: white;

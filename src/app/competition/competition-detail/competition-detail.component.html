@@ -1,7 +1,10 @@
 
 <div style="overflow: hidden" class="full-color">
-  <img src="../../../assets/compi/compi3.png" class="bg1">
+  <div>
+  <img src="../../../assets/compi/Asset 26withbg.png" class="bg1">
 
+<img src="../../../assets/logos/Asset 49compibglogo.svg" class="logo">
+</div>
 <div *ngFor="let category of competitions_categories">
   <div *ngIf="category.name == current_competition_category">
     <div *ngFor="let event of category.events">
@@ -19,7 +22,7 @@
               <button routerLink="comp-prizes" class="raise" (click)="onClick('prizes')" routerLinkActive="active" [ngClass]="{'clicked': clickedButton=='prizes'}">Prizes & LYPs</button>
             </a>
             <a >
-              <button routerLink="comp-faq" routerLinkActive="active" class="raise" (click)="onClick('faq')" [ngClass]="{'clicked': clickedButton=='faq'}">FAQs</button>
+              <button routerLink="comp-faq" routerLinkActive="active" class="raise" (click)="onClick('faq')" [ngClass]="{'clicked': clickedButton=='faq'}">Queries</button>
             </a>
             <a >
               <button routerLink="comp-reg" routerLinkActive="active" class="raise" (click)="onClick('reg')" [ngClass]="{'clicked': clickedButton=='reg'}">Register</button>

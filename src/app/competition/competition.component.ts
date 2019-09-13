@@ -12,4 +12,8 @@ export class CompetitionComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngAfterViewInit() {
+    
+  }
+
 }
