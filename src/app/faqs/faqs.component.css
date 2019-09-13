@@ -1,3 +1,10 @@
+.logo{
+  width: 13%;
+  height: auto;
+  position: relative;
+  margin-top: 3%;
+  margin-left: 4%;
+}
 .sm-link{
 	--uismLinkDisplay: var(--smLinkDisplay, inline-flex);	
 	--uismLinkTextColor: var(--smLinkTextColor);
@@ -261,15 +268,13 @@ SETTINGS
 }
 
 .main_heading{
-    position: relative;
-    font-size: 190px;
-    font-family: Welcome;
-    width:100%;
-    text-align: center;
-    /* top: 20%;  */
-    color: white;
+  margin-top: -10%;
+  font-family: Welcome;
+  font-size: 175px;
+  color: white;
+  position: relative;
+  text-align: center;
 }
-
 .btn_group{
     /* width: 50%; */
     position: relative;
@@ -318,6 +323,15 @@ p {
 }
 
 @media screen and (max-width: 800px){
+  .main_heading {
+    /* position: absolute; */
+
+    font-size: 100px;
+    line-height: 86px;
+  }
+  .logo{
+    display: none
+  }
   p {
     font-size: 20px;
   }

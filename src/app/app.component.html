@@ -14,8 +14,24 @@
     </div>
 </div>
 <div class="mobile">
+    <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <li><a class="button1" (click)="closeNav()" routerLink="accommodation" >ACCOMMODATION </a></li>
+    <li><a class="button1" routerLink="registration" (click)="closeNav()"> REGISTER </a></li>
+    <li><a class="button1" routerLink="events" (click)="closeNav()"> EVENTS </a></li>
+    <li><a class="button1" routerLink="competition" (click)="closeNav()"> COMPETITIONS </a></li>
+    <li><a class="button1" routerLink="faqs" (click)="closeNav()"> FAQs </a></li>
+    <li><a class="button1" target="_blank" href="https://sponsors.moodi.org" (click)="closeNav()"> SPONSORS </a></li>
+    <li><a style="margin-right: 25px" class="button1" routerLink="contact" (click)="closeNav()"> CONTACT US </a></li>
 
+  </div>
   
+  <!-- Use any element to open the sidenav -->
+  <span (click)="openNav()"><img src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" width="40px" ></span>
+  
+  <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+  <div id="main">
+  </div>
 </div>
 
 

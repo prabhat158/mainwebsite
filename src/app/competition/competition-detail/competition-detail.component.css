@@ -168,8 +168,8 @@ code {
   }
   @media screen and (max-width: 600px){
     .headr {
-      margin-top: 14%;
-      font-size: 85px;
+      font-size: 100px;
+      line-height: 136px;
     }
     .description{
       padding: 0 10px;

@@ -49,6 +49,7 @@
 }
 
 .headr{
+
   margin-top: -10%;
   font-family: Welcome;
   font-size: 200px;
@@ -100,8 +101,13 @@
     /* margin-left: 40px; */
   }
   
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 600px) {
     .responsive {
       width: 100%;
+      margin: 20px;
+    }
+    .headr{
+      font-size: 100px;
+      line-height: 136px;
     }
   }
