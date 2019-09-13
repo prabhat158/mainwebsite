@@ -6,6 +6,20 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class CollegelistPipe implements PipeTransform {
 
 
+  is_subsequence(x, y){
+    if(x.length==0){
+      return true;
+    }else if(y.length<x.length){
+      return false;
+    }
+    else if(y.charAt(0)==x.charAt(0)){
+      return this.is_subsequence(x.slice(1),y.slice(1));
+    }
+    else{
+      return this.is_subsequence(x,y.slice(1));
+    }
+  }
+
   transform(people: any[], term: any): any {
     // console.log(term);
     //check if search term is undefined
