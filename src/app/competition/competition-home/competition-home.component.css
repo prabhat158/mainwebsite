@@ -5,7 +5,7 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    background-color: #B2E1FF; 
+    /* background-color: #B2E1FF;  */
 }   
 
 .bg2 {
@@ -42,8 +42,9 @@
 }
 
 .headr{
+    margin-top: 6%;
     font-family: Welcome;
-    font-size: 200px;
+    font-size: 175px;
     color: white;
     position: relative;
     text-align: center;
@@ -55,6 +56,7 @@
   }
   
   div.desc {
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     font-size: 122%;
   }
@@ -64,9 +66,9 @@
   }
   
   .responsive {
-    padding: 30px 30px;
+    padding: 5px 5px;
     float: left;
-    width: 25%;
+    width: 20%;
     /* margin-left: 40px; */
   }
   
@@ -81,6 +83,12 @@
   .gallery img:hover{
     animation: shake 0.5s;
     animation-iteration-count: infinite;
+}
+@media screen and (max-width: 600px){
+  .headr {
+    /* margin-top: 14%; */
+    font-size: 100px;
+  }
 }
 
 @keyframes shake {

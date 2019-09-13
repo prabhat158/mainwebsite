@@ -9,10 +9,18 @@ export class DataService {
   constructor(
     private router:Router,
   ) { }
-
+    
+  setcollegedata(data){
+    localStorage.setItem('college',data);
+  }
 
   setJdata(data){
     localStorage.setItem('jdata',data);
+  }
+
+  getcollegedata(){
+    // let temp = this.uid;
+    return localStorage.getItem('college')
   }
 
   getJdata(){

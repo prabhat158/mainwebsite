@@ -73,3 +73,9 @@ thead{
         font-weight: bold;
 
 }
+@media screen and (max-width: 600px){
+
+    .cntr{
+      padding: 0px;
+    }
+  }

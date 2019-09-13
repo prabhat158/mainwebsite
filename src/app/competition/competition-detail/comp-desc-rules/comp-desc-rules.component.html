@@ -4,9 +4,9 @@
       <div *ngFor="let event of category.events">
           <div *ngIf="event.name == current_event">
     
-              <div [innerHTML]="event.description"></div><br>
-              <div style="font-size: 2.5em; font-variant: small-caps; font-weight:bold; font-family: 'Courier New', Courier, monospace">Rules</div><br>
-              <div [innerHTML]="event.rules"></div>
+              <div style="padding: 3%; padding-bottom: 0;" [innerHTML]="event.description"></div><br>
+              <div style="padding: 3%; padding-top: 0; padding-bottom: 0; font-size: 2.5em; font-variant: small-caps; font-weight:bold; font-family: 'Courier New', Courier, monospace">Rules</div><br>
+              <div style="padding: 3%; padding-top: 0;" [innerHTML]="event.rules"></div>
             
     
             

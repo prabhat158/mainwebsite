@@ -76,10 +76,10 @@ div.desc {
     /* margin-top: 225px; */
     /* margin-left: 250px; */
 
-    border: solid black!important;
+    border: solid #AF32FF!important;
     border-width: 0 2px;
 
-    background-color: transparent;
+    background-color: white;
     cursor: pointer;
     width:auto;
     padding: 0.3em 1.9em;

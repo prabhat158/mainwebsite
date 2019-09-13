@@ -280,6 +280,7 @@ SETTINGS
   position: relative;
   margin-left: 10%;
   margin-right: 59%;
+  outline: none;
   /*padding: 1%;*/
   /* background-color: azure; */
   /* display: inline-block; */
@@ -293,6 +294,7 @@ SETTINGS
   font-size: 35px;
   color: black;
   cursor: pointer;
+  padding-bottom: 0;
 }
 
 .bot1 {
@@ -345,6 +347,7 @@ p {
   }
 
   .mobileoptions {
+    font-family: 'Staatliches', cursive;
     display: block;
     font-size: 10px;
   }
@@ -359,6 +362,44 @@ p {
 }
 
 .options {
+  font-family: 'Staatliches', cursive;
   margin-left: 4%;
   width: 100%;
+}
+
+.active_button {
+  /* color: #000; */
+  /* text-decoration: underline; */
+
+  /* border-bottom: white; */
+
+  /* content: "";  */
+  /* width: 100%;
+  height: 5px;
+	background-color: white;
+
+  position: absolute;
+  left: 0;
+  bottom: 0; */
+
+  /* color: #F16A70; */
+  /* text-transform: uppercase; */
+  display: inline-block;
+  /* font-size: 30; */
+  /* font-family: oswald; */
+  /* /* text-decoration: none; */
+  background-image: linear-gradient(to right, black, black);
+  background-position: bottom left;
+  /* background-position: top 5px; */
+  background-repeat: no-repeat;
+  background-size: 100% 5px;
+  /* /* padding: 10px  */
+  /* transition: background-size .5s ease; */
+  /* padding-bottom: 50px; */
+  /* z-index: -2 ; */
+  /* height: 5px  ; */
+
+  /* transform: translate3d(-100%, 0, 0); */
+  /* transition: transform .2s ease-in; */
+
 }

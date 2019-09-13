@@ -14,26 +14,26 @@
 <div style="margin-top: -100px" *ngFor="let category of competitions_categories">
   <div *ngIf="category.name == current_competition_category">
       <div class="container">
-          <a *ngFor="let event of category.events, let i=index" class="button" routerLink="{{event.name}}">
+          <div *ngFor="let event of category.events, let i=index" class="button"  routerLink="{{event.name}}">
               <!-- <b> {{event.name}} </b> <br>
               {{event.subtitle}} -->
-            <div class="responsive">
-              <div style="margin-bottom: 50px" class="gallery">
-                <a target="_blank" href="#">
+            <div  class="responsive">
+              <div style="margin-bottom: 50px;" class="gallery">
+                <div>
                   <img *ngIf="i%3==0" src='../../../assets/compi/Asset 18.png'  width="600" height="400">
                   <img *ngIf="i%3==1" src='../../../assets/compi/Asset 19.png'  width="600" height="400">
                   <img *ngIf="i%3==2" src='../../../assets/compi/Asset 20.png'  width="600" height="400">
-                <div style="margin-top: -35%">
+                <div style="font-family: 'Poppins', sans-serif; margin-top: -35%">
                   <span class="desc"><b>{{event.name}}</b></span><br>
                   <span class="subdesc">{{event.subtitle}}</span>
                 </div>
-                </a>  
+                </div>  
                 
-              </div>  
+              </div>      
             </div>  
    
       
-      </a>
+          </div>
     </div>
   </div>
 </div>

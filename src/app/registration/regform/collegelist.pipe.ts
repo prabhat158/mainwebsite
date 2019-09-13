@@ -20,9 +20,11 @@ export class CollegelistPipe implements PipeTransform {
   }
 
   transform(people: any[], term: any): any {
-    console.log(term);
+    // console.log(term);
     //check if search term is undefined
-    if(term === undefined) return people;
+    if(term === undefined) return null;
+    if(term === "") return null;
+    if(term.length<3) return null;
     //return updates people array
 
     // var objs: any[] = [];
