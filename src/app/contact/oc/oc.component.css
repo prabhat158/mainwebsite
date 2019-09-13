@@ -1,4 +1,4 @@
-.main_content {
+.adityacss {
   /* display:inline-block; */
   width: 50%;
   position: relative;
@@ -28,7 +28,7 @@
 
 }
 
-.main_content::-webkit-scrollbar {
+.adityacss::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
@@ -38,11 +38,30 @@
   display: inline-block;
 }
 
+.contsocial {
+  display: inline-block;
+  opacity: 0;
+  padding: 1%;
+  position: relative;
+  top: -230px;
+}
+.contsocial img {
+  width: 20%;
+  padding: 2%;
+}
+.contaditya:hover {
+  background-color: white;
+  border-radius: 50%;
+}
+
 .contdet {
   opacity: 0;
-  width: 50%;
-  padding: 0;
-  margin: 0 0;
+  position: relative;
+  top: -240px;
+  color: black;
+}
+.contdet:hover {
+  color: white;
 }
 
 .contactimg {
@@ -56,9 +75,12 @@
 .contactcont:hover .contdet{
   opacity: 1;
 }
+.contactcont:hover .contsocial{
+  opacity: 1;
+}
 
 @media screen and (max-width: 800px) {
-  .main_content {
+  .adityacss {
     width: 100%;
     float: none;
     text-align: center;
