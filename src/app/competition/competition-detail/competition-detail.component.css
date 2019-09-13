@@ -6,7 +6,6 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    background-color: #B2E1FF; 
 }   
 
 .bg2 {
@@ -21,7 +20,13 @@
     /* max-height: 120px; */
 
 }
-
+.logo{
+  width: 13%;
+  height: auto;
+  position: relative;
+  margin-top: 3%;
+  margin-left: 4%;
+}
 .full-color{
   background-color:  	#32B4FF !important;
   position: absolute;
@@ -38,13 +43,14 @@
 .headr{
     font-family: Welcome;
     font-size: 200px;
-    margin-top: 10%;
+    margin-top: 0%;
     color: white;
     position: relative;
     text-align: center;
 }
 
 .btn-group{
+  z-index: 5;
     margin-top: 10px;
     width: 100%;
     /* position: absolute; */

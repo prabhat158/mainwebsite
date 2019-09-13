@@ -1,3 +1,11 @@
+.logo{
+  width: 13%;
+  height: auto;
+  position: relative;
+  margin-top: -96%;
+  margin-left: 4%;
+}
+
 .sm-link{
 	--uismLinkDisplay: var(--smLinkDisplay, inline-flex);	
 	--uismLinkTextColor: var(--smLinkTextColor);

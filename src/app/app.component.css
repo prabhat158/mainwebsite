@@ -17,3 +17,16 @@ ul li a{
   font-size: 28px;
   margin-top: 50px;
 }
+.mobile{
+  display: none
+}
+
+@media screen and (max-width: 800px) {
+  .mobile{
+    display: block;
+  }
+  .pcheader{
+    display: none;
+  }
+
+}
