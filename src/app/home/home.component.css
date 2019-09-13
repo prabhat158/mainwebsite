@@ -26,8 +26,8 @@
 .stats{
     position: absolute;
     top:30%;
-    right: 10%;
-    font-size: 50px
+    right: 3%;
+    font-size: 39px
 }
 .bottomi1{
     width: 100%;
@@ -74,18 +74,18 @@
     height: auto;
     position: relative;
     margin-top: -297px;
-    right: -89%;
+    right: -105%;
 }
 
 
 .topleft{
     background-color: #f5a1af;
-    margin: -18% 0 0 0;
+    margin-bottom: 26px;
     z-index: 1;
     margin-left: 100px;
     position: relative;
     margin-top: -233px;
-    font-size: 96px;
+    font-size: 105px;
 }
 
 .aboutus{
@@ -98,12 +98,12 @@
 }
 
 .aboutusp{
-    width: 50%;
+    width: 46%;
     display: inline-block;
     position: relative;
     margin-top: 20px;
     margin-left: 100px;
-    font-size: 109%;
+    font-size: 22px;
     font-weight: lighter;
 }
 
@@ -155,7 +155,7 @@
 
 .themep{
     position: relative;
-    font-size: 25px;
+    font-size: 22px;
     margin-left: 10%;
     margin-right: 50%;
     margin-bottom: -10px

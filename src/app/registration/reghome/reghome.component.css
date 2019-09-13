@@ -39,12 +39,12 @@ top:0;
 }
 
 .headr{
+  margin-top: -10%;
   font-family: Welcome;
-  font-size: 180px;
-  width: 100%;
+  font-size: 175px;
   color: white;
-  margin-top: 14%;
-  margin-bottom: 0;
+  position: relative;
+  text-align: center;
 }
 
 div.gallery img {
@@ -87,10 +87,19 @@ div.desc {
     outline: none !important;
     margin-bottom: 1.8em;     
 }
-
+.logo{
+  width: 13%;
+  height: auto;
+  position: relative;
+  margin-top: 3%;
+  margin-left: 4%;
+}
 @media screen and (max-width: 600px){
   .headr {
     margin-top: 14%;
     font-size: 75px;
+  }
+  .logo{
+    display: none
   }
 }

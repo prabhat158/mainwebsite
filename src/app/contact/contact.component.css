@@ -13,7 +13,13 @@
   position: relative;
   overflow: hidden;
 }
-
+.logo{
+  width: 13%;
+  height: auto;
+  position: relative;
+  margin-top: 3%;
+  margin-left: 4%;
+}
 a.sm-link{
   text-decoration: none;
 }
