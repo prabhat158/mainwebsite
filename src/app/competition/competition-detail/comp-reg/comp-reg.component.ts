@@ -46,6 +46,8 @@ export class CompRegComponent implements OnInit {
     );}else{
       
       this.competitions_categories =this.dataService.getCompidetail();
+      console.log("max  ")
+     console.log(this.dataService.getCompidetail()) 
     }
    }  
 

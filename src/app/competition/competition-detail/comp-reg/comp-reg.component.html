@@ -8,6 +8,13 @@
                 <button (click)="create_team(eventid)" class="team_button">Create Team</button><br>
                 Only Team Leader should create the team<br>
                 Team Leader can then add the Team Members<br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
               
           </div>
           <div align=center *ngIf="status ==false">
@@ -75,26 +82,32 @@
                   </tbody>
 
               </table>
-              You are registered!<br>
-              <!-- Team Limit: 15<br> -->
-              Team Leader can add Team Members only when the team members have made their MI numbers<br>
-              - No other Team Member should register themselves as the Team Leader<br>
-              - Contact Kanav(7700903058) or Atharva(7021760392) in case of any issues   
+              -You are registered!<br>
+              -Team Limit: {{event.maxparticipants}}<br>
+              -Team Leader can add Team Members only when the team members have made their MI numbers<br>
+              -No other Team Member should register themselves as the Team Leader<br>
+              -Contact Kanav(7700903058) or Atharva(7021760392) in case of any issues   
             </div>
           </div>
           <div *ngIf="is_leader_names">
-              <div *ngIf="is_leader_names?.length < 14 && my_team_names?.length < 14" class="input-group">
+              <div *ngIf="is_leader_names?.length < event.maxparticipants-1 && my_team_names?.length < event.maxparticipants-1" class="input-group">
                   <input #myInput  placeholder="Registered Mobile No."  type="text" class="form-control">
                   <span class="input-group-btn">
                       <button class=btn2 (click)="add_member(myInput.value,eventid)" type="button">Add member</button>
                   </span>
               </div>
               <br>
-              You are registered!<br>
-              <!-- Team Limit: 15<br> -->
-              Team Leader can add Team Members only when the team members have made their MI numbers<br>
-              - No other Team Member should register themselves as the Team Leader<br>
-              - Contact Kanav(7700903058) or Atharva(7021760392) in case of any issues      
+              -You are registered!<br>
+              -Team Limit: {{event.maxparticipants}}<br>
+              -Team Leader can add Team Members only when the team members have made their MI numbers<br>
+              -No other Team Member should register themselves as the Team Leader<br>
+              -Contact Kanav(7700903058) or Atharva(7021760392) in case of any issues   
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>   
             </div>
         </div>
          <br>

@@ -189,11 +189,12 @@
 }
 
 .footersm{
-    padding: 10px;
+    padding: 4px;
+    width: 8vw;
 }
 
 .footersm:hover{
-    width: 50%;
+    width: 7.4vw;
 }
 
 .footeri{
@@ -340,6 +341,10 @@
     }
     
     @media screen and (max-width: 800px){
+        .footersm{
+            padding: 4px;
+            width: 9vw;
+        }
         .laptop {
             display: none
         }
@@ -430,5 +435,14 @@
             margin-left: 14%
 
         } */
+        .bottomlogo{
+            left: 21vw;
+        }
+    }
+    .bottomlogo{
+        position: absolute;
+        left: 8vw;
+        top: 30vw;
+        width: 27vw
     }
     
