@@ -1,3 +1,11 @@
+var animation2l = bodymovin.loadAnimation({
+  container: document.getElementById('bmload'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path:'assets/home/animation2/data.json'
+});
+
 var animation = bodymovin.loadAnimation({
     container: document.getElementById('bm'),
     renderer: 'svg',
@@ -13,6 +21,9 @@ var animation = bodymovin.loadAnimation({
     autoplay: true,
     path:'assets/home/animation2/data.json'
   });
+
+
+
   var animation2dup = bodymovin.loadAnimation({
     container: document.getElementById('bm2dup'),
     renderer: 'svg',

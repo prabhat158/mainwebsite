@@ -39,6 +39,7 @@ top:0;
 }
 
 .headr{
+  z-index: -1;
   margin-top: -10%;
   font-family: Welcome;
   font-size: 175px;

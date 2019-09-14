@@ -56,6 +56,7 @@ import { FourthFaqComponent } from './faqs/fourth-faq/fourth-faq.component';
 import { FifthFaqComponent } from './faqs/fifth-faq/fifth-faq.component';
 import { SixthComponent } from './accommodation/sixth/sixth.component';
 import { SixthfaqComponent } from './faqs/sixthfaq/sixthfaq.component';
+import { EventtabComponent } from './events/eventtab/eventtab.component';
 
 
 
@@ -105,7 +106,8 @@ import { SixthfaqComponent } from './faqs/sixthfaq/sixthfaq.component';
     FourthFaqComponent,
     FifthFaqComponent,
     SixthComponent,
-    SixthfaqComponent
+    SixthfaqComponent,
+    EventtabComponent
   ],
   imports: [
 
@@ -147,8 +149,8 @@ import { SixthfaqComponent } from './faqs/sixthfaq/sixthfaq.component';
         component: EventsComponent,
         children: [
           {path: '', component: EventsHomeComponent},
+            {path: 'detail', component: EventtabComponent }
         ]
-
     },
       {path:'faqs',component:FaqsComponent,
       children: [
