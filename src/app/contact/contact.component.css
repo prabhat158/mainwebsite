@@ -13,7 +13,13 @@
   position: relative;
   overflow: hidden;
 }
-
+.logo{
+  width: 13%;
+  height: auto;
+  position: relative;
+  margin-top: 3%;
+  margin-left: 4%;
+}
 a.sm-link{
   text-decoration: none;
 }
@@ -266,6 +272,7 @@ SETTINGS
 }
 
 .main_heading{
+  z-index: -1;
   position: relative;
   font-size: 190px;
   font-family: Welcome;
@@ -273,13 +280,16 @@ SETTINGS
   text-align: center;
   /* top: 20%;  */
   color: black;
+  margin-top: 0;
+  margin-bottom: 0;
+  top: 0%;
 }
 
 .btn_group{
   /* width: 50%; */
   position: relative;
-  margin-left: 10%;
-  margin-right: 59%;
+  margin-left: 30%;
+  /*margin-right: 59%;*/
   outline: none;
   /*padding: 1%;*/
   /* background-color: azure; */
@@ -306,7 +316,7 @@ SETTINGS
 }
 
 p {
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .mobileoptions {
@@ -322,13 +332,17 @@ p {
   color: black;
   cursor: pointer;
   width:auto;
-  font-size: 200%;
+  font-size: 100%;
   padding: 0.3em 01em;
   border-radius: 1em;
-  margin-left: 0.5%;
-  margin-right:0.5%;
   font-weight: 500;
   outline: none !important;
+}
+
+@media screen and (max-width: 1100px) {
+  p {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 800px){
@@ -349,7 +363,9 @@ p {
   .mobileoptions {
     font-family: 'Staatliches', cursive;
     display: block;
-    font-size: 10px;
+    font-size: 8px;
+    position: relative;
+    top: 10px;
   }
 
   .bot1 {
@@ -359,12 +375,25 @@ p {
   .bot2 {
     display: block;
   }
+
+  .main_heading {
+    font-size: 100px;
+    position: relative;
+    top: 25px;
+  }
+
+}
+
+.contactimg {
+  cursor: pointer;
 }
 
 .options {
   font-family: 'Staatliches', cursive;
   margin-left: 4%;
-  width: 100%;
+  width: 30%;
+  position: relative;
+  top: -45px;
 }
 
 .active_button {
@@ -402,4 +431,8 @@ p {
   /* transform: translate3d(-100%, 0, 0); */
   /* transition: transform .2s ease-in; */
 
+}
+
+.active{
+  font-size: 200%;
 }

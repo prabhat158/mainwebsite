@@ -41,9 +41,10 @@
   }
   
   .headr{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 70px;
-    top: 90px;
+    z-index: -1;
+    margin-top: -10%;
+    font-family: Welcome;
+    font-size: 175px;
     color: white;
     position: relative;
     text-align: center;
@@ -103,7 +104,9 @@
     outline: none;
   }
   table {
+    font-size: 20px;
     width: 100%;
+    margin-left: -5%
   }
   td.text {
     width: available;
@@ -224,10 +227,19 @@
   background-color: blue;
   margin-top: 2500px;
 }
-
+.logo{
+  width: 13%;
+  height: auto;
+  position: relative;
+  margin-top: 3%;
+  margin-left: 4%;
+}
 @media only screen and (max-width: 500px) {
 
   .headr {
     font-size: 80px;
+  }
+  .logo{
+    display: none
   }
 }

@@ -1,3 +1,10 @@
+.logo{
+  width: 13%;
+  height: auto;
+  position: relative;
+  margin-top: 3%;
+  margin-left: 4%;
+}
 
 .bg1 {
   z-index: -3;
@@ -47,10 +54,12 @@
   text-align: center;
 }
 
+
 .headr{
-  margin-top: 6%;
+  z-index: -1;
+  margin-top: -10%;
   font-family: Welcome;
-  font-size: 200px;
+  font-size: 175px;
   color: white;
   position: relative;
   text-align: center;
@@ -103,9 +112,9 @@ div.desc {
   animation-iteration-count: infinite;
 }
 @media screen and (max-width: 600px){
-  .headr {
-    /* margin-top: 14%; */
+  .headr{
     font-size: 100px;
+    line-height: 136px;
   }
 }
 
