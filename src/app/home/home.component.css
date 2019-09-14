@@ -207,6 +207,8 @@
 }
 
 .footerheadleft{
+    color: #333333;
+    /* line-height: 4px; */
     font-size: 3.5vw;
     position: relative;
     z-index: 2;
@@ -214,12 +216,18 @@
 }
 
 .footerleft{
+    color: #333333;
+
+    /* line-height: 4px; */
     font-size: 2.5vw;
     position: relative;
     z-index: 2;
 }
 
 .footerright{
+    color: #333333;
+
+    /* line-height: 4px; */
     font-size: 2.5vw;
     position: relative;
     z-index: 2;
@@ -227,6 +235,9 @@
 }
 
 .footerheadright{
+    color: #333333;
+
+    /* line-height: 4px; */
     font-size: 3.5vw;
     position: relative;
     z-index: 2;
@@ -393,6 +404,11 @@
             font-size: 46px;
             margin-top: -50%
         }
+        .themehead{
+            /* margin-left: 63px; */
+            font-size: 46px;
+            margin-bottom: 2px
+        }
         .anim2m{
             width: 76%;
             margin-top: -10%;
@@ -400,7 +416,7 @@
         }
         .anim2t{
             width: 76%;
-            margin-top: 28%;
+            margin-top: 33%;
             margin-left: 11%
         }
         .aboutushead{

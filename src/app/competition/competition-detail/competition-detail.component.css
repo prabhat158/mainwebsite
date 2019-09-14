@@ -41,6 +41,7 @@
 }
 
 .headr{
+  z-index: -1;
     font-family: Welcome;
     font-size: 200px;
     margin-top: 0%;

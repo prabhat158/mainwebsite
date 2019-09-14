@@ -272,6 +272,7 @@ SETTINGS
 }
 
 .main_heading{
+  z-index: -1;
   position: relative;
   font-size: 190px;
   font-family: Welcome;
@@ -331,11 +332,9 @@ p {
   color: black;
   cursor: pointer;
   width:auto;
-  font-size: 200%;
+  font-size: 100%;
   padding: 0.3em 01em;
   border-radius: 1em;
-  margin-left: 0.5%;
-  margin-right:0.5%;
   font-weight: 500;
   outline: none !important;
 }
@@ -432,4 +431,8 @@ p {
   /* transform: translate3d(-100%, 0, 0); */
   /* transition: transform .2s ease-in; */
 
+}
+
+.active{
+  font-size: 200%;
 }
