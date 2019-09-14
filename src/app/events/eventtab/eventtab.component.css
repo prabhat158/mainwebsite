@@ -48,6 +48,14 @@
     text-align: center;
   }
   
+  .cont{
+    font-size: 32px;
+  }
+  @media screen and (max-width: 600px){
+    .cont{
+      font-size: 21px;
+    }
+  }
   div.gallery img {
     width: 80%;
     height: auto;
