@@ -1,3 +1,10 @@
+.logo{
+  width: 13%;
+  height: auto;
+  position: relative;
+  margin-top: 3%;
+  margin-left: 4%;
+}
 .sm-link{
 	--uismLinkDisplay: var(--smLinkDisplay, inline-flex);	
 	--uismLinkTextColor: var(--smLinkTextColor);
@@ -261,15 +268,14 @@ SETTINGS
 }
 
 .main_heading{
-    position: relative;
-    font-size: 190px;
-    font-family: Welcome;
-    width:100%;
-    text-align: center;
-    /* top: 20%;  */
-    color: white;
+  z-index: -1;
+  margin-top: -10%;
+  font-family: Welcome;
+  font-size: 175px;
+  color: white;
+  position: relative;
+  text-align: center;
 }
-
 .btn_group{
     /* width: 50%; */
     position: relative;
@@ -310,7 +316,7 @@ p {
   cursor: pointer;
   width:auto;
   font-size: 200%;
-  padding: 0;
+  padding: -20px;
   border-radius: 1em;
   font-weight: 500;
   outline: none !important;
@@ -322,11 +328,14 @@ p {
   }
 
   .main_heading {
-    position: absolute;
-    top:66px;
-    font-size: 70px;
-  }
+    /* position: absolute; */
 
+    font-size: 100px;
+    /* line-height: 86px; */
+  }
+.logo{
+  display: none
+}
   .mobileoptions {
     font-family: 'Staatliches', cursive;
     margin-top: 0;
@@ -344,6 +353,8 @@ p {
   }
 
   .mobileoptions {
+
+    
     display: block;
   }
 }

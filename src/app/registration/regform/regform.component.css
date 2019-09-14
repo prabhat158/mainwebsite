@@ -168,7 +168,13 @@ td.input {
     font-size: 120px;
   }
 }
-
+.logo{
+  width: 13%;
+  height: auto;
+  position: relative;
+  margin-top: 3%;
+  margin-left: 4%;
+}
 @media only screen and (max-width: 500px) {
   .responsive {
     width: 100%;
@@ -182,6 +188,9 @@ td.input {
 
   .headr {
     font-size: 80px;
+  }
+  .logo{
+    display: none
   }
 }
 

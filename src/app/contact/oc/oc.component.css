@@ -1,11 +1,12 @@
-.adityascss {
+.adityacss {
   /* display:inline-block; */
   width: 50%;
   position: relative;
+  top: -70px;
   float: right;
   /* margin-left: 40%; */
   /* margin-top: 0%; */
-  margin-right: 10%;
+  margin-right: 15%;
 
   /* top: 95%; */
   /* margin-top: -10%; */
@@ -13,7 +14,7 @@
   /* height: 40%; */
   color: white;
   font-size: 15px;
-  display: block;
+  /*display: block;*/
   justify-content: center;
   text-align: center;
 
@@ -27,22 +28,78 @@
 
 }
 
-.adityascss::-webkit-scrollbar {
+.adityacss::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
 
-.contactimg {
+.contactcont {
   width: 50%;
+  display: inline-block;
+}
+
+.contsocial {
+  display: inline-block;
+  opacity: 0;
+  padding: 1%;
+  position: relative;
+  top: -230px;
+}
+.contsocial img {
+  width: 20%;
+  padding: 2%;
+}
+.contaditya:hover {
+  background-color: white;
+  border-radius: 50%;
+}
+
+.contdet {
+  opacity: 0;
+  position: relative;
+  top: -240px;
+  color: black;
+}
+.contdet:hover {
+  color: white;
+}
+
+.contactimg {
+  width: 90%;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.contactcont:hover .contactimg{
+  opacity: 0.2;
+}
+.contactcont:hover .contdet{
+  opacity: 1;
+}
+.contactcont:hover .contsocial{
+  opacity: 1;
 }
 
 @media screen and (max-width: 800px) {
-  .adityascss {
+  .adityacss {
     width: 100%;
     float: none;
     text-align: center;
     justify-content: center;
     padding-left: 5%;
     padding-right: 5%;
+    top: 0;
+  }
+  .contactcont .contsocial {
+    opacity: 1;
+    position: relative;
+    top: -130px;
+  }
+  .contactcont .contdet {
+    opacity: 1;
+    position: relative;
+    top: -140px;
+  }
+  .contactcont .contactimg {
+    opacity: 0.3;
   }
 }

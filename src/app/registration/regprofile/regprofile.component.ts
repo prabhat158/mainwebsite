@@ -20,7 +20,9 @@ export class RegprofileComponent implements OnInit {
 
     name=JSON.parse(this.profile.getJdata()).name;
     email=JSON.parse(this.profile.getJdata()).email
-    uid=JSON.parse(this.profile.getJdata()).uid
+    mobile=JSON.parse(this.profile.getJdata()).mobile
+
+    mino=JSON.parse(this.profile.getJdata()).mi_no
 
     logout(){
     localStorage.clear();
