@@ -4,10 +4,10 @@
           <div *ngIf="event.name == current_event">
               <!-- {{event.maxparticipants}} -->
     
+          <div *ngIf="event.maxparticipants===1">
             <div align=center *ngIf="status ==true && is_leader_names == undefined && my_team_names ==undefined">
-                <button (click)="create_team(eventid)" class="team_button">Create Team</button><br>
-                Only Team Leader should create the team<br>
-                Team Leader can then add the Team Members<br>
+                <button (click)="create_team(eventid)" class="team_button">Register</button><br>
+                
                 <br>
                 <br>
                 <br>
@@ -15,11 +15,26 @@
                 <br>
                 <br>
                 <br>
-              
           </div>
+        </div>
+        <div *ngIf="event.maxparticipants>1">
+          <div align=center *ngIf="status ==true && is_leader_names == undefined && my_team_names ==undefined">
+              <button (click)="create_team(eventid)" class="team_button">Create Team</button><br>
+              Only Team Leader should create the team<br>
+              Team Leader can then add the Team Members<br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+        </div>
+      </div>
+
           <div align=center *ngIf="status ==false">
-              <button (click)="sendTo()" class="team_button">Register</button><br>
-              Please register first!!<br>
+              <button (click)="sendTo()" class="team_button">Login/Sign-Up</button><br>
+              After Login/Sign-Up, Come Back to Register for the Competition<br>
             
         </div>
           <div class='cntr'>
@@ -82,11 +97,14 @@
                   </tbody>
 
               </table>
-              -You are registered!<br>
-              -Team Limit: {{event.maxparticipants}}<br>
-              -Team Leader can add Team Members only when the team members have made their MI numbers<br>
-              -No other Team Member should register themselves as the Team Leader<br>
-              -Contact Kanav(7700903058) or Atharva(7021760392) in case of any issues   
+              You are registered!<br>
+              Team Limit: {{event.maxparticipants}}<br>
+              - Team Leader can add Team Members only when the team members have made their MI numbers<br>
+- No other Team Member should register themselves as the Team Leader<br>
+- Contact Kanav(7700903058) or Atharva(7021760392) in case of any issues<br>
+- Join the official group of Participants for regular updates about Competitions: facebook.com/groups/668083100270725/<br>
+- Follow the official Instagram Page for Participants of all the Competitions: instagram.com/competitions.moodi/<br>
+- Register at multicity.moodi.org to participate in Multicity Eliminations 2019  <br>
             </div>
           </div>
           <div *ngIf="is_leader_names">
@@ -97,13 +115,31 @@
                   </span>
               </div>
               <br>
-              -You are registered!<br>
-              -Team Limit: {{event.maxparticipants}}<br>
-              -Team Leader can add Team Members only when the team members have made their MI numbers<br>
-              -No other Team Member should register themselves as the Team Leader<br>
-              -Contact Kanav(7700903058) or Atharva(7021760392) in case of any issues   
+              You are registered!<br>
+
+              <div *ngIf="event.maxparticipants>1">
+              Team Limit: {{event.maxparticipants}}<br>
+              - Team Leader can add Team Members only when the team members have made their MI numbers<br>
+              - No other Team Member should register themselves as the Team Leader<br>
+              - Contact Kanav(7700903058) or Atharva(7021760392) in case of any issues<br>
+              - Join the official group of Participants for regular updates about Competitions: <a target="_blank" href="https://facebook.com/groups/668083100270725">facebook.com/groups/668083100270725</a> <br>
+              - Follow the official Instagram Page for Participants of all the Competitions: <a target="_blank" href="https://instagram.com/competitions.moodi"> instagram.com/competitions.moodi</a><br>
+              - Register at multicity.moodi.org to participate in Multicity Eliminations 2019  <br>
+                 
+            </div>
+            <div *ngIf="event.maxparticipants===1">
+              - Contact Kanav(7700903058) or Atharva(7021760392) in case of any issues<br>
+              - Join the official group of Participants for regular updates about Competitions: <a target="_blank" href="https://facebook.com/groups/668083100270725">facebook.com/groups/668083100270725</a> <br>
+              - Follow the official Instagram Page for Participants of all the Competitions: <a target="_blank" href="https://instagram.com/competitions.moodi"> instagram.com/competitions.moodi</a><br>
+              - Register at multicity.moodi.org to participate in Multicity Eliminations 2019  <br>
+                 
+            </div>  
               <br>
               <br>
+              <br>
+              <br>
+              <br>
+              <br>   
               <br>
               <br>
               <br>

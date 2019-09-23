@@ -136,7 +136,7 @@ import { EventtabComponent } from './events/eventtab/eventtab.component';
     },
 
       {
-        path:'registration',
+        path:'register',
         component:RegistrationComponent,
         children: [
           {path: '', component: ReghomeComponent},
@@ -182,7 +182,7 @@ import { EventtabComponent } from './events/eventtab/eventtab.component';
         ]
       },
       {
-        path:'competition',
+        path:'competitions',
         component:CompetitionComponent,
         children: [
           {path: '', component: CompetitionHomeComponent },

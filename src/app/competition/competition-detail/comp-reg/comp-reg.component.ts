@@ -158,7 +158,7 @@ export class CompRegComponent implements OnInit {
 
 
   sendTo(){
-    this.router.navigateByUrl('/registration');
+    this.router.navigateByUrl('/register');
   }
 
   ngOnInit() {
