@@ -65,7 +65,7 @@
                   <td>{{user.name}}</td>
                   <td>{{user.mobile_number}}</td>
                   <td>
-                    <button class=button (click)="exit_team(user.mobile_number,eventid)" type="button">Remove</button>
+                    <button class=button (click)="exit_team(user.mi_number,eventid)" type="button">Remove</button>
                   </td>
                 </tr>
               </tbody>
@@ -109,7 +109,7 @@
           </div>
           <div *ngIf="is_leader_names">
               <div *ngIf="is_leader_names?.length < event.maxparticipants-1 && my_team_names?.length < event.maxparticipants-1" class="input-group">
-                  <input #myInput  placeholder="Registered Mobile No."  type="text" class="form-control">
+                  <input #myInput  placeholder="Team Member's MI No."  type="text" class="form-control">
                   <span class="input-group-btn">
                       <button class=btn2 (click)="add_member(myInput.value,eventid)" type="button">Add member</button>
                   </span>
