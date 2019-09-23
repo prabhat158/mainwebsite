@@ -98,7 +98,7 @@ export class ReghomeComponent implements OnInit {
 
   profile(){
 
-    this.router.navigateByUrl('/registration/profile');
+    this.router.navigateByUrl('/register/profile');
   }
 
   ngOnInit() {
