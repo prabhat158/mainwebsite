@@ -202,7 +202,7 @@ import { EventtabComponent } from './events/eventtab/eventtab.component';
           },
       ],
     },
-    {path: 'vogue', redirectTo: 'competitions/Lifestyle/Vogue/comp-desc', pathMatch:'full'},
+    {path: 'vogue', redirectTo: 'competitions/Lifestyle/Vogue', pathMatch:'full'},
       
   ]),
 
