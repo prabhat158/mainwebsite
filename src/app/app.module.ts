@@ -181,11 +181,12 @@ import { EventtabComponent } from './events/eventtab/eventtab.component';
           {path: 'oc', component: OcComponent, data: {animation: 'Oc'} },
         ]
       },
+      {path: 'vogue', redirectTo: 'competitions/Lifestyle/Vogue/comp-desc', pathMatch:'full'},
       {
         path:'competitions',
         component:CompetitionComponent,
         children: [
-          {path: 'vogue', redirectTo: 'Lifestyle/Vogue/comp-desc', pathMatch:'full'},
+          
           {path: '', component: CompetitionHomeComponent },
           {path: ':compiName', component: CompetitionListComponent},
           {
