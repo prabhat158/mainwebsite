@@ -181,7 +181,6 @@ import { EventtabComponent } from './events/eventtab/eventtab.component';
           {path: 'oc', component: OcComponent, data: {animation: 'Oc'} },
         ]
       },
-      {path: 'vogue', redirectTo: 'competitions/Lifestyle/Vogue/comp-desc', pathMatch:'full'},
       {
         path:'competitions',
         component:CompetitionComponent,
@@ -203,6 +202,8 @@ import { EventtabComponent } from './events/eventtab/eventtab.component';
           },
       ],
     },
+    {path: 'vogue', redirectTo: 'competitions/Lifestyle/Vogue/comp-desc', pathMatch:'full'},
+      
   ]),
 
     HttpClientModule,
