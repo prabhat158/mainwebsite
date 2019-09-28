@@ -185,6 +185,7 @@ import { EventtabComponent } from './events/eventtab/eventtab.component';
         path:'competitions',
         component:CompetitionComponent,
         children: [
+          {path: 'vogue', redirectTo: 'Lifestyle/Vogue/comp-desc', pathMatch:'full'},
           {path: '', component: CompetitionHomeComponent },
           {path: ':compiName', component: CompetitionListComponent},
           {
