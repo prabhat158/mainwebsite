@@ -202,8 +202,6 @@ import { EventtabComponent } from './events/eventtab/eventtab.component';
           },
       ],
     },
-    {path: 'vogue', redirectTo: 'competitions/Lifestyle/Vogue', pathMatch:'full'},
-      
   ]),
 
     HttpClientModule,
