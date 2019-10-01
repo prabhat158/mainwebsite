@@ -28,7 +28,7 @@
     position: absolute;
     top:30%;
     right: 3%;
-    font-size: 3vw
+    font-size: 2.5vw
 }
 .bottomi1{
     width: 100%;
@@ -86,11 +86,11 @@
     margin-left: 15%;
 }
 .anim2{
-    width: 92%;
+    width: 77%;
     height: auto;
     position: relative;
-    top:411px;
-    right: -105%;
+    top:268px;
+    right: -118%;
 }
 
 
@@ -101,7 +101,7 @@
     margin-left: 100px;
     position: relative;
     margin-top: -233px;
-    font-size: 105px;
+    font-size: 90px;
 }
 
 .aboutus{
@@ -117,9 +117,9 @@
     width: 46%;
     display: inline-block;
     position: relative;
-    margin-top: -24%;
+    margin-top: -21%;
     margin-left: 100px;
-    font-size: 22px;
+    font-size: 17px;
     font-weight: lighter;
 }
 
@@ -163,7 +163,7 @@
     position: relative;
     /* margin-left: 45%; */
     margin-top: 8px;
-    font-size: 105px;
+    font-size: 90px;
     color: #333333;
 }
 
@@ -178,9 +178,10 @@
 
 .themep{
     position: relative;
-    font-size: 22px;
+    font-size: 17px;
     margin-left: 0%;
     margin-right: 50%;
+    margin-top: 99px;
 }
 
 .footer{
@@ -190,11 +191,11 @@
 
 .footersm{
     padding: 4px;
-    width: 8vw;
+    width: 3vw;
 }
 
 .footersm:hover{
-    width: 7.4vw;
+    width: 3.2vw;
 }
 
 .footeri{
@@ -208,38 +209,42 @@
 }
 
 .footerheadleft{
+    text-decoration: none;
     color: #333333;
     /* line-height: 4px; */
-    font-size: 3.5vw;
+    font-size: 2vw;
     position: relative;
     z-index: 2;
     font-weight: bold;
 }
 
 .footerleft{
+    text-decoration: none;
     color: #333333;
 
     /* line-height: 4px; */
-    font-size: 2.5vw;
+    font-size: 1.8vw;
     position: relative;
     z-index: 2;
 }
 
 .footerright{
+    text-decoration: none;
     color: #333333;
 
     /* line-height: 4px; */
-    font-size: 2.5vw;
+    font-size: 1.8vw;
     position: relative;
     z-index: 2;
     width: 72%;
 }
 
 .footerheadright{
+    text-decoration: none;
     color: #333333;
 
     /* line-height: 4px; */
-    font-size: 3.5vw;
+    font-size: 2vw;
     position: relative;
     z-index: 2;
     width: 72%;
@@ -247,6 +252,7 @@
 }
 
 .footerleftdiv{
+    text-decoration: none;
     float: right;
     /* position: absolute; */
     width: 30%;
@@ -336,8 +342,8 @@
     .stats a{
         color: #333333;
         text-decoration:none;
-        font-size: 8vw; 
-        line-height: 14vw
+        font-size: 6vw; 
+        line-height: 9vw
     }
     
     @media screen and (max-width: 800px){
@@ -441,8 +447,8 @@
     }
     .bottomlogo{
         position: absolute;
-        left: 8vw;
-        top: 30vw;
-        width: 27vw
+        left: 11vw;
+        top: 24vw;
+        width: 14vw
     }
     
