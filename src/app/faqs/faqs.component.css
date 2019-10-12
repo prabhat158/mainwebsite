@@ -329,6 +329,7 @@ p {
     width: 100%;
     /* position: absolute; */
     text-align: center;
+    display: none;
 
 }
 
@@ -403,7 +404,7 @@ button:hover, button:focus {
     vertical-align: middle;
   }
 
-  .mobileoptions {
+  .btn-group {
     font-family: 'Staatliches', cursive;
     display: block;
   }
