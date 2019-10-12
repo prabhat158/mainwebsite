@@ -57,6 +57,11 @@ import { FifthFaqComponent } from './faqs/fifth-faq/fifth-faq.component';
 import { SixthComponent } from './accommodation/sixth/sixth.component';
 import { SixthfaqComponent } from './faqs/sixthfaq/sixthfaq.component';
 import { EventtabComponent } from './events/eventtab/eventtab.component';
+import { InformalsComponent } from './events/informals/informals.component';
+import { ProshowsComponent } from './events/proshows/proshows.component';
+import { PremiComponent } from './events/premi/premi.component';
+import { WneComponent } from './events/wne/wne.component';
+import { ProniteComponent } from './events/pronite/pronite.component';
 
 
 
@@ -107,7 +112,12 @@ import { EventtabComponent } from './events/eventtab/eventtab.component';
     FifthFaqComponent,
     SixthComponent,
     SixthfaqComponent,
-    EventtabComponent
+    EventtabComponent,
+    InformalsComponent,
+    ProshowsComponent,
+    PremiComponent,
+    WneComponent,
+    ProniteComponent
   ],
   imports: [
 
@@ -149,7 +159,11 @@ import { EventtabComponent } from './events/eventtab/eventtab.component';
         component: EventsComponent,
         children: [
           {path: '', component: EventsHomeComponent},
-            {path: 'detail', component: EventtabComponent }
+            {path: 'informals', component: InformalsComponent },
+            {path: 'pronites', component: ProniteComponent},
+            {path: 'proshows', component: ProshowsComponent},
+            {path: 'premi', component: PremiComponent},
+            {path: 'wne', component: WneComponent}
         ]
     },
       {path:'faqs',component:FaqsComponent,
