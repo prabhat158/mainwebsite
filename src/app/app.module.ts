@@ -62,6 +62,7 @@ import { ProshowsComponent } from './events/proshows/proshows.component';
 import { PremiComponent } from './events/premi/premi.component';
 import { WneComponent } from './events/wne/wne.component';
 import { ProniteComponent } from './events/pronite/pronite.component';
+import { LeaderboardComponent } from './competition/leaderboard/leaderboard.component';
 
 
 
@@ -117,7 +118,8 @@ import { ProniteComponent } from './events/pronite/pronite.component';
     ProshowsComponent,
     PremiComponent,
     WneComponent,
-    ProniteComponent
+    ProniteComponent,
+    LeaderboardComponent
   ],
   imports: [
 
@@ -159,6 +161,7 @@ import { ProniteComponent } from './events/pronite/pronite.component';
         component: EventsComponent,
         children: [
           {path: '', component: EventsHomeComponent},
+          {path: 'home', component: EventtabComponent},
             {path: 'informals', component: InformalsComponent },
             {path: 'pronites', component: ProniteComponent},
             {path: 'proshows', component: ProshowsComponent},
@@ -177,6 +180,7 @@ import { ProniteComponent } from './events/pronite/pronite.component';
         {path: 'sixth', component: SixthfaqComponent},
       ]
     },
+    {path:'michampionship',component:LeaderboardComponent},
       {path:'sponsors',component:SponsorsComponent},
       {path:'contact',component:ContactComponent,
         children: [
@@ -216,6 +220,10 @@ import { ProniteComponent } from './events/pronite/pronite.component';
           },
       ],
     },
+    {
+      path:'**',
+        component:HomeComponent,
+    }
   ]),
 
     HttpClientModule,

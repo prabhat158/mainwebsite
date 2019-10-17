@@ -19,7 +19,7 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
   font-family: 'Poppins', sans-serif;
-  font-weight: bold;
+  /* font-weight: bold; */
   /* z-index: 1; */
   /* float: right; */
   /* background-color: azure;     */
