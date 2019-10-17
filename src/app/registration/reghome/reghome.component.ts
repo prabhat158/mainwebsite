@@ -43,7 +43,8 @@ export class ReghomeComponent implements OnInit {
     gapi.load('auth2',()=>{
       this.auth2 = gapi.auth2.init({
         client_id: '511498944970-b2g59f8sj5h2c20vhkim5tkrpcn9sckc.apps.googleusercontent.com',
-        scope: 'profile'
+        cookiepolicy: 'single_host_origin',
+        scope: 'profile email'
       });
       this.attachSignin(document.getElementById('button'));
     });
