@@ -1,0 +1,44 @@
+
+
+  <div class="main_content" *ngFor="let nite of pronites_nites">
+        <div *ngIf="nite.name == current_nite">
+  
+          <p style="line-height: 101px ; color: black;" >{{nite.name}}</p><br>
+  
+            <div style="color: black;" *ngFor="let item of nite.events">
+              <p>{{ item.name }}</p>
+              <p>{{ item.description }}</p>
+            </div>
+          <!-- <div class="btn-group" >
+            
+              <a >
+                <button routerLink="#" class="raise" routerLinkActive="active" (click)="onClick('desc')" [ngClass]="{'clicked': clickedButton=='desc'}">Description & Rules</button>
+              </a>
+              <a >
+                <button routerLink="#" class="raise" (click)="onClick('prizes')" routerLinkActive="active" [ngClass]="{'clicked': clickedButton=='prizes'}">Prizes & LYPs</button>
+              </a>
+              <a >
+                <button routerLink="#" routerLinkActive="active" class="raise" (click)="onClick('faq')" [ngClass]="{'clicked': clickedButton=='faq'}">Queries</button>
+              </a>
+              <a >
+                <button routerLink="#" routerLinkActive="active" class="raise" (click)="onClick('reg')" [ngClass]="{'clicked': clickedButton=='reg'}">Register</button>
+              </a>
+              <a >
+                <button routerLink="#" routerLinkActive="active" class="raise" (click)="onClick('winner')" [ngClass]="{'clicked': clickedButton=='winner'}">Previous Winners</button>
+              </a>
+          </div> -->
+  
+          <!-- <div class="description">
+            <router-outlet></router-outlet>
+          </div> -->
+  
+         
+  
+          
+  
+  
+        </div>
+    
+  
+  
+  

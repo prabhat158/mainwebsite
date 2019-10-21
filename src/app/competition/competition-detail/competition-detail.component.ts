@@ -5,7 +5,7 @@ import { CompetitionDataService } from '../competition-data.service';
 import { HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import {Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-competition-detail',

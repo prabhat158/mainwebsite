@@ -56,13 +56,17 @@ import { FourthFaqComponent } from './faqs/fourth-faq/fourth-faq.component';
 import { FifthFaqComponent } from './faqs/fifth-faq/fifth-faq.component';
 import { SixthComponent } from './accommodation/sixth/sixth.component';
 import { SixthfaqComponent } from './faqs/sixthfaq/sixthfaq.component';
-import { EventtabComponent } from './events/eventtab/eventtab.component';
+import { EventtabComponent } from './events/pronite/eventtab/eventtab.component';
 import { InformalsComponent } from './events/informals/informals.component';
 import { ProshowsComponent } from './events/proshows/proshows.component';
 import { PremiComponent } from './events/premi/premi.component';
 import { WneComponent } from './events/wne/wne.component';
 import { ProniteComponent } from './events/pronite/pronite.component';
 import { LeaderboardComponent } from './competition/leaderboard/leaderboard.component';
+import { ProshowlineupComponent } from './events/proshows/proshowlineup/proshowlineup.component';
+import { InflineupComponent } from './events/informals/inflineup/inflineup.component';
+import { PremilineupComponent } from './events/premi/premilineup/premilineup.component';
+import { WnelineupComponent } from './events/wne/wnelineup/wnelineup.component';
 
 
 
@@ -119,7 +123,11 @@ import { LeaderboardComponent } from './competition/leaderboard/leaderboard.comp
     PremiComponent,
     WneComponent,
     ProniteComponent,
-    LeaderboardComponent
+    LeaderboardComponent,
+    ProshowlineupComponent,
+    InflineupComponent,
+    PremilineupComponent,
+    WnelineupComponent
   ],
   imports: [
 
@@ -161,12 +169,17 @@ import { LeaderboardComponent } from './competition/leaderboard/leaderboard.comp
         component: EventsComponent,
         children: [
           {path: '', component: EventsHomeComponent},
-          {path: 'home', component: EventtabComponent},
+          // {path: 'home', component: EventtabComponent},
             {path: 'informals', component: InformalsComponent },
+            {path: 'informals/:infname', component: InflineupComponent},
             {path: 'pronites', component: ProniteComponent},
+            {path: 'pronites/:nitename', component: EventtabComponent},
             {path: 'proshows', component: ProshowsComponent},
+            {path: 'proshows/:showname', component: ProshowlineupComponent},
             {path: 'premi', component: PremiComponent},
-            {path: 'wne', component: WneComponent}
+            {path: 'premi/:eventname', component: PremilineupComponent},
+            {path: 'wne', component: WneComponent},
+            {path: 'wne/:exhiname', component: WnelineupComponent},
         ]
     },
       {path:'faqs',component:FaqsComponent,
