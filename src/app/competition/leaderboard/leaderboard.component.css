@@ -1,5 +1,3 @@
-
-
 .bg1 {
         z-index: -3;
         width:100%;
@@ -167,10 +165,13 @@
       /* --hover: #e5ff60; */
                 
       }
-      @media screen and (max-width: 600px){
+      @media screen and (max-width: 800px){
         .headr {
-          font-size: 100px;
-          line-height: 136px;
+          font-size: 90px;
+          line-height: 70px;
+        }
+        .detail{
+          font-size: 3.2vw;
         }
         .description{
           padding: 0 10px;
