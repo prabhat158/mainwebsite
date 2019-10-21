@@ -9,15 +9,17 @@
     <!-- <div class="bg1"></div> -->
     <!-- <img src="../../assets/acco/Asset 26.png" class="bg2"> -->
     <div>
-    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br>
   
   
     <h1 class="main_heading">Pronites</h1>
       <div class="btn-group">
-        <a>
-          <button routerLink="reach us" class="raise" routerLinkActive="active">Registration & General </button>
-        </a>
-        <a>
+        <div *ngFor="let nite of pronites_nites">
+              <a>
+                <button routerLink="{{ nite.name }}" class="raise" routerLinkActive="active" (click)="onClick('desc')" [ngClass]="{'clicked': clickedButton=='desc'}">{{ nite.name }}</button>
+              </a>
+        </div>
+        <!-- <a>
           <button routerLink="prizes & lyps" class="raise" routerLinkActive="active">Accomodation & CL</button>
         </a>
         <a>
@@ -31,24 +33,26 @@
         </a>
         <a>
           <button routerLink="sixth" class="raise" routerLinkActive="active">Multicities</button>
-        </a>
+        </a> -->
         <br><br><br>
       </div>
+      
     <router-outlet></router-outlet>
   
+  
       <div class="options">
-    <div class="btn_group">
+    <div *ngFor="let nite of pronites_nites" class="btn_group">
     <div class="section">
         <div class="section__item">
           <a class="sm-link sm-link_padding-bottom sm-link3">
               
-                  <p style="margin-bottom: 0; outline: 0;" routerLinkActive="active_button" routerLink="reach us">Registration & General</p>
+                  <p style="margin-bottom: 0; outline: 0;" routerLinkActive="active_button" routerLink="{{nite.name}}">{{ nite.name }}</p>
                 
           </a>
         </div>
       </div>
     </div>
-    <div class="btn_group">
+    <!-- <div class="btn_group">
         <div class="section">
             <div class="section__item">
               <a class="sm-link sm-link_padding-bottom sm-link3">
@@ -95,7 +99,7 @@
               </a>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     
     <!-- </div> -->
