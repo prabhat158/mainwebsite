@@ -48,10 +48,12 @@ export class InflineupComponent implements OnInit {
 
   onClick(button){
     this.clickedButton = button;
-  }
+  } 
+
+  
 
   ngOnInit() {
-    this.clickedButton='desc';
+    // 
     this.getCategories();
     this.route.params.subscribe(
       params => {
