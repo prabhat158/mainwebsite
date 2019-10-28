@@ -4,20 +4,33 @@
   <a routerLink="/">
     <img src="../../../assets/logos/Asset 33eventbglogo.svg" class="logo">  
   </a>
-  </div>
+</div>
   <div>
     <!-- <div class="bg1"></div> -->
     <!-- <img src="../../assets/acco/Asset 26.png" class="bg2"> -->
     <div>
     <br><br><br><br><br>
-  
+    
   
     <h1 class="main_heading">Proshows</h1>
+      <div class="options">
+          <div class="main_content" *ngFor="let inf of proshows_shows">
+            <div *ngIf="inf.name == clickedButton">
+        
+              <p style="line-height: 101px ; color: black;" class="headr">{{inf.name}}</p><br>
+        
+                <div style="color: black;" *ngFor="let item of inf.events">
+                  <p>{{ item.name }}</p>
+                  <p>{{ item.description }}</p>
+                </div>
+                </div>
+            </div>
+    </div>    
       <div class="btn-group">
         <div *ngFor="let show of proshows_shows">
           <div *ngIf="proshows_shows">
               <a>
-                <button routerLink="{{ show.name }}" class="raise" routerLinkActive="active" (click)="onClick('desc')" [ngClass]="{'clicked': clickedButton=='desc'}">{{ show.name }}</button>
+                <button routerLink="{{ show.name }}" class="raise" routerLinkActive="active" (click)="onClick(show.name)" [ngClass]="{'clicked': clickedButton=='desc'}">{{ show.name }}</button>
               </a>
           </div>
         </div>
@@ -49,7 +62,7 @@
         <div class="section__item">
           <a class="sm-link sm-link_padding-bottom sm-link3">
               
-                  <p style="margin-bottom: 0; outline: 0;" routerLinkActive="active_button" routerLink="{{show.name}}">{{ show.name }}</p>
+                  <p style="margin-bottom: 0; outline: 0;" routerLinkActive="active_button" (click)="onClick(show.name)">{{ show.name }}</p>
                 
           </a>
         </div>
@@ -112,6 +125,23 @@
   
   <!-- <img src="../../assets/faq/Asset 23.svg" class="bg4">
   </div> -->
+
+
+<div class="btn-group" *ngFor="let inf of proshows_shows">
+    <div *ngIf="inf.name == clickedButton">
+
+      <p style="line-height: 101px ; color: black;" class="headr">{{inf.name}}</p><br>
+
+        <div style="color: black;" *ngFor="let item of inf.events">
+          <p>{{ item.name }}</p>
+          <p>{{ item.description }}</p>
+        </div>
+        </div>
+    </div>
+
+
+</div>
+  
 
 
   <img src="../../../assets/Events/page%20layout%20elements_events%20outer%20page/Asset%2022lap.png" class="bg4">
