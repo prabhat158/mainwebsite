@@ -11,6 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class InformalsComponent implements OnInit {
   informals: any;
+  clickedButton;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,6 +26,7 @@ export class InformalsComponent implements OnInit {
       data=> {
       
       this.informals = data['Informals'];
+      this.clickedButton=this.informals[0].name;
       this.dataService.setInformaldetail(data['Informals']);
 
       },
@@ -34,8 +36,14 @@ export class InformalsComponent implements OnInit {
   }
           // console.log(this.pronites_nites);
   }  
+  onClick(button){
+    console.log(button);
+    this.clickedButton = button;
+  } 
+
 
   ngOnInit() {
+    
     this.getCategories();
     this.route.params.subscribe(
       params => {
