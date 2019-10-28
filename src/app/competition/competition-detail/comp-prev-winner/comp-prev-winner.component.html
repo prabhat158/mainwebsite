@@ -3,10 +3,23 @@
       <div *ngFor="let event of category.events">
           <div *ngIf="event.name == current_event">
     
-              <b>Will be added soon!</b>
-            
-    
-            
+            <div style="padding: 6%; font-size: 2.5em; font-variant: small-caps; font-weight:bold; font-family: 'Courier New', Courier, monospace">Winners</div><br>
+            <div style="padding: 6%;" [innerHTML]="event.winners"></div><br>
+  
+          
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br><br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+  
     
     
           </div>

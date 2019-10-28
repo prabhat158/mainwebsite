@@ -2,8 +2,10 @@
 import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CompetitionDataService } from '../competition-data.service';
-
+import { HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-competition-detail',
@@ -21,7 +23,8 @@ export class CompetitionDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private http:HttpClient,
-    private dataService: CompetitionDataService
+    private dataService: CompetitionDataService,
+    private router: Router
   ) { }
 
   getCategories(){
@@ -56,5 +59,8 @@ export class CompetitionDetailComponent implements OnInit {
       }
     );
   }
-
+  @HostListener('window:popstate', ['$event'])
+  onPopState(event) {
+    // this.router.navigateByUrl('/registration');
+  }
 }

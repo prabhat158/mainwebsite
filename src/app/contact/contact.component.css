@@ -394,6 +394,7 @@ p {
   width: 30%;
   position: relative;
   top: -45px;
+  /* background-color: #FEE332; */
 }
 
 .active_button {
