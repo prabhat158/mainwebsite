@@ -56,7 +56,17 @@ import { FourthFaqComponent } from './faqs/fourth-faq/fourth-faq.component';
 import { FifthFaqComponent } from './faqs/fifth-faq/fifth-faq.component';
 import { SixthComponent } from './accommodation/sixth/sixth.component';
 import { SixthfaqComponent } from './faqs/sixthfaq/sixthfaq.component';
-import { EventtabComponent } from './events/eventtab/eventtab.component';
+import { EventtabComponent } from './events/pronite/eventtab/eventtab.component';
+import { InformalsComponent } from './events/informals/informals.component';
+import { ProshowsComponent } from './events/proshows/proshows.component';
+import { PremiComponent } from './events/premi/premi.component';
+import { WneComponent } from './events/wne/wne.component';
+import { ProniteComponent } from './events/pronite/pronite.component';
+import { LeaderboardComponent } from './competition/leaderboard/leaderboard.component';
+import { ProshowlineupComponent } from './events/proshows/proshowlineup/proshowlineup.component';
+import { InflineupComponent } from './events/informals/inflineup/inflineup.component';
+import { PremilineupComponent } from './events/premi/premilineup/premilineup.component';
+import { WnelineupComponent } from './events/wne/wnelineup/wnelineup.component';
 
 
 
@@ -107,7 +117,17 @@ import { EventtabComponent } from './events/eventtab/eventtab.component';
     FifthFaqComponent,
     SixthComponent,
     SixthfaqComponent,
-    EventtabComponent
+    EventtabComponent,
+    InformalsComponent,
+    ProshowsComponent,
+    PremiComponent,
+    WneComponent,
+    ProniteComponent,
+    LeaderboardComponent,
+    ProshowlineupComponent,
+    InflineupComponent,
+    PremilineupComponent,
+    WnelineupComponent
   ],
   imports: [
 
@@ -136,7 +156,7 @@ import { EventtabComponent } from './events/eventtab/eventtab.component';
     },
 
       {
-        path:'registration',
+        path:'register',
         component:RegistrationComponent,
         children: [
           {path: '', component: ReghomeComponent},
@@ -149,7 +169,17 @@ import { EventtabComponent } from './events/eventtab/eventtab.component';
         component: EventsComponent,
         children: [
           {path: '', component: EventsHomeComponent},
-            {path: 'detail', component: EventtabComponent }
+          // {path: 'home', component: EventtabComponent},
+            {path: 'informals', component: InformalsComponent },
+            {path: 'informals/:infname', component: InflineupComponent},
+            {path: 'pronites', component: ProniteComponent},
+            {path: 'pronites/:nitename', component: EventtabComponent},
+            {path: 'proshows', component: ProshowsComponent},
+            {path: 'proshows/:showname', component: ProshowlineupComponent},
+            {path: 'premi', component: PremiComponent},
+            {path: 'premi/:eventname', component: PremilineupComponent},
+            {path: 'wne', component: WneComponent},
+            {path: 'wne/:exhiname', component: WnelineupComponent},
         ]
     },
       {path:'faqs',component:FaqsComponent,
@@ -163,6 +193,10 @@ import { EventtabComponent } from './events/eventtab/eventtab.component';
         {path: 'sixth', component: SixthfaqComponent},
       ]
     },
+    {path:'michampionship',component:LeaderboardComponent},
+    {path:'vogue',redirectTo:'competitions/Lifestyle/Vogue/comp-desc'},
+    {path:"sgtl",redirectTo:"competitions/Lifestyle/She's%20Got%20the%20Look/comp-desc"},
+
       {path:'sponsors',component:SponsorsComponent},
       {path:'contact',component:ContactComponent,
         children: [
@@ -182,9 +216,10 @@ import { EventtabComponent } from './events/eventtab/eventtab.component';
         ]
       },
       {
-        path:'competition',
+        path:'competitions',
         component:CompetitionComponent,
         children: [
+          
           {path: '', component: CompetitionHomeComponent },
           {path: ':compiName', component: CompetitionListComponent},
           {
@@ -201,6 +236,10 @@ import { EventtabComponent } from './events/eventtab/eventtab.component';
           },
       ],
     },
+    {
+      path:'**',
+        component:HomeComponent,
+    }
   ]),
 
     HttpClientModule,

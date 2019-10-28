@@ -46,6 +46,8 @@ export class CompRegComponent implements OnInit {
     );}else{
       
       this.competitions_categories =this.dataService.getCompidetail();
+      console.log("max  ")
+     console.log(this.dataService.getCompidetail()) 
     }
    }  
 
@@ -156,7 +158,7 @@ export class CompRegComponent implements OnInit {
 
 
   sendTo(){
-    this.router.navigateByUrl('/registration');
+    this.router.navigateByUrl('/register');
   }
 
   ngOnInit() {

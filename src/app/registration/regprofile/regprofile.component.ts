@@ -26,7 +26,7 @@ export class RegprofileComponent implements OnInit {
 
     logout(){
     localStorage.clear();
-    this.router.navigateByUrl('/registration');
+    this.router.navigateByUrl('/register');
     }
   ngOnInit() {
   }
