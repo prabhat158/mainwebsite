@@ -13,12 +13,28 @@
     
     
       <h1 class="main_heading">Pre MI</h1>
-        <div class="btn-group">
-          <div *ngFor="let event of premi">
+
+      <div class="options">
+          <div class="main_content" *ngFor="let inf of premi">
+            <div *ngIf="inf.name == clickedButton">
+        
+              <p style="line-height: 101px ; color: black;" class="headr">{{inf.name}}</p><br>
+        
+                <div style="color: black;" *ngFor="let item of inf.events">
+                  <p>{{ item.name }}</p>
+                  <p>{{ item.description }}</p>
+                </div>
+                </div>
+            </div>
+    </div>      
+    
+    
+    <div class="btn-group">
+      <div *ngFor="let event of premi">
             <div *ngIf="premi">
-                <a>
-                  <button routerLink="{{ event.name }}" class="raise" routerLinkActive="active" (click)="onClick('desc')" [ngClass]="{'clicked': clickedButton=='desc'}">{{ event.name }}</button>
-                </a>
+              <a>
+                <button class="raise" routerLinkActive="active" (click)="onClick(event.name)" [ngClass]="{'clicked': clickedButton=='desc'}">{{ event.name }}</button>
+              </a>
             </div>
           </div>
           <!-- <a>
@@ -28,7 +44,7 @@
             <button routerLink="faq" class="raise" routerLinkActive="active">Campus Facilities</button>
           </a>
           <a>
-              <button routerLink="register" class="raise" routerLinkActive="active">Concert & Pass</button>
+            <button routerLink="register" class="raise" routerLinkActive="active">Concert & Pass</button>
           </a>
           <a>
             <button routerLink="previous winners" class="raise" routerLinkActive="active">Competitions</button>
@@ -39,55 +55,55 @@
           <br><br><br>
         </div>
         
-      <router-outlet></router-outlet>
-    
-    
+        <router-outlet></router-outlet>
+        
+        
         <div class="options">
-      <div *ngFor="let event of premi" class="btn_group">
-          <div *ngIf="premi">
-      <div class="section">
+          <div *ngFor="let event of premi" class="btn_group">
+            <div *ngIf="premi">
+              <div class="section">
+                <div class="section__item">
+                  <a class="sm-link sm-link_padding-bottom sm-link3">
+                    
+                    <p style="margin-bottom: 0; outline: 0;" (click)="onClick(event.name)"  routerLinkActive="active_button" >{{ event.name }}</p>
+                  
+                  </a>
+                </div>
+              </div>
+      </div>
+    </div>
+      <!-- <div class="btn_group">
+        <div class="section">
           <div class="section__item">
             <a class="sm-link sm-link_padding-bottom sm-link3">
-                
-                    <p style="margin-bottom: 0; outline: 0;" routerLinkActive="active_button" routerLink="{{event.name}}">{{ event.name }}</p>
-                  
+              <p style="margin-bottom: 0; outline: 0;" routerLinkActive="active_button" routerLink="prizes & lyps">Accomodation & CL</p>
             </a>
           </div>
         </div>
       </div>
-      </div>
-      <!-- <div class="btn_group">
-          <div class="section">
-              <div class="section__item">
-                <a class="sm-link sm-link_padding-bottom sm-link3">
-                    <p style="margin-bottom: 0; outline: 0;" routerLinkActive="active_button" routerLink="prizes & lyps">Accomodation & CL</p>
-                </a>
-              </div>
-            </div>
-          </div>
-    
-    
-          <div class="btn_group">
-              <div class="section">
-                  <div class="section__item">
+      
+      
+      <div class="btn_group">
+        <div class="section">
+          <div class="section__item">
                     <a class="sm-link sm-link_padding-bottom sm-link3">
-                        <p style="margin-bottom: 0; outline: 0;" routerLinkActive="active_button" routerLink="faq">Campus Facilities</p>
+                      <p style="margin-bottom: 0; outline: 0;" routerLinkActive="active_button" routerLink="faq">Campus Facilities</p>
                     </a>
                   </div>
                 </div>
               </div>
-  
+              
               <div class="btn_group">
-                  <div class="section">
-                      <div class="section__item">
-                        <a class="sm-link sm-link_padding-bottom sm-link3">
-                            <p style="margin-bottom: 0; outline: 0;" routerLinkActive="active_button" routerLink="register">Concert & Pass</p>
+                <div class="section">
+                  <div class="section__item">
+                    <a class="sm-link sm-link_padding-bottom sm-link3">
+                      <p style="margin-bottom: 0; outline: 0;" routerLinkActive="active_button" routerLink="register">Concert & Pass</p>
                         </a>
                       </div>
                     </div>
                   </div>    
-          <div class="btn_group">
-            <div class="section">
+                  <div class="btn_group">
+                    <div class="section">
               <div class="section__item">
                 <a class="sm-link sm-link_padding-bottom sm-link3">
                   <p style="margin-bottom: 0; outline: 0;" routerLinkActive="active_button" routerLink="previous winners">Competitions</p>
@@ -105,15 +121,29 @@
             </div>
           </div> -->
         </div>
+        
+        <!-- </div> -->
       
-      <!-- </div> -->
+      </div>
       
+      <!-- <img src="../../assets/faq/Asset 23.svg" class="bg4">
+      </div> -->
+      
+      <div class="btn-group" *ngFor="let inf of premi">
+          <div *ngIf="inf.name == clickedButton">
+      
+            <p style="line-height: 101px ; color: black;" class="headr">{{inf.name}}</p><br>
+      
+              <div style="color: black;" *ngFor="let item of inf.events">
+                <p>{{ item.name }}</p>
+                <p>{{ item.description }}</p>
+              </div>
+              </div>
+          </div>
+    
+    
+    </div>
+      
+      <img src="../../../assets/Events/page%20layout%20elements_events%20outer%20page/Asset%2022lap.png" class="bg4">
     </div>
     
-    <!-- <img src="../../assets/faq/Asset 23.svg" class="bg4">
-    </div> -->
-  
-  
-    <img src="../../../assets/Events/page%20layout%20elements_events%20outer%20page/Asset%2022lap.png" class="bg4">
-    </div>
-  

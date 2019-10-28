@@ -11,6 +11,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PremiComponent implements OnInit {
   premi: any;
+  clickedButton;
+
 
   constructor(
     private route: ActivatedRoute,
@@ -25,6 +27,7 @@ export class PremiComponent implements OnInit {
       data=> {
       
       this.premi = data['Arts and Ideas'];
+      this.clickedButton=this.premi[0].name;
       this.dataService.setPremidetail(data['Arts and Ideas']);
 
       },
@@ -34,6 +37,11 @@ export class PremiComponent implements OnInit {
   }
           // console.log(this.pronites_nites);
   }  
+
+  onClick(button){
+    console.log(button);
+    this.clickedButton = button;
+  }
 
   ngOnInit() {
     this.getCategories();

@@ -16,28 +16,28 @@
     
       <h1 class="main_heading">Informals</h1>
 
-        <div class="options">
-              <div class="main_content" *ngFor="let inf of informals">
-                <div *ngIf="inf.name == clickedButton">
-            
-                  <p style="line-height: 101px ; color: black;" class="headr">{{inf.name}}</p><br>
-            
-                    <div style="color: black;" *ngFor="let item of inf.events">
-                      <p>{{ item.name }}</p>
-                      <p>{{ item.description }}</p>
-                    </div>
-                    </div>
-                </div>
-        </div>          
+      
+      <div class="options">
+            <div class="main_content" *ngFor="let inf of informals">
+              <div *ngIf="inf.name == clickedButton">
+          
+                <p style="line-height: 101px ; color: black;" class="headr">{{inf.name}}</p><br>
+          
+                  <div style="color: black;" *ngFor="let item of inf.events">
+                    <p>{{ item.name }}</p>
+                    <p>{{ item.description }}</p>
+                  </div>
+                  </div>
+              </div>
+      </div>    
     
-    
-        
-        <div class="btn-group">
-          <div *ngFor="let inf of informals">
-            <div *ngIf="informals">
-                <a>
-                  <button class="raise" routerLinkActive="active" (click)="onClick(inf.name)">{{ inf.name }}</button>
-                </a>
+      
+      <div class="btn-group">
+        <div *ngFor="let inf of informals">
+          <div *ngIf="informals">
+            <a>
+              <button class="raise" routerLinkActive="active" (click)="onClick(inf.name)">{{ inf.name }}</button>
+            </a>
             </div>
           </div>
           <br><br><br>
@@ -63,19 +63,19 @@
         </div>
 
         <div class="btn-group" *ngFor="let inf of informals">
-          <div *ngIf="inf.name == clickedButton">
-      
-            <p style="line-height: 101px ; color: black;" class="headr">{{inf.name}}</p><br>
-      
-              <div style="color: black;" *ngFor="let item of inf.events">
-                <p>{{ item.name }}</p>
-                <p>{{ item.description }}</p>
-              </div>
-              </div>
-          </div>
-
-
-    </div>
+            <div *ngIf="inf.name == clickedButton">
+        
+              <p style="line-height: 101px ; color: black;" class="headr">{{inf.name}}</p><br>
+        
+                <div style="color: black;" *ngFor="let item of inf.events">
+                  <p>{{ item.name }}</p>
+                  <p>{{ item.description }}</p>
+                </div>
+                </div>
+            </div>
+  
+  
+      </div>
   
     
   

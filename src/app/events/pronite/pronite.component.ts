@@ -12,6 +12,7 @@ import { HttpClient } from '@angular/common/http';
 export class ProniteComponent implements OnInit {
   pronites_nites: any;
   current_pronites_nite: any;
+  clickedButton;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,7 +26,8 @@ export class ProniteComponent implements OnInit {
     this.http.get('https://api2.moodi.org/events').subscribe(
       data=> {
       
-      this.pronites_nites = data['Concerts'];
+        this.pronites_nites = data['Concerts'];
+        this.clickedButton=this.pronites_nites[0].name;
       this.dataService.setEventdetail(data['Concerts']);
 
       },
@@ -35,6 +37,11 @@ export class ProniteComponent implements OnInit {
   }
           // console.log(this.pronites_nites);
   }  
+
+  onClick(button){
+    console.log(button);
+    this.clickedButton = button;
+  }
 
   ngOnInit() {
     this.getCategories();
