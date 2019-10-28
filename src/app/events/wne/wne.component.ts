@@ -11,6 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class WneComponent implements OnInit {
   wne: any;
+  clickedButton;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,7 +25,8 @@ export class WneComponent implements OnInit {
     this.http.get('https://api2.moodi.org/events').subscribe(
       data=> {
       
-      this.wne = data['Workshops'];
+        this.wne = data['Workshops'];
+        this.clickedButton=this.wne[0].name;
       this.dataService.setWnedetail(data['Workshops']);
 
       },
@@ -34,6 +36,11 @@ export class WneComponent implements OnInit {
   }
           // console.log(this.pronites_nites);
   }  
+
+  onClick(button){
+    console.log(button);
+    this.clickedButton = button;
+  }
 
   ngOnInit() {
     this.getCategories();
