@@ -11,6 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProshowsComponent implements OnInit {
   proshows_shows: any;
+  clickedButton;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,6 +26,7 @@ export class ProshowsComponent implements OnInit {
       data=> {
       
       this.proshows_shows = data['Proshows'];
+      this.clickedButton=this.proshows_shows[0].name;
       this.dataService.setProshowdetail(data['Proshows']);
 
       },
@@ -34,6 +36,11 @@ export class ProshowsComponent implements OnInit {
   }
           // console.log(this.pronites_nites);
   }  
+
+  onClick(button){
+    console.log(button);
+    this.clickedButton = button;
+  }
 
   ngOnInit() {
     this.getCategories();

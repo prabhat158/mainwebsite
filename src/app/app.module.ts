@@ -63,11 +63,6 @@ import { PremiComponent } from './events/premi/premi.component';
 import { WneComponent } from './events/wne/wne.component';
 import { ProniteComponent } from './events/pronite/pronite.component';
 import { LeaderboardComponent } from './competition/leaderboard/leaderboard.component';
-import { ProshowlineupComponent } from './events/proshows/proshowlineup/proshowlineup.component';
-import { InflineupComponent } from './events/informals/inflineup/inflineup.component';
-import { PremilineupComponent } from './events/premi/premilineup/premilineup.component';
-import { WnelineupComponent } from './events/wne/wnelineup/wnelineup.component';
-
 
 
 @NgModule({
@@ -124,10 +119,7 @@ import { WnelineupComponent } from './events/wne/wnelineup/wnelineup.component';
     WneComponent,
     ProniteComponent,
     LeaderboardComponent,
-    ProshowlineupComponent,
-    InflineupComponent,
-    PremilineupComponent,
-    WnelineupComponent
+    
   ],
   imports: [
 
@@ -171,15 +163,11 @@ import { WnelineupComponent } from './events/wne/wnelineup/wnelineup.component';
           {path: '', component: EventsHomeComponent},
           // {path: 'home', component: EventtabComponent},
             {path: 'informals', component: InformalsComponent },
-            {path: 'informals/:infname', component: InflineupComponent},
             {path: 'pronites', component: ProniteComponent},
             {path: 'pronites/:nitename', component: EventtabComponent},
             {path: 'proshows', component: ProshowsComponent},
-            {path: 'proshows/:showname', component: ProshowlineupComponent},
             {path: 'premi', component: PremiComponent},
-            {path: 'premi/:eventname', component: PremilineupComponent},
             {path: 'wne', component: WneComponent},
-            {path: 'wne/:exhiname', component: WnelineupComponent},
         ]
     },
       {path:'faqs',component:FaqsComponent,

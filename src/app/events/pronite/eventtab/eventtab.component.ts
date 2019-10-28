@@ -18,6 +18,7 @@ export class EventtabComponent implements OnInit {
   current_nite: string;
   pronites_lineup: any;
 
+
   constructor(
     private route: ActivatedRoute,
     private http:HttpClient,
