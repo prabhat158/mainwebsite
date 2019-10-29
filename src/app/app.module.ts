@@ -56,7 +56,7 @@ import { FourthFaqComponent } from './faqs/fourth-faq/fourth-faq.component';
 import { FifthFaqComponent } from './faqs/fifth-faq/fifth-faq.component';
 import { SixthComponent } from './accommodation/sixth/sixth.component';
 import { SixthfaqComponent } from './faqs/sixthfaq/sixthfaq.component';
-import { EventtabComponent } from './events/pronite/eventtab/eventtab.component';
+// import { EventtabComponent } from './events/pronite/eventtab/eventtab.component';
 import { InformalsComponent } from './events/informals/informals.component';
 import { ProshowsComponent } from './events/proshows/proshows.component';
 import { PremiComponent } from './events/premi/premi.component';
@@ -114,7 +114,7 @@ import { CollegedataPipe } from './accommodation/collegedata.pipe';
     FifthFaqComponent,
     SixthComponent,
     SixthfaqComponent,
-    EventtabComponent,
+    // EventtabComponent,
     InformalsComponent,
     ProshowsComponent,
     PremiComponent,
@@ -170,7 +170,7 @@ import { CollegedataPipe } from './accommodation/collegedata.pipe';
           // {path: 'home', component: EventtabComponent},
             {path: 'informals', component: InformalsComponent },
             {path: 'pronites', component: ProniteComponent},
-            {path: 'pronites/:nitename', component: EventtabComponent},
+            // {path: 'pronites/:nitename', component: EventtabComponent},
             {path: 'proshows', component: ProshowsComponent},
             {path: 'premi', component: PremiComponent},
             {path: 'wne', component: WneComponent},

@@ -33,6 +33,7 @@ export class WneComponent implements OnInit {
   );}else{
     
     this.wne =this.dataService.getWnedetail();
+    this.clickedButton=this.wne[0].name;
   }
           // console.log(this.pronites_nites);
   }  

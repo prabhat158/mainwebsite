@@ -33,6 +33,7 @@ export class InformalsComponent implements OnInit {
   );}else{
     
     this.informals =this.dataService.getInformaldetail();
+    this.clickedButton=this.informals[0].name;
   }
           // console.log(this.pronites_nites);
   }  
