@@ -63,6 +63,8 @@ import { PremiComponent } from './events/premi/premi.component';
 import { WneComponent } from './events/wne/wne.component';
 import { ProniteComponent } from './events/pronite/pronite.component';
 import { LeaderboardComponent } from './competition/leaderboard/leaderboard.component';
+import { GetaccoComponent } from './accommodation/getacco/getacco.component';
+import { CollegedataPipe } from './accommodation/collegedata.pipe';
 
 
 @NgModule({
@@ -119,6 +121,8 @@ import { LeaderboardComponent } from './competition/leaderboard/leaderboard.comp
     WneComponent,
     ProniteComponent,
     LeaderboardComponent,
+    GetaccoComponent,
+    CollegedataPipe,
     
   ],
   imports: [
@@ -137,13 +141,15 @@ import { LeaderboardComponent } from './competition/leaderboard/leaderboard.comp
       {path:'accommodation',component:AccommodationComponent,
       children: [
 
-        {path: '', redirectTo: 'reach us', pathMatch:'full'},
-        {path: 'reach us', component: FirstComponent},
-        {path: 'prizes & lyps', component: SecondComponent},
-        {path: 'faq', component: ThirdComponent},
-        {path: 'register', component: FourthComponent},
-        {path: 'previous winners', component: FifthComponent},
-        {path: 'sixth', component: SixthComponent},
+        {path: '', redirectTo: 'General', pathMatch:'full'},
+
+        {path: 'reservation', component: GetaccoComponent},
+        {path: 'General', component: FirstComponent},
+        {path: 'How To Avail', component: SecondComponent},
+        {path: 'All About CL', component: ThirdComponent},
+        {path: 'Charges', component: FourthComponent},
+        {path: 'Privileges', component: FifthComponent},
+        {path: 'FAQs', component: SixthComponent},
       ]
     },
 
