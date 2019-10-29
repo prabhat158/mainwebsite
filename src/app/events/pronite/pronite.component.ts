@@ -34,6 +34,7 @@ export class ProniteComponent implements OnInit {
   );}else{
     
     this.pronites_nites =this.dataService.getEventdetail();
+    this.clickedButton=this.pronites_nites[0].name;
   }
           // console.log(this.pronites_nites);
   }  
