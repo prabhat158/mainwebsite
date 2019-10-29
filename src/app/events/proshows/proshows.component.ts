@@ -33,6 +33,7 @@ export class ProshowsComponent implements OnInit {
   );}else{
     
     this.proshows_shows =this.dataService.getProshowdetail();
+    this.clickedButton=this.proshows_shows[0].name;
   }
           // console.log(this.pronites_nites);
   }  
