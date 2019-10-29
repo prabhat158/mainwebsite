@@ -1,5 +1,6 @@
 .main_content {
     /* display:inline-block; */
+    z-index: 3;
     width: 50%;
     position: relative;
     float: right;
