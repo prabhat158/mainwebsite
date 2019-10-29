@@ -34,6 +34,7 @@ export class PremiComponent implements OnInit {
   );}else{
     
     this.premi =this.dataService.getPremidetail();
+    this.clickedButton=this.premi[0].name;
   }
           // console.log(this.pronites_nites);
   }  
