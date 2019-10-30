@@ -65,6 +65,7 @@ import { ProniteComponent } from './events/pronite/pronite.component';
 import { LeaderboardComponent } from './competition/leaderboard/leaderboard.component';
 import { GetaccoComponent } from './accommodation/getacco/getacco.component';
 import { CollegedataPipe } from './accommodation/collegedata.pipe';
+import { KnowclComponent } from './accommodation/knowcl/knowcl.component';
 
 
 @NgModule({
@@ -123,6 +124,7 @@ import { CollegedataPipe } from './accommodation/collegedata.pipe';
     LeaderboardComponent,
     GetaccoComponent,
     CollegedataPipe,
+    KnowclComponent,
     
   ],
   imports: [
@@ -141,9 +143,10 @@ import { CollegedataPipe } from './accommodation/collegedata.pipe';
       {path:'accommodation',component:AccommodationComponent,
       children: [
 
-        {path: '', redirectTo: 'General', pathMatch:'full'},
+        {path: '', redirectTo: 'reservation', pathMatch:'full'},
 
         {path: 'reservation', component: GetaccoComponent},
+        {path: 'knowyourcl', component: KnowclComponent},
         {path: 'General', component: FirstComponent},
         {path: 'How To Avail', component: SecondComponent},
         {path: 'All About CL', component: ThirdComponent},
