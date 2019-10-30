@@ -1,159 +1,94 @@
-    <div style="font-family: Poppins;" *ngIf="uid2" class="div1">
+<div class="main_content" align=center *ngIf="status ==false">
+  <button (click)="sendTo()" class="team_button">Login/Sign-Up</button><br>
+  After sign-up/log-in, return to this page to apply for Accommodation<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
 
-        <p>
-        <b>MI No.:</b> {{uid2.mi_number}}<br>
-        <b>Name:</b> {{uid2.name}}<br>
-        <b>Mobile:</b> {{uid2.mobile_number}}<br>
-        <!-- Contingent strength: 3<br>
-        Male Contingent strength: 3<br>
-        Female Contingent strength: 0<br> -->
-        </p>
-        <!-- </p> -->
+<div class="main_content" *ngIf="status && uid3">
+    <!-- <p align=center> -->
+        <h4>CL Details:</h4>
         <table  class="table">
-          <thead>
-            <tr>
-              <td style="font-size:120%; font-weight:bold;">Name</td>
-              <td style="font-size:120%; font-weight:bold;">Phone Number</td>
-              <td style="font-size:120%; font-weight:bold;">MI Number</td>
-              <td style="font-size:120%; font-weight:bold;">Gender</td>
-              <td></td>
-            </tr>
-          </thead>
-          
-          <!-- <thead>
-        
-              <td>{{uid2.name}}</td>
-              <td>{{uid2.mobile_number}}</td>
-          
-          </thead> -->
-          <tbody *ngFor="let us of members_added">
-            <!-- <div > -->
-            <tr *ngIf="us.removed==false && us.addedbycl==true">
-              <td>{{us.user.name}}</td>
-              <td>{{us.user.mobile_number}}</td>
-              <td>{{us.user.mi_number}}</td>
-        
-              <td>{{us.user.gender}}</td>
-              <td>
-                  <span class="input-group-btn">
-                      <button class=btn2 (click)="remove(us.user.mi_number)" type="button">Remove</button>
-                    </span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <h2>Approval requests:</h2>
-          <table  class="table">
             <thead>
               <tr>
                 <td style="font-size:120%; font-weight:bold;">Name</td>
                 <td style="font-size:120%; font-weight:bold;">Phone Number</td>
                 <td style="font-size:120%; font-weight:bold;">MI Number</td>
-                <td style="font-size:120%; font-weight:bold;">Gender</td>
                 <td></td>
               </tr>
             </thead>
-            
-          <tbody *ngFor="let us of members_added">
-            
-            <tr *ngIf="us.removed==false && us.addedbycl==false">
-              <td>{{us.user.name}}</td>
-              <td>{{us.user.mobile_number}}</td>
-              <td>{{us.user.mi_number}}</td>
-        
-              <td>{{us.user.gender}}</td>
-              <td>
-                  <span class="input-group-btn">
-                      <button class=btn2 (click)="update(us.user.mi_number)" type="button">Approve</button>
-                    </span>
-              </td>
-            </tr>
-            <!-- </div> -->
-          </tbody>
-        </table>
-        <h3>Enter MI Numbers of Contingent Members</h3>
-        <input #myInput  placeholder="Team Member's MI No.(MI-ABC-123)"  type="text" class="form-control" style="width:60%; display: inline-block; text-transform:uppercase;">
-          <button class=btn3 (click)="add_member(myInput.value)" type="button" style="display:inline;">Add Member</button>
-        </div>
-        
-        
-        
-        
-        
-        <div class="main_content" *ngIf="!uid2&&uid3">
-            <p>
-                MI No: {{uid3.mi_number}}<br>
-                Name: {{uid3.name}}<br>
-                Mobile: {{uid3.mobile_number}}<br>
-                <!-- Contingent strength: 3<br>
-                Male Contingent strength: 3<br>
-                Female Contingent strength: 0<br> -->
-                </p>
-                <!-- </p> -->
-                <table  class="table">
-                  <thead>
-                    <tr>
-                      <td>Name</td>
-                      <td>Phone No.</td>
-                      <td>Mi No.</td>
-                      <td>Gender</td>
-                      <td></td>
-                    </tr>
-                  </thead>
-                  
-                  <!-- <thead>
-                
-                      <td>{{uid2.name}}</td>
-                      <td>{{uid2.mobile_number}}</td>
-                  
-                  </thead> -->
-                  <tbody *ngFor="let us of members_added">
-                    <!-- <div > -->
-                    <tr *ngIf="us.removed==false">
-                      <td>{{us.user.name}}</td>
-                      <td>{{us.user.mobile_number}}</td>
-                      <td>{{us.user.mi_number}}</td>
-                
-                      <td>{{us.user.gender}}</td>
-                      <td>
-                          <span *ngIf="us.user.mi_number==mi_id" class="input-group-btn">
-                              <button class=btn2 (click)="exit(us.user.mi_number)" type="button">Exit</button>
-                            </span>
-                      </td>
-                    </tr>
-                    <!-- </div> -->
-                  </tbody>
-                </table>
-                
+            <tbody>
+              <tr>
+                <td>{{uid3.name}}</td>
+                <td>{{uid3.mobile_number}}</td>
+                <td>{{uid3.mi_number}}</td>
           
-        </div>
-        
-        
-        
-        
-        <div class="main_content" *ngIf="!uid2&&!uid3">
-            <form autocomplete="off" name="myForm">
-                Current College:
-                <table>
-            <tr>
-                <td><label for="currentclg"></label></td><br>
-                <td (blur)="showDropDownClg = false"><input autocomplete="off"tyle="margin-bottom: 0px" name="people" [(ngModel)]="college" id="currentclg" (click)="toggleDropDownClg()" (clickOutside)="closeDropDownClg()" (focus)="toggleDropDownClg()" placeholder="Select Your College">
-                  <div class="dropdown" *ngIf="showDropDownClg">
-                    <div (click)="selectValueClg(person)" class="dropdown-option" *ngFor="let person of people | collegelistfilter:college" (blur)="showDropDownClg = false">
-                      {{person}}
-                    </div>
-                  </div>
-                </td>
               </tr>
-              </table>
-              </form>
-              <div *ngIf="pop" id="cl_data">
-                  <h4>Please contact your CL: </h4>
-                  Name: {{data.name}}<br>
-                  Contact No: {{data.mobile_number}}<br>
-                  Email: {{data.email}}<br>
-                  <span class='input-group-btn'>
-                   <span><button class=btn2 (click)='add_member2()' type='button'>Add</button></span></span>
-                
+            </tbody>
+          </table>
+      
+        Kindly get in touch with your CL, if your application has not been approved by the CL. You can find the contact details under "Know Your CL" tab. You have to ask your CL to get your name verified/approved on his portal.<br>
+        Kindly note: Approval doesn't mean you accommodation is final. After approval, you will be alloted Accommodation (subject to availability) and you have to pay at amount at the portal. Dates for these will be informed to CLs.         
+          <div align=center *ngFor="let us of members_added">
+            <div *ngIf="us.removed==false && us.user.mi_number==mi_id">
+                    <table  class="table">
+                        <thead>
+                          <tr>
+                            <td style="font-size:120%; font-weight:bold;">Name</td>
+                            <td style="font-size:120%; font-weight:bold;">Phone Number</td>
+                            <td style="font-size:120%; font-weight:bold;">MI Number</td>
+                            <td style="font-size:120%; font-weight:bold;">Acco Status</td>
+                            <td></td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>{{us.user.name}}</td>
+                            <td>{{us.user.mobile_number}}</td>
+                            <td>{{us.user.mi_number}}</td>
+                            <td><span *ngIf="us.addedbycl">Approved</span><span *ngIf="!us.addedbycl">Approval Pending</span></td>
+                      
+                          </tr>
+                        </tbody>
+                      </table>
+
+                    <button (click)="exit(us.user.mi_number)" class="team_button">DEREGISTER</button><br>
                   </div>
-        </div>
+            </div>
+  
+</div>
+        
+        
+        
+        
+<div class="main_content" *ngIf="status && !uid3">
+    <form autocomplete="off" name="myForm">
+        If your college is not in the list, then your college doesn't have a CL.<br>
+        If your college doesn't have a CL, you can register as the CL at <a href="https://ccp.moodi.org/cl">ccp.moodi.org/cl</a><br>
+       
+        <h3>Current College:</h3>
+        <table>
+    <tr>
+        <td><label for="currentclg"></label></td><br>
+        <td (blur)="showDropDownClg = false"><input autocomplete="off"tyle="margin-bottom: 0px" name="people" [(ngModel)]="college" id="currentclg" (click)="toggleDropDownClg()" (clickOutside)="closeDropDownClg()" (focus)="toggleDropDownClg()" placeholder="Select Your College">
+          <div class="dropdown" *ngIf="showDropDownClg">
+            <div (click)="selectValueClg(person)" class="dropdown-option" *ngFor="let person of people | collegelistfilter:college" (blur)="showDropDownClg = false">
+              {{person}}
+            </div>
+          </div>
+        </td>
+      </tr>
+      </table>
+      </form>
+      <div  align=center *ngIf="pop" id="cl_data">
+          <!-- <h4>Please contact your CL: </h4>
+          Name: {{data.name}}<br>
+          Contact No: {{data.mobile_number}}<br>
+          Email: {{data.email}}<br> -->
+
+          <button (click)='add_member2()' class="team_button">Apply for Accommodation</button><br>
+          <!-- <span class='input-group-btn'>
+            <span><button class=btn2 (click)='add_member2()' type='button'>Add</button></span></span> -->
+        
+          </div>
+
+      <br><br><br><br><br><br><br><br><br>
+</div>
