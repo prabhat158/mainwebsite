@@ -5,11 +5,11 @@
   import { FormGroup, FormControl } from '@angular/forms';
   
   @Component({
-    selector: 'app-accommodation',
-    templateUrl: './getacco.component.html',
-    styleUrls: ['./getacco.component.css']
+    selector: 'app-knowcl',
+    templateUrl: './knowcl.component.html',
+    styleUrls: ['./knowcl.component.css']
   })
-  export class GetaccoComponent implements OnInit {
+  export class KnowclComponent implements OnInit {
   
     constructor(
       private router: Router,

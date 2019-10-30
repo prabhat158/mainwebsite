@@ -25,7 +25,6 @@ export class CollegedataPipe implements PipeTransform {
     //check if search term is undefined
     if(term === undefined) return null;
     if(term === "") return null;
-    if(term.length<3) return null;
     
     var result:any[]=[];
     var do_not_push=true;

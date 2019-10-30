@@ -1,0 +1,49 @@
+<div class="main_content" align=center *ngIf="status ==false">
+    <button (click)="sendTo()" class="team_button">Login/Sign-Up</button><br>
+    After sign-up/log-in, return to this page to apply for Accommodation<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
+   
+  <div class="main_content" *ngIf="status">
+      <form autocomplete="off" name="myForm">
+          If your college is not in the list, then your college doesn't have a CL.<br>
+          If your college doesn't have a CL, you can register as the CL at <a href="https://ccp.moodi.org/cl">ccp.moodi.org/cl</a><br>
+         
+          <h3>Current College:</h3>
+          <table>
+      <tr>
+          <td><label for="currentclg"></label></td><br>
+          <td (blur)="showDropDownClg = false"><input autocomplete="off"tyle="margin-bottom: 0px" name="people" [(ngModel)]="college" id="currentclg" (click)="toggleDropDownClg()" (clickOutside)="closeDropDownClg()" (focus)="toggleDropDownClg()" placeholder="Select Your College">
+            <div class="dropdown" *ngIf="showDropDownClg">
+              <div (click)="selectValueClg(person)" class="dropdown-option" *ngFor="let person of people | collegelistfilter:college" (blur)="showDropDownClg = false">
+                {{person}}
+              </div>
+            </div>
+          </td>
+        </tr>
+        </table>
+    <div *ngIf="pop">
+        <h4>CL Details:</h4>
+        <table  class="table">
+            <thead>
+              <tr>
+                <td style="font-size:120%; font-weight:bold;">Name</td>
+                <td style="font-size:120%; font-weight:bold;">Phone Number</td>
+                <td style="font-size:120%; font-weight:bold;">MI Number</td>
+                <td style="font-size:120%; font-weight:bold;">Email</td>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{data.name}}</td>
+                <td>{{data.mobile_number}}</td>
+                <td>{{data.mi_number}}</td>
+                <td>{{data.email}}</td>
+          
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </form>
+        <br><br><br><br><br><br><br><br><br>
+  </div>
