@@ -240,7 +240,7 @@
       console.log("Helo");
      
       this.get_data();
-      this.http.get('http://api2.moodi.org/contingent-collegelist')
+      this.http.get('https://api2.moodi.org/contingent-collegelist')
         .subscribe((data: any[]) => 
         this.people = data.map(function(item){
           return item.college_name;
