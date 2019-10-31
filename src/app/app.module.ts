@@ -193,6 +193,7 @@ import { KnowclComponent } from './accommodation/knowcl/knowcl.component';
     {path:'michampionship',component:LeaderboardComponent},
     {path:'vogue',redirectTo:'competitions/Lifestyle/Vogue/comp-desc'},
     {path:"sgtl",redirectTo:"competitions/Lifestyle/She's%20Got%20the%20Look/comp-desc"},
+    {path:'hysteria',redirectTo:'competitions/Music/Hysteria/comp-desc'},
 
       {path:'sponsors',component:SponsorsComponent},
       {path:'contact',component:ContactComponent,
