@@ -19,13 +19,13 @@
       
       <div class="options">
             <div class="main_content" *ngFor="let inf of informals">
-              <div *ngIf="inf.name == clickedButton">
+              <div class="rightcontent" *ngIf="inf.name == clickedButton">
           
-                <p style="line-height: 101px ; color: black;" class="headr">{{inf.name}}</p><br>
+                <p class="headr">{{inf.name}}</p><br>
           
-                  <div style="color: black;" *ngFor="let item of inf.events">
-                    <p>{{ item.name }}</p>
-                    <p>{{ item.description }}</p>
+                  <div *ngFor="let item of inf.events">
+                    <p class="name">{{ item.name }}</p>
+                    <p class="desc">{{ item.description }}</p>
                   </div>
                   </div>
               </div>
@@ -63,13 +63,13 @@
         </div>
 
         <div class="btn-group" *ngFor="let inf of informals">
-            <div *ngIf="inf.name == clickedButton">
+            <div class="detailphone" *ngIf="inf.name == clickedButton">
         
-              <p style="line-height: 101px ; color: black;" class="headr">{{inf.name}}</p><br>
+              <p class="headr">{{inf.name}}</p><br>
         
-                <div style="color: black;" *ngFor="let item of inf.events">
-                  <p>{{ item.name }}</p>
-                  <p>{{ item.description }}</p>
+                <div *ngFor="let item of inf.events">
+                  <p class="name">{{ item.name }}</p>
+                  <p class="desc">{{ item.description }}</p>
                 </div>
                 </div>
             </div>
