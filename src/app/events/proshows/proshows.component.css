@@ -279,8 +279,8 @@ SETTINGS
 .btn_group{
     /* width: 50%; */
     position: relative;
-    margin-left: 10%;
-    margin-right: 59%;
+    margin-left: 6%;
+    margin-right: 68%;
     /*padding: 1%;*/
     /* background-color: azure; */
     /* display: inline-block; */
@@ -291,7 +291,7 @@ SETTINGS
 }
 
 .btn_group a{
-    font-size: 35px;
+    font-size: 25px;
     color: white;
     cursor: pointer;
 }
@@ -299,7 +299,7 @@ SETTINGS
 
 
 p {
-  font-size: 25px;
+  font-size: 30px;
 }
 
 /* .mobileoptions {
@@ -380,6 +380,27 @@ button:hover, button:focus {
           
 }
 
+.rightcontent{
+  margin-left: 5%;
+}
+
+.headr{
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.name{
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+.desc{
+  font-size: 15px;
+  margin-top: 0;
+}
+
+
+
 @media screen and (max-width: 800px){
   .main_heading {
     /* position: absolute; */
@@ -457,6 +478,22 @@ button:hover, button:focus {
   .btn-group button{
     font-size: 16px;
   }
+  .headr{
+    font-size: 25px;
+    color: black;
+  }
+  .detailphone{
+    padding: 5%;
+    font-family: 'Poppins';
+  }
+  .name{
+    font-size: 20px;
+    color: black;
+  }
+  .desc{
+    font-size: 15px;
+    color: black;
+  }
 }
 
 
@@ -495,12 +532,18 @@ button:hover, button:focus {
 }
 
 @media screen and (max-width: 800px) {
-.main_content {
-  width: 100%;
-  float: none;
-  text-align: center;
-  justify-content: center;
-  padding-left: 8%;
-  padding-right: 8%;
+  .main_content {
+    width: 100%;
+    float: none;
+    text-align: center;
+    justify-content: center;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
 }
+
+@media screen and (max-width: 1200px){
+  .btn_group{
+    margin-left: 4%;
+  }
 }
