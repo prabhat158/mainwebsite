@@ -28,7 +28,7 @@ export class WneComponent implements OnInit {
   getCategories(){
 
     if(this.dataService.getWnedetail()==undefined){
-    this.http.get('http://localhost:8000/events').subscribe(
+    this.http.get('https://api2.moodi.org/events').subscribe(
       data=> {
       
         this.wne = data['Workshops'];

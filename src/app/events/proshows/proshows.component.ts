@@ -27,7 +27,7 @@ export class ProshowsComponent implements OnInit {
   getCategories(){
 
     if(this.dataService.getProshowdetail()==undefined){
-    this.http.get('http://localhost:8000/events').subscribe(
+    this.http.get('https://api2.moodi.org/events').subscribe(
       data=> {
       
       this.proshows_shows = data['Proshows'];
