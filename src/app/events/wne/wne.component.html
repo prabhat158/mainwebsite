@@ -22,18 +22,16 @@
           
                   <div *ngFor="let item of inf.events">
                     <p class="name">{{ item.name }}</p>
-                    <p class="desc">{{ item.description }}</p>
+                    <p class="desc" [innerHTML]="transform(item.description)"></p>
                   </div>
                   </div>
               </div>
         </div>    
         <div class="btn-group">
           <div *ngFor="let exhi of wne">
-            <div *ngIf="wne">
-                <a>
-                  <button routerLink="{{ exhi.name }}" class="raise" routerLinkActive="active" (click)="onClick(exhi.name)" [ngClass]="{'clicked': clickedButton=='desc'}">{{ exhi.name }}</button>
+              <a>
+                  <button class="raise" routerLinkActive="active" (click)="onClick(exhi.name)" [ngClass]="{'clicked': clickedButton=='desc'}">{{ exhi.name }}</button>
                 </a>
-            </div>
           </div>
           <!-- <a>
             <button routerLink="prizes & lyps" class="raise" routerLinkActive="active">Accomodation & CL</button>
@@ -62,9 +60,7 @@
       <div class="section">
           <div class="section__item">
             <a class="sm-link sm-link_padding-bottom sm-link3">
-                
-                    <p style="margin-bottom: 0; outline: 0;" routerLinkActive="active_button" routerLink="{{exhi.name}}" (click)="onClick(exhi.name)">{{ exhi.name }}</p>
-                  
+                <p style="margin-bottom: 0; outline: 0;" routerLinkActive="active_button" (click)="onClick(exhi.name)">{{ exhi.name }}</p>           
             </a>
           </div>
         </div>
@@ -135,7 +131,7 @@
   
           <div *ngFor="let item of inf.events">
             <p class="name">{{ item.name }}</p>
-            <p class="desc">{{ item.description }}</p>
+            <p class="desc" [innerHTML]="transform(item.description)"></p>
           </div>
           </div>
       </div>

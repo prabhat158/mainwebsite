@@ -31,7 +31,7 @@ export class CompetitionDetailComponent implements OnInit {
   
 
     if(this.dataService.getCompidetail()==undefined){
-    this.http.get('https://api2.moodi.org/events').subscribe(
+    this.http.get('http://localhost:8000/events').subscribe(
       data=> {
       
       this.competitions_categories =data['Competitions'];

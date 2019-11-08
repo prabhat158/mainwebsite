@@ -36,7 +36,7 @@ export class CompRegComponent implements OnInit {
   getCategories(){
 
     if(this.dataService.getCompidetail()==undefined){
-      this.http.get('https://api2.moodi.org/events').subscribe(
+      this.http.get('http://localhost:8000/events').subscribe(
         data=> {
         
         this.competitions_categories =data['Competitions'];
@@ -54,7 +54,7 @@ export class CompRegComponent implements OnInit {
     public my_team(eventid){
       console.log('43534534534')
       // this.cdRef.detectChanges();
-      this.http.get('https://api2.moodi.org/team/is_leader/'+this.UID+"?event="+eventid+"&multicity=NO")
+      this.http.get('http://localhost:8000/team/is_leader/'+this.UID+"?event="+eventid+"&multicity=NO")
       .subscribe(
         data => {
           this.is_leader_names=data['members']
@@ -71,7 +71,7 @@ export class CompRegComponent implements OnInit {
       )
         
   
-      this.http.get('https://api2.moodi.org/team/my_team/'+JSON.parse(this.profile.getJdata()).uid+"?event="+eventid+"&multicity=no")
+      this.http.get('http://localhost:8000/team/my_team/'+JSON.parse(this.profile.getJdata()).uid+"?event="+eventid+"&multicity=no")
       .subscribe(
         data1 => {
           this.my_team_names=data1['members']
@@ -91,7 +91,7 @@ export class CompRegComponent implements OnInit {
     public create_team(eventid) {
     
       console.log("ok")
-      this.http.post('https://api2.moodi.org/team/create_team/'+this.UID, {
+      this.http.post('http://localhost:8000/team/create_team/'+this.UID, {
         mobile_number :1222222233,
         multicity:"NO",
         eventMI_id: eventid,
@@ -109,7 +109,7 @@ export class CompRegComponent implements OnInit {
     }
     public add_member(number, eventid){
       console.log(number)
-      this.http.post('https://api2.moodi.org/team/add_member/'+this.UID, {
+      this.http.post('http://localhost:8000/team/add_member/'+this.UID, {
         eventMI_id: eventid,
         multicity:'NO',
         member_number: number
@@ -124,9 +124,27 @@ export class CompRegComponent implements OnInit {
           }
         ); 
     }
+
+    public join_team(number, eventid){
+      this.http.post('http://localhost:8000/team/join_team/'+this.UID, {
+        eventMI_id: eventid,
+        multicity:'NO',
+        mi_number: number
+       })
+        .subscribe(result =>{
+        this.my_team(eventid)},
+        data => {
+          console.log(data)
+          alert(data["error"]["detail"])
+          },
+          () => {
+          }
+        ); 
+    }
+
     public exit_team(number, eventid){
       console.log(number)
-      this.http.post('https://api2.moodi.org/team/exit_team/'+this.UID, {
+      this.http.post('http://localhost:8000/team/exit_team/'+this.UID, {
         eventMI_id: eventid,
         multicity:'NO',
         number: number

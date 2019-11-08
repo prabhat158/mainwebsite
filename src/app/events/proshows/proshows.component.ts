@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { EventdataService } from '../eventdata.service';
 
 import { HttpClient } from '@angular/common/http';
+import { DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-proshows',
@@ -16,13 +17,17 @@ export class ProshowsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private dataService: EventdataService,
-    private http:HttpClient,
-  ) { }
+    private http:HttpClient,   
+    protected sanitizer: DomSanitizer,
+    ) { }
+    public transform(type){
+      return this.sanitizer.bypassSecurityTrustHtml(type);
+    }
 
   getCategories(){
 
     if(this.dataService.getProshowdetail()==undefined){
-    this.http.get('https://api2.moodi.org/events').subscribe(
+    this.http.get('http://localhost:8000/events').subscribe(
       data=> {
       
       this.proshows_shows = data['Proshows'];

@@ -39,11 +39,13 @@
         </div>
           <div class='cntr'>
           <div style="align-content: flex-end">
-              <div class='leader' *ngIf="leader_names">
+              
+        <div *ngIf="is_leader_names"><br>
+        
+        <div class='leader' *ngIf="leader_names">
                   <b>Leader:</b> {{leader_names.name}}
-                  </div>
+              </div>
                   <br>
-        <div *ngIf="is_leader_names">
           <table  class="table">
               <thead>
                 <tr>
@@ -114,6 +116,14 @@
                       <button class=btn2 (click)="add_member(myInput.value,eventid)" type="button">Add member</button>
                   </span>
               </div>
+              <br>
+              In case you have mistakenly registered as the Team Leader(i.e. you are not the actual team leader), Fill in the MI Number of your Team Leader below:
+              <div *ngIf="event.maxparticipants>1" class="input-group">
+                  <input #myInput  placeholder="Team Leader's MI No."  type="text" class="form-control">
+                  <span class="input-group-btn">
+                      <button class=btn2 (click)="join_team(myInput.value,eventid)" type="button">Join Team</button>
+                  </span>
+        </div><br>
               <br>
               You are registered!<br>
 

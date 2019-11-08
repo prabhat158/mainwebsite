@@ -22,7 +22,7 @@
         
                 <div *ngFor="let item of inf.events">
                   <p class="name">{{ item.name }}</p>
-                  <p class="desc">{{ item.description }}</p>
+                  <p class="desc" [innerHTML]="transform(item.description)"></p>
                 </div>
                 </div>
             </div>
@@ -136,7 +136,7 @@
       
               <div *ngFor="let item of inf.events">
                 <p class="name">{{ item.name }}</p>
-                <p class="desc">{{ item.description }}</p>
+                <p class="desc" [innerHTML]="transform(item.description)"></p>
               </div>
               </div>
           </div>
