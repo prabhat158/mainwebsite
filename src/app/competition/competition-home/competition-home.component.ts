@@ -17,7 +17,7 @@ export class CompetitionHomeComponent implements OnInit {
 
   ngOnInit() {
 
-    this.http.get('https://api2.moodi.org/events').subscribe(
+    this.http.get('http://localhost:8000/events').subscribe(
       data=> {
       this.dataService.setCompidetail(data['Competitions']);
 

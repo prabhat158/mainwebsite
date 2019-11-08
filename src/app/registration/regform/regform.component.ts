@@ -54,7 +54,7 @@ export class RegformComponent implements OnInit {
       this._ngZone.run(() => this.router.navigate(['/'],{relativeTo: this.activatedRoute.parent}));
     }else{
 
-      this.http.get('https://api2.moodi.org/collegeslist')
+      this.http.get('http://localhost:8000/collegeslist')
       .subscribe((data: any[]) => 
       this.people = data.map(function(item){
         return item.college_name;
@@ -121,7 +121,7 @@ export class RegformComponent implements OnInit {
 
   createuser(){
     // console.log(this.chosengender + this.city +this.college+this.mobile)
-    this.http.post("https://api2.moodi.org/user/create",
+    this.http.post("http://localhost:8000/user/create",
     {
       name: this.name,
       mobile_number: this.mobile,
