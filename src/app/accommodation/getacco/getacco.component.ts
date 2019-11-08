@@ -17,7 +17,7 @@
       // private transfereService:DataService,
       private http: HttpClient,) { }
   
-      baseusl="http://localhost:8000/";
+      baseusl="https://api2.moodi.org/";
       cldata;
 
       uid3;
@@ -45,7 +45,7 @@
       }
   
       process(clg){
-        this.http.get("http://localhost:8000/contingent/search/"+clg)
+        this.http.get("https://api2.moodi.org/contingent/search/"+clg)
                       .subscribe(
                         data => {
                           // console.log("wefqwefwefwrdfwefqwefrqwe")
@@ -102,7 +102,7 @@
   
       public add_member(number){
         console.log(number)
-        this.http.get('http://localhost:8000/contingent/'+this.uid+"/add/"+number+"/addedby/cl")
+        this.http.get('https://api2.moodi.org/contingent/'+this.uid+"/add/"+number+"/addedby/cl")
           .subscribe(result =>{
   
             this.get_data();
@@ -120,7 +120,7 @@
   
   
       public update(number){
-        this.http.get('http://localhost:8000/contingent/'+this.uid+"/update/"+number)
+        this.http.get('https://api2.moodi.org/contingent/'+this.uid+"/update/"+number)
         .subscribe(result =>{
         // this.my_team(eventid)},
         console.log(result);
@@ -138,7 +138,7 @@
   
       public add_member2(){
         console.log(this.mi_id);
-        this.http.get('http://localhost:8000/contingent/'+this.data["fb_id"]+"/add/"+this.mi_id+"/addedby/notcl")
+        this.http.get('https://api2.moodi.org/contingent/'+this.data["fb_id"]+"/add/"+this.mi_id+"/addedby/notcl")
           .subscribe(result =>{
           // this.my_team(eventid)},
           console.log(result);
@@ -157,7 +157,7 @@
   
       public remove(number){
         console.log(number)
-        this.http.get('http://localhost:8000/contingent/'+this.uid+"/remove/"+number)
+        this.http.get('https://api2.moodi.org/contingent/'+this.uid+"/remove/"+number)
           .subscribe(result =>{
           // this.my_team(eventid)},
           console.log(result)
@@ -174,7 +174,7 @@
   
       public exit(number){
         console.log(number)
-        this.http.get('http://localhost:8000/contingent/'+this.uid3["fb_id"]+"/remove/"+number)
+        this.http.get('https://api2.moodi.org/contingent/'+this.uid3["fb_id"]+"/remove/"+number)
           .subscribe(result =>{
           // this.my_team(eventid)},
           this.uid3=undefined;
@@ -240,7 +240,7 @@
       console.log("Helo");
      
       this.get_data();
-      this.http.get('http://localhost:8000/contingent-collegelist')
+      this.http.get('https://api2.moodi.org/contingent-collegelist')
         .subscribe((data: any[]) => 
         this.people = data.map(function(item){
           return item.college_name;
