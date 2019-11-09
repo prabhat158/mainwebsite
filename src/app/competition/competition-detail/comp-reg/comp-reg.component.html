@@ -117,8 +117,9 @@
                   </span>
               </div>
               <br>
-              In case you have mistakenly registered as the Team Leader(i.e. you are not the actual team leader), Fill in the MI Number of your Team Leader below:
               <div *ngIf="event.maxparticipants>1" class="input-group">
+              In case you have mistakenly registered as the Team Leader(i.e. you are not the actual team leader), Fill in the MI Number of your Team Leader below:
+  
                   <input #myInput  placeholder="Team Leader's MI No."  type="text" class="form-control">
                   <span class="input-group-btn">
                       <button class=btn2 (click)="join_team(myInput.value,eventid)" type="button">Join Team</button>
@@ -131,6 +132,7 @@
               Team Limit: {{event.maxparticipants}}<br>
               - Team Leader can add Team Members only when the team members have made their MI numbers<br>
               - No other Team Member should register themselves as the Team Leader<br>
+              - Team Leaders should immediately tell the team members whom they are unable to add, to use the "Join Team" option (as those members have mistakenly registered as the Team Leader)<br>
               - Contact Kanav(7700903058) or Atharva(7021760392) in case of any issues<br>
               - Join the official group of Participants for regular updates about Competitions: <a target="_blank" href="https://facebook.com/groups/668083100270725">facebook.com/groups/668083100270725</a> <br>
               - Follow the official Instagram Page for Participants of all the Competitions: <a target="_blank" href="https://instagram.com/competitions.moodi"> instagram.com/competitions.moodi</a><br>
