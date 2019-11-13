@@ -118,7 +118,7 @@ export class CompRegComponent implements OnInit {
         this.my_team(eventid)},
         data => {
           console.log(data)
-          alert(data["error"]["detail"])
+          alert(JSON.stringify(data["error"]))
           },
           () => {
           }
@@ -135,7 +135,7 @@ export class CompRegComponent implements OnInit {
         this.my_team(eventid)},
         data => {
           console.log(data)
-          alert(data["error"]["detail"])
+          alert(JSON.stringify(data["error"]))
           },
           () => {
           }
