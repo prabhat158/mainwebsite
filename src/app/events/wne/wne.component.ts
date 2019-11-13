@@ -15,11 +15,11 @@ export class WneComponent implements OnInit {
   wne: any;
   clickedButton;
   status=false;
-
-  name=JSON.parse(this.profile.getJdata()).name;
-  email=JSON.parse(this.profile.getJdata()).email
-  mobile=JSON.parse(this.profile.getJdata()).mobile
-  mino=JSON.parse(this.profile.getJdata()).mi_no
+  name
+  email
+  mobile
+  mino
+  
 
   constructor(
     private profile:DataService,
@@ -110,6 +110,10 @@ export class WneComponent implements OnInit {
       this.status=false;
     }else{
       this.status=true;
+      this.name=JSON.parse(this.profile.getJdata()).name;
+      this.email=JSON.parse(this.profile.getJdata()).email
+      this.mobile=JSON.parse(this.profile.getJdata()).mobile
+      this.mino=JSON.parse(this.profile.getJdata()).mi_no
     }
   }
 
