@@ -195,6 +195,7 @@ import { KnowclComponent } from './accommodation/knowcl/knowcl.component';
     {path:"sgtl",redirectTo:"competitions/Lifestyle/She's%20Got%20the%20Look/comp-desc"},
     {path:'hysteria',redirectTo:'competitions/Music/Hysteria/comp-desc'},
     {path:'migt',redirectTo:"competitions/Talent%20Hunt/MI's%20Got%20Talent/comp-desc"},
+    {path:'mrandmsmi',redirectTo:"competitions/Lifestyle/Mr%20And%20Ms%20Mood%20Indigo/comp-desc"},
 
       {path:'sponsors',component:SponsorsComponent},
       {path:'contact',component:ContactComponent,
