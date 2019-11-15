@@ -196,7 +196,9 @@ import { KnowclComponent } from './accommodation/knowcl/knowcl.component';
     {path:'hysteria',redirectTo:'competitions/Music/Hysteria/comp-desc'},
     {path:'migt',redirectTo:"competitions/Talent%20Hunt/MI's%20Got%20Talent/comp-desc"},
     {path:'mrandmsmi',redirectTo:"competitions/Lifestyle/Mr%20And%20Ms%20Mood%20Indigo/comp-desc"},
+    {path:'cosplay',redirectTo:"competitions/Lifestyle/Mood%20Indigo's%20Cosplay/comp-desc"},
 
+    
       {path:'sponsors',component:SponsorsComponent},
       {path:'contact',component:ContactComponent,
         children: [
