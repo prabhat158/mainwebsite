@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CompetitionDataService } from '../competition-data.service';
-
+import { Router, NavigationEnd } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -13,6 +13,7 @@ export class CompetitionListComponent implements OnInit {
 
   competitions_categories: any;
   current_competition_category: string;
+  router: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -44,6 +45,12 @@ export class CompetitionListComponent implements OnInit {
         this.current_competition_category = params.compiName
       }
     );
+    this.router.events.subscribe((evt: any) => {
+      if (!(evt instanceof NavigationEnd)) {
+          return;
+      }
+      window.scrollTo(0, 0)
+  });
   }
 
 }
