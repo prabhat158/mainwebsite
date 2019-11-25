@@ -3,6 +3,7 @@
   import { DataService } from '../../registration/data.service';
   import { ActivatedRoute, Router } from '@angular/router';
   import { FormGroup, FormControl } from '@angular/forms';
+  import * as $ from 'jquery';
   
   @Component({
     selector: 'app-accommodation',
@@ -10,6 +11,7 @@
     styleUrls: ['./getacco.component.css']
   })
   export class GetaccoComponent implements OnInit {
+    exists: any;
   
     constructor(
       private router: Router,
@@ -31,7 +33,7 @@
       pop=false;
       data;
   
-      people=[];
+      people=[]; 
   
   
       toggleDropDownClg() {
@@ -191,7 +193,22 @@
         
       }
   
-      
+      // timeline(){
+      //   this.http.get(this.baseusl+"contingent-info/"+this.uid)
+      //   .subscribe(
+      //     data => {
+      //       console.log("dcniosv")
+      //       this.members_added=data["members"];
+      //       this.exists = this.members_added[96].removed;
+      //       $(document).ready(function(){
+      //         $("li").click(function(){
+      //         if(1){
+      //           $("li").toggleClass("active");}
+      //         });
+      //       });
+      //     },
+      //     )
+      // }   
   
       get_data(){
         this.http.get(this.baseusl+"contingent/"+this.uid)
@@ -240,6 +257,7 @@
       console.log("Helo");
      
       this.get_data();
+      // this.timeline();
       this.http.get('https://api2.moodi.org/contingent-collegelist')
         .subscribe((data: any[]) => 
         this.people = data.map(function(item){
