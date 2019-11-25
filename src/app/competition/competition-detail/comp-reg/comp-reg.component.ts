@@ -5,6 +5,8 @@ import { CompetitionDataService } from '../../competition-data.service';
 import { HttpClient } from '@angular/common/http';
 // import {RouteConfig, Router, ROUTER_DIRECTIVES} from 'angular2/router';
 import { DataService } from '../../../registration/data.service';
+import { NavigationEnd } from '@angular/router';
+
 @Component({
   selector: 'app-comp-reg',
   templateUrl: './comp-reg.component.html',
@@ -196,6 +198,12 @@ export class CompRegComponent implements OnInit {
       this.my_team(this.eventid);
       console.log("yooo")
     }
+    this.router.events.subscribe((evt: any) => {
+      if (!(evt instanceof NavigationEnd)) {
+          return;
+      }
+      window.scrollTo(0, 0)
+  });
   }
 
 }
