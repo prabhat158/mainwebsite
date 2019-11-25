@@ -226,7 +226,6 @@
                           this.http.get(this.baseusl+"contingent-info/"+this.uid)
                       .subscribe(
                         data => {
-                          console.log("wefqwefwefwrdfwefqwefrqwe")
                           this.uid3=data["leader"];
                           console.log(this.uid3);
           
