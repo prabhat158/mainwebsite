@@ -25,8 +25,8 @@
             </tbody>
           </table>
       
-        Kindly get in touch with your CL, if your application has not been approved by the CL. You can find the contact details under "Know Your CL" tab. You have to ask your CL to get your name verified/approved on his portal.<br>
-        Kindly note: Approval doesn't mean you accommodation is final. After approval, you will be alloted Accommodation (subject to availability) and you have to pay at amount at the portal. Dates for these will be informed to CLs.         
+        Kindly get in touch with your CL, if your application has not been verified by the CL. You can find the contact details under "Know Your CL" tab. You have to ask your CL to get your name verified on his portal.<br>
+        Kindly note: Verification doesn't mean your accommodation is final. After Verification, you will be alloted Accommodation (subject to availability) and you have to pay at amount at the portal. Dates for these will be informed to CLs.         
           <div align=center *ngFor="let us of members_added">
             <div *ngIf="us.removed==false && us.user.mi_number==mi_id">
                     <table  class="table">
@@ -35,7 +35,7 @@
                             <td style="font-size:120%; font-weight:bold;">Name</td>
                             <td style="font-size:120%; font-weight:bold;">Phone Number</td>
                             <td style="font-size:120%; font-weight:bold;">MI Number</td>
-                            <td style="font-size:120%; font-weight:bold;">Acco Status</td>
+                            <!-- <td style="font-size:120%; font-weight:bold;">Acco Status</td> -->
                             <td></td>
                           </tr>
                         </thead>
@@ -44,17 +44,27 @@
                             <td>{{us.user.name}}</td>
                             <td>{{us.user.mobile_number}}</td>
                             <td>{{us.user.mi_number}}</td>
-                            <td><span *ngIf="us.addedbycl">Approved</span><span *ngIf="!us.addedbycl">Approval Pending</span></td>
+                            <!-- <td><span *ngIf="us.addedbycl">Approved</span><span *ngIf="!us.addedbycl">Approval Pending</span></td> -->
                       
                           </tr>
                         </tbody>
                       </table>
                       <div class="container">
                         <ul class="timeline">
-                          <li class="active">Pending</li>
-                          <li>Approved</li>
-                          <li>Confirmed</li>
-                          <li>Paid</li>
+                          <li [ngClass]="{'active': !us.removed || us.addedbycl || us.approved || us.approvedbymi}">Applied</li>
+
+                          <li [ngClass]="{'active': !us.removed && us.addedbycl || us.approved || us.approvedbymi}">
+                            <span *ngIf="(!us.removed && us.addedbycl || us.approved || us.approvedbymi)">Verified</span>
+                            <span *ngIf="!(!us.removed && us.addedbycl || us.approved || us.approvedbymi)">Verification Pending</span>
+                          </li>
+                          <li [ngClass]="{'active': !us.removed && (us.approved || us.approvedbymi) }">
+                              <span *ngIf="(!us.removed && (us.approved || us.approvedbymi))">Approved</span>
+                              <span *ngIf="!(!us.removed && (us.approved || us.approvedbymi))">Approval Pending</span>
+                          </li>
+                          <li [ngClass]="{'active': !us.removed && (us.approved || us.approvedbymi) && us.has_paid }">
+                              <span *ngIf="(!us.removed && (us.approved || us.approvedbymi) && us.has_paid)">Paid</span> 
+                              <span *ngIf="!(!us.removed && (us.approved || us.approvedbymi) && us.has_paid)">Payment Pending</span>
+                          </li>
                       <br><br>
                         </ul>
                       </div>
