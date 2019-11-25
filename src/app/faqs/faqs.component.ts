@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { Router, NavigationEnd } from '@angular/router';
+
 
 
 @Component({
@@ -11,6 +13,7 @@ export class FaqsComponent implements OnInit {
   public lottieConfig: Object;
   private anim: any;
   animationSpeed: number = 1;
+  router: any;
 
   constructor() { 
     this.lottieConfig = {
@@ -27,6 +30,14 @@ export class FaqsComponent implements OnInit {
     $(window).on('load', function() { 
       $(".se-pre-con").fadeOut("slow");});
       console.log("here")
+
+      this.router.events.subscribe((evt: any) => {
+        if (!(evt instanceof NavigationEnd)) {
+            return;
+        }
+        window.scrollTo(0, 0)
+    });
   };
+  
   
 }
