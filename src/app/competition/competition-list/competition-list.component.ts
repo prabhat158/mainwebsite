@@ -43,7 +43,7 @@ export class CompetitionListComponent implements OnInit {
     this.route.params.subscribe(
       params => {
         this.current_competition_category = params.compiName
-      }
+      },
     );
     this.router.events.subscribe((evt: any) => {
       if (!(evt instanceof NavigationEnd)) {
