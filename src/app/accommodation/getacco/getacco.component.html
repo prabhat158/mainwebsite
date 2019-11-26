@@ -58,8 +58,8 @@
                             <span *ngIf="!(!us.removed && us.addedbycl || us.approved || us.approvedbymi)">Verification Pending</span>
                           </li>
                           <li [ngClass]="{'active': !us.removed && (us.approved || us.approvedbymi) }">
-                              <span *ngIf="(!us.removed && (us.approved || us.approvedbymi))">Approved</span>
-                              <span *ngIf="!(!us.removed && (us.approved || us.approvedbymi))">Approval Pending</span>
+                              <span *ngIf="(!us.removed && (us.approved || us.approvedbymi))">Confirmed</span>
+                              <span *ngIf="!(!us.removed && (us.approved || us.approvedbymi))">Confirmation Pending</span>
                           </li>
                           <li [ngClass]="{'active': !us.removed && (us.approved || us.approvedbymi) && us.has_paid }">
                               <span *ngIf="(!us.removed && (us.approved || us.approvedbymi) && us.has_paid)">Paid</span> 
