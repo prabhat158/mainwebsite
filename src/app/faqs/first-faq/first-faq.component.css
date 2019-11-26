@@ -32,6 +32,11 @@
   height: 0;
 }
 
+.plus{
+  position: absolute;
+  left: 0;
+}
+
 @media screen and (max-width: 800px) {
   .main_content {
     width: 100%;

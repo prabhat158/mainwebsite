@@ -79,6 +79,15 @@
   opacity: 1;
 }
 
+.fa{
+  color: black;
+  font-size: 120%;
+}
+
+.fa:hover{
+  color: white;
+}
+
 @media screen and (max-width: 800px) {
   .adityacss {
     width: 100%;
@@ -97,9 +106,13 @@
   .contactcont .contdet {
     opacity: 1;
     position: relative;
-    top: -140px;
+    top: -130px;
+    font-size: 70%;
   }
   .contactcont .contactimg {
     opacity: 0.3;
+  }
+  .fa{
+    font-size: 100%;
   }
 }

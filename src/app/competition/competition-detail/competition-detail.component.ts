@@ -4,8 +4,10 @@ import { ActivatedRoute } from '@angular/router';
 import { CompetitionDataService } from '../competition-data.service';
 import { HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router, NavigationEnd } from '@angular/router';
 
-import { Router } from '@angular/router';
+
+// import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-competition-detail',
@@ -19,6 +21,7 @@ export class CompetitionDetailComponent implements OnInit {
   competitions_categories: any[];
   current_competition_category: string;
   current_event: string;
+  routar: any;
   
   constructor(
     private route: ActivatedRoute,
@@ -58,6 +61,12 @@ export class CompetitionDetailComponent implements OnInit {
         this.current_event = params.eventName
       }
     );
+    this.routar.events.subscribe((evt: any) => {
+      if (!(evt instanceof NavigationEnd)) {
+          return;
+      }
+      window.scrollTo(0, 0)
+  });
   }
   @HostListener('window:popstate', ['$event'])
   onPopState(event) {

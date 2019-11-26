@@ -27,7 +27,9 @@ export class CompetitionComponent implements OnInit {
   public ngOnInit()
   {
     $(window).on('load', function() { 
-      $(".se-pre-con").fadeOut("slow");;});
+      $(".se-pre-con").fadeOut("slow");;
+    }
+    );
 
       this.router.events.subscribe((evt: any) => {
         if (!(evt instanceof NavigationEnd)) {
