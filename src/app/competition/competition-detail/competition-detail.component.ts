@@ -22,7 +22,7 @@ export class CompetitionDetailComponent implements OnInit {
   current_competition_category: string;
   current_event: string;
   routar: any;
-  
+
   constructor(
     private route: ActivatedRoute,
     private http:HttpClient,
@@ -31,28 +31,28 @@ export class CompetitionDetailComponent implements OnInit {
   ) { }
 
   getCategories(){
-  
+
 
     if(this.dataService.getCompidetail()==undefined){
     this.http.get('https://api2.moodi.org/events').subscribe(
       data=> {
-      
+
       this.competitions_categories =data['Competitions'];
       this.dataService.setCompidetail(data['Competitions']);
 
       },
   );}else{
-    
+
     this.competitions_categories =this.dataService.getCompidetail();
   }
-  }  
+  }
 
   onClick(button){
     this.clickedButton = button;
   }
 
   ngOnInit() {
-    
+
     this.clickedButton='desc';
     this.getCategories();
     this.route.params.subscribe(

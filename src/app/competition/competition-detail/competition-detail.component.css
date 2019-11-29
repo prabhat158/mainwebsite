@@ -6,10 +6,10 @@
     position: absolute;
     top: 0px;
     left: 0px;
-}   
+}
 
 .bg2 {
-    
+
     z-index: -1;
     width:100%;
     /* position: absolute; */
@@ -31,13 +31,13 @@
   background-color:  	#32B4FF !important;
   position: absolute;
   /* height:100vh; */
-  top:0; 
-  
-   right:0; 
-   left:0; 
-   
-   
-   z-index: -150; 
+  top:0;
+
+   right:0;
+   left:0;
+
+
+   z-index: -150;
 }
 
 .headr{
@@ -107,7 +107,7 @@
     font-size: 14px;
     z-index: 100;
     /* overflow-y: auto; */
-    
+
 }
 
 /*
@@ -165,7 +165,7 @@ code {
             transform: translateY(-0.25em);
   /* --color: #ffa260; */
   /* --hover: #e5ff60; */
-            
+
   }
   @media screen and (max-width: 600px){
     .headr {
