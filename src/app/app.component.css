@@ -22,7 +22,7 @@ ul li a{
   display: none
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
   .mobile{
     color: black;
     display: block;
@@ -54,7 +54,7 @@ ul li a{
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  
+
   font-family: 'Staatliches', cursive;
   color: #818181;
   display: block;
