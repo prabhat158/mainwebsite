@@ -1,23 +1,23 @@
 <div class="pcheader">
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right" style="z-index: 999; position: absolute; top: 10px; right: 15px;">
-        
-            <li><a class="button1" href="accommodation">ACCOMMODATION </a></li>
-            <li><a class="button1" href="register"> REGISTER </a></li>
-            <li><a class="button1" href="events"> EVENTS </a></li>
-            <li><a class="button1" href="competitions"> COMPETITIONS </a></li>
-            <li><a class="button1" href="faqs"> FAQs </a></li>
-            <li><a class="button1" target="_blank" href="https://sponsors.moodi.org"> SPONSORS </a></li>
-            <li><a style="margin-right: 25px" class="button1" href="contact"> CONTACT US </a></li>
-        
-      </ul>
-    </div>
+  <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav navbar-right" style="z-index: 999; position: absolute; top: 10px; right: 15px;">
+
+      <li><a class="button1" href="accommodation">ACCOMMODATION </a></li>
+      <li><a class="button1" href="register"> REGISTER </a></li>
+      <li><a class="button1" href="events"> EVENTS </a></li>
+      <li><a class="button1" href="competitions"> COMPETITIONS </a></li>
+      <li><a class="button1" href="faqs"> FAQs </a></li>
+      <li><a class="button1" target="_blank" href="https://sponsors.moodi.org"> SPONSORS </a></li>
+      <li><a style="margin-right: 25px" class="button1" href="contact"> CONTACT US </a></li>
+
+    </ul>
+  </div>
 </div>
 <div style="z-index: 3" class="mobile">
-    <div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
     <li><a class="button1" (click)="closeNav()" href="/" >HOME </a></li>
-  
+
     <li><a class="button1" (click)="closeNav()" href="accommodation" >ACCOMMODATION </a></li>
     <li><a class="button1" href="register" (click)="closeNav()"> REGISTER </a></li>
     <li><a class="button1" href="events" (click)="closeNav()"> EVENTS </a></li>
@@ -27,14 +27,14 @@
     <li><a style="margin-right: 25px" class="button1" href="contact" (click)="closeNav()"> CONTACT US </a></li>
 
   </div>
-  
+
   <!-- Use any element to open the sidenav -->
   <span (click)="openNav()"><img src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" width="40px" ></span>
-  
+
   <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
   <div id="main">
   </div>
 </div>
 
 
-<router-outlet></router-outlet> 
+<router-outlet></router-outlet>
