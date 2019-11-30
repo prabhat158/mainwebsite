@@ -11,6 +11,7 @@
     display: block;
   }
 } */
+
 ul li a{
   color: black;
   font-family: 'Staatliches', cursive;
@@ -18,22 +19,56 @@ ul li a{
   margin-top: 50px;
 }
 .mobile{
-
   display: none
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px){
+  ul li a{
+    font-size: 27px;
+  }
+}
+
+@media screen and (max-width: 1120px){
+  ul li a{
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 1060px){
+  ul li a{
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  ul li a{
+    font-size: 21px;
+  }
+}
+
+@media screen and (max-width: 920px){
+  ul li a{
+    font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 860px){
+  ul li a{
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .mobile{
     color: black;
     display: block;
     position: absolute;
-    top:5px;
+    top: 5px;
     right: 12px;
   }
   .pcheader{
     display: none;
   }
-
 }
 /* The side navigation menu */
 .sidenav {
