@@ -30,6 +30,14 @@
   z-index: -150;
 }
 
+.container h1{
+  font-family: Welcome;
+  font-size: 180px;
+  text-align: center;
+  margin-top: 100px;
+  width: 100%;
+  color: black;
+}
 
 .container{
   position: relative;
@@ -273,19 +281,11 @@ section {
 }
 
 section h2.section-heading {
-  font-size: 40px;
+  font-size: 34px;
   font-weight: bold;
+  text-align: center;
   margin-top: 0;
   margin-bottom: 30px;
-}
-
-section h3.section-subheading {
-  font-size: 16px;
-  font-weight: 400;
-  font-style: italic;
-  margin-bottom: 75px;
-  text-transform: none;
-  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 @media (min-width: 768px) {
