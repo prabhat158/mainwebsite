@@ -53,11 +53,6 @@
   text-align: center;
 }
 
-div.gallery img {
-  width: 80%;
-  height: auto;
-}
-
 div.desc {
   text-align: center;
   font-size: 25px;
@@ -112,7 +107,7 @@ div.desc {
 
 .icon img:hover{
   animation: shake 0.5s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 2;
 }
 
 @keyframes shake {
