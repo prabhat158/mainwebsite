@@ -257,6 +257,8 @@
     width: 40%;
     vertical-align: middle;
     padding-left: 5%;
+    color: white;
+    font-size: 130%;
 }
 
 .footer{
@@ -538,6 +540,7 @@
 
             .bluep{
                 padding-left: 3%;
+                font-size: 90%;
             }
         /* .anim2{
             width: 133%;
