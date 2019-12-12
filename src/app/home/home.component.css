@@ -193,6 +193,72 @@
     margin-top: 99px;
 }
 
+.merchandise{
+    background-color: #A2BCC9;
+}
+
+.headr{
+    font-family: Welcome;
+    font-size: 175px;
+    color: white;
+    position: relative;
+    text-align: center;
+    background-color: #A2BCC9;
+  }
+
+.backo{
+    width: 150%;
+    position: relative;
+    left: 0;
+    z-index: 999;
+}
+
+.fronto{
+    width: 150%;
+    position: relative;
+    left: -67%;
+    top: 10px;
+    z-index: 999;
+}
+
+.orangeimg{
+    display: inline-block;
+    width: 60%;
+    text-align: center;
+}
+
+.orangep{
+    display: inline-block;
+    width: 40%;
+    vertical-align: middle;
+    padding-right: 5%;
+}
+
+.backb{
+    width: 150%;
+    position: relative;
+    left: 55%;
+}
+
+.frontb{
+    width: 150%;
+    position: relative;
+    left: -88%;
+}
+
+.blueimg{
+    display: inline-block;
+    width: 60%;
+    text-align: center;
+}
+
+.bluep{
+    display: inline-block;
+    width: 40%;
+    vertical-align: middle;
+    padding-left: 5%;
+}
+
 .footer{
     position: absolute;
     background-color: #B0FE76;
@@ -442,6 +508,37 @@
         .aboutushead{
             margin-top: 23%
         }
+
+            .headr{
+              font-size: 100px;
+              line-height: 136px;
+            }
+
+            .fronto{
+                width: 200%;
+                left: -85%;
+            }
+            
+            .backo{
+                width: 200%;
+                left: -30%;
+            }
+            .frontb{
+                width: 200%;
+                left: -120%;
+            }
+            .backb{
+                width: 200%;
+                left: 40%;
+            }
+
+            .orangep{
+                padding-right: 2%;
+            }
+
+            .bluep{
+                padding-left: 3%;
+            }
         /* .anim2{
             width: 133%;
             height: auto;
@@ -460,4 +557,3 @@
         top: 24vw;
         width: 14vw
     }
-    
