@@ -1,85 +1,90 @@
-<div style="overflow: hidden"  class="full-color">
-    <div>
-    <img src="../../../assets/Events/page%20layout%20elements_events%20inner%20page/Asset%2030withbg.png" class="bg1">
+<div style="overflow: hidden" class="full-color">
+  <div>
+    <img
+      src="../../../assets/Events/page%20layout%20elements_events%20inner%20page/Asset%2030withbg.png"
+      class="bg1"
+    />
     <a href="/">
-      <img src="../../../assets/logos/Asset 33eventbglogo.svg" class="logo">  
+      <img src="../../../assets/logos/Asset 33eventbglogo.svg" class="logo" />
     </a>
-    </div>
+  </div>
+  <div>
+    <!-- <div class="bg1"></div> -->
+    <!-- <img src="../../assets/acco/Asset 26.png" class="bg2"> -->
     <div>
-      <!-- <div class="bg1"></div> -->
-      <!-- <img src="../../assets/acco/Asset 26.png" class="bg2"> -->
-      <div>
-      <br><br><br><br><br>
+      <br /><br /><br /><br /><br />
 
-      
-    
-    
       <h1 class="main_heading">Informals</h1>
 
-      
       <div class="options">
-            <div class="main_content" *ngFor="let inf of informals">
-              <div class="rightcontent" *ngIf="inf.name == clickedButton">
-          
-                <p class="headr">{{inf.name}}</p><br>
-          
-                  <div *ngFor="let item of inf.events">
-                    <p class="name">{{ item.name }}</p>
-                    <p class="desc" [innerHTML]="transform(item.description)"></p>
-                  </div>
-                  </div>
-              </div>
-      </div>    
-    
-      
+        <div class="main_content" *ngFor="let inf of informals">
+          <div class="rightcontent" *ngIf="inf.name == clickedButton">
+            <p class="headr">{{ inf.name }}</p>
+            <br />
+
+            <div *ngFor="let item of inf.events">
+              <p class="name">{{ item.name }}</p>
+              <p class="desc" [innerHTML]="transform(item.description)"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="btn-group">
         <div *ngFor="let inf of informals">
           <div *ngIf="informals">
             <a>
-              <button class="raise" routerLinkActive="active" (click)="onClick(inf.name)">{{ inf.name }}</button>
-            </a>
-            </div>
-          </div>
-          <br><br><br>
-        </div>
-        
-      <!-- <router-outlet></router-outlet> -->
-    
-    
-        <div class="options">
-      <div *ngFor="let inf of informals" class="btn_group">
-          <div *ngIf="informals">
-      <div class="section">
-          <div class="section__item">
-            <a class="sm-link sm-link_padding-bottom sm-link3">
-                
-                    <p style="margin-bottom: 0; outline: 0;" routerLinkActive="active_button" (click)="onClick(inf.name)">{{ inf.name }}</p>
-                  
+              <button
+                class="raise"
+                routerLinkActive="active"
+                (click)="onClick(inf.name)"
+              >
+                {{ inf.name }}
+              </button>
             </a>
           </div>
         </div>
+        <br /><br /><br />
       </div>
-      </div>
-        </div>
 
-        <div class="btn-group" *ngFor="let inf of informals">
-            <div class="detailphone" *ngIf="inf.name == clickedButton">
-        
-              <p class="headr">{{inf.name}}</p><br>
-        
-                <div *ngFor="let item of inf.events">
-                  <p class="name">{{ item.name }}</p>
-                  <p class="desc">{{ item.description }}</p>
-                </div>
-                </div>
+      <!-- <router-outlet></router-outlet> -->
+
+      <div class="options">
+        <div *ngFor="let inf of informals" class="btn_group">
+          <div *ngIf="informals">
+            <div class="section">
+              <div class="section__item">
+                <a class="sm-link sm-link_padding-bottom sm-link3">
+                  <p
+                    style="margin-bottom: 0; outline: 0;"
+                    routerLinkActive="active_button"
+                    (click)="onClick(inf.name)"
+                  >
+                    {{ inf.name }}
+                  </p>
+                </a>
+              </div>
             </div>
-  
-  
+          </div>
+        </div>
       </div>
-  
-    
-  
-    <img src="../../../assets/Events/page%20layout%20elements_events%20outer%20page/Asset%2022lap.png" class="bg4">
+
+      <div class="btn-group" *ngFor="let inf of informals">
+        <div class="detailphone" *ngIf="inf.name == clickedButton">
+          <p class="headr">{{ inf.name }}</p>
+          <br />
+
+          <div *ngFor="let item of inf.events">
+            <p class="name">{{ item.name }}</p>
+            <p class="desc" [innerHTML]="transform(item.description)"></p>
+          </div>
+        </div>
+      </div>
     </div>
-  
-    
+
+    <img
+      src="../../../assets/Events/page%20layout%20elements_events%20outer%20page/Asset%2022lap.png"
+      class="bg4"
+    />
+  </div>
+</div>
