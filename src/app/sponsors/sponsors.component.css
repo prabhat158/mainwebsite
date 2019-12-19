@@ -39,6 +39,9 @@
   z-index: -150;
 }
 
+::-webkit-scrollbar{
+  width: 10px !important;
+}
 /* .container h1 {
   font-family: Welcome;
   font-size: 180px;
@@ -88,13 +91,12 @@ div.desc {
   top:0;
   overflow-y: auto;
 
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  /* scrollbar-width: none;
+  -ms-overflow-style: none; */
 }
 
-.back::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+::-webkit-scrollbar {
+  width: 10px;
 }
 /* 
 .icon {
@@ -275,6 +277,14 @@ button:hover, button:focus {
   max-width: 800px;
 }
 
+#kfc{
+  width: 50%;
+}
+
+#lbc{
+  width: 45%;
+}
+
 @media (min-width: 767px) {
   .portfolio-item {
     margin: 0 0 30px;
@@ -298,6 +308,7 @@ section h2.section-heading {
     padding: 150px 0;
   }
 }
+
 
 #nivea {
   width: 50%;
