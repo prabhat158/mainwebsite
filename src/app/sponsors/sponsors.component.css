@@ -317,6 +317,7 @@ button:hover, button:focus {
     padding: 0% 1% 0% 1%;
     cursor: pointer;
     border-radius: 20%;
+    box-shadow: 0 0 7px 3px darkslategrey;
   }
   
   #myBtn:hover {
@@ -354,6 +355,10 @@ section h2.section-heading {
   section h2.section-heading{
     font-size: 20px;
   }
+  #myBtn{
+    bottom: 50px;
+  }
+
 }
 
 #nivea {
