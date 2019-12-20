@@ -285,6 +285,44 @@ button:hover, button:focus {
   width: 45%;
 }
 
+.top-scroller {
+  position: fixed;
+      bottom: 100px;
+      right: 10px;
+      font-size: 2em;
+      display: none;
+      z-index: 2;
+      text-align: center;
+      cursor: pointer;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      color: black;
+      line-height: 40px;
+  
+  }
+
+
+  #myBtn {
+    /* display: none; */
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 2;
+    font-size: 1em;
+    border: none;
+    outline: none;
+    background-color: yellowgreen;
+    color: white;
+    padding: 0% 1% 0% 1%;
+    cursor: pointer;
+    border-radius: 20%;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+
 @media (min-width: 767px) {
   .portfolio-item {
     margin: 0 0 30px;
@@ -309,6 +347,14 @@ section h2.section-heading {
   }
 }
 
+@media screen and (max-width: 650px){
+  .btn-group button{
+    font-size: 100%;
+  }
+  section h2.section-heading{
+    font-size: 20px;
+  }
+}
 
 #nivea {
   width: 50%;
