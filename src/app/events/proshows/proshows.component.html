@@ -21,7 +21,8 @@
           
                   <div *ngFor="let item of inf.events">
                     <p class="name">{{ item.name }}</p>
-                    <img class="{{item.name}} image" src="http://api2.moodi.org/{{ item.image }}">
+                    <!-- <img id="{{item.name}}_image" src="http://api2.moodi.org/{{ item.image }}"> -->
+                    <div class="image" id="{{item.name}}_imagediv"><img id="{{item.name}}_image" style="width: 50%;" src="http://api2.moodi.org/{{ item.image }}" (error)="remove(item.name)"></div>
                     <p class="desc" [innerHTML]="transform(item.description)"></p>
                   </div>
                   </div>
@@ -135,6 +136,7 @@
   
           <div *ngFor="let item of inf.events">
             <p class="name">{{ item.name }}</p>
+            <div class="image" id="{{item.name}}_imagediv"><img id="{{item.name}}_image" style="width: 100%;" src="http://api2.moodi.org/{{ item.image }}" (error)="remove(item.name)"></div>
             <p class="desc" [innerHTML]="transform(item.description)"></p>
           </div>
           </div>

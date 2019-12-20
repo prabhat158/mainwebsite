@@ -400,12 +400,7 @@ button:hover, button:focus {
 }
 
 .image{
-  display: none;
-  width: 100%;
-}
-
-.imagedisplay{
-  display: block;
+  display: inline-block;
   width: 100%;
 }
 
