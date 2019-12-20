@@ -4,6 +4,7 @@ import { EventdataService } from '../eventdata.service';
 
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer} from '@angular/platform-browser';
+import { isNull } from 'util';
 
 @Component({
   selector: 'app-proshows',
@@ -29,32 +30,33 @@ export class ProshowsComponent implements OnInit {
     if(this.dataService.getProshowdetail()==undefined){
     this.http.get('https://api2.moodi.org/events').subscribe(
       data=> {
-      
       this.proshows_shows = data['Proshows'];
       this.clickedButton=this.proshows_shows[0].name;
       this.dataService.setProshowdetail(data['Proshows']);
 
-      for(var i = 0; i < this.proshows_shows.length; i++){
-        for(var j = 0; j < this.proshows_shows[i].events.length; j++){
-          if(document.getElementById(this.proshows_shows[i].events[j].name+'image') != undefined){
-            document.getElementById(this.proshows_shows[i].events[j].name+'image').style.display = "block";
-          }
-        }
-      }
-
-
+      
       },
-  );}else{
-    
-    this.proshows_shows =this.dataService.getProshowdetail();
-    this.clickedButton=this.proshows_shows[0].name;
+  );}
+
+    else{
+      this.proshows_shows =this.dataService.getProshowdetail();
+      this.clickedButton=this.proshows_shows[0].name;
+    } 
   }
-          // console.log(this.pronites_nites);
-  }  
 
   onClick(button){
     console.log(button);
     this.clickedButton = button;
+  }
+
+  remove(item){
+    for(var i = 0; i < this.proshows_shows.length; i++){
+      for(var j = 0; j < this.proshows_shows[i].events.length; j++){
+        if(item == this.proshows_shows[i].events[j].name){
+          document.getElementById(this.proshows_shows[i].events[j].name+'_imagediv').style.display = "none";
+        }
+      }
+    }
   }
 
   ngOnInit() {
