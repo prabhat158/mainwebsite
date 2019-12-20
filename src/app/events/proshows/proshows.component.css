@@ -404,6 +404,11 @@ button:hover, button:focus {
   width: 100%;
 }
 
+.imagedisplay{
+  display: block;
+  width: 100%;
+}
+
 @media screen and (max-width: 800px){
   .main_heading {
     /* position: absolute; */
