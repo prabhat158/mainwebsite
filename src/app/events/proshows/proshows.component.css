@@ -399,12 +399,14 @@ button:hover, button:focus {
   margin-top: 0;
 }
 
-
+.image{
+  display: none;
+  width: 100%;
+}
 
 @media screen and (max-width: 800px){
   .main_heading {
     /* position: absolute; */
-
     font-size: 100px;
     line-height: 86px;
   }

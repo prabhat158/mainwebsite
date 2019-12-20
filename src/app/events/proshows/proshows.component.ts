@@ -11,7 +11,7 @@ import { DomSanitizer} from '@angular/platform-browser';
   styleUrls: ['./proshows.component.css']
 })
 export class ProshowsComponent implements OnInit {
-  proshows_shows: any;
+  proshows_shows;
   clickedButton;
 
   constructor(
@@ -34,6 +34,15 @@ export class ProshowsComponent implements OnInit {
       this.clickedButton=this.proshows_shows[0].name;
       this.dataService.setProshowdetail(data['Proshows']);
 
+      for(var i = 0; i < this.proshows_shows.length; i++){
+        for(var j = 0; j < this.proshows_shows[i].events.length; j++){
+          if(document.getElementById(this.proshows_shows[i].events[j].name+'image') != undefined){
+            document.getElementById(this.proshows_shows[i].events[j].name+'image').style.display = "block";
+          }
+        }
+      }
+
+
       },
   );}else{
     
@@ -55,6 +64,8 @@ export class ProshowsComponent implements OnInit {
         // this.current_pronites_nite = params.pronites
       }
     );
-  }
+
+
+}
 
 }
