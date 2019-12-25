@@ -15,7 +15,7 @@
 ul li a{
   color: black;
   font-family: 'Staatliches', cursive;
-  font-size: 28px;
+  font-size: 25px;
   margin-top: 50px;
 }
 .mobile{
@@ -24,37 +24,37 @@ ul li a{
 
 @media screen and (max-width: 1200px){
   ul li a{
-    font-size: 27px;
+    font-size: 22px;
   }
 }
 
 @media screen and (max-width: 1120px){
   ul li a{
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 
 @media screen and (max-width: 1060px){
   ul li a{
-    font-size: 23px;
+    font-size: 19px;
   }
 }
 
 @media screen and (max-width: 1000px){
   ul li a{
-    font-size: 21px;
+    font-size: 18px;
   }
 }
 
 @media screen and (max-width: 920px){
   ul li a{
-    font-size: 19px;
+    font-size: 17px;
   }
 }
 
 @media screen and (max-width: 860px){
   ul li a{
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 
