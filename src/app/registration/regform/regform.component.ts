@@ -57,6 +57,7 @@ export class RegformComponent implements OnInit {
       this.http.get('https://api2.moodi.org/collegeslist')
       .subscribe((data: any[]) => 
       this.people = data.map(function(item){
+        console.log(item)
         return item.college_name;
       },
 
